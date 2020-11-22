@@ -9,6 +9,7 @@ import { Shows } from "./components/Shows";
 import { WhatNow } from "./components/WhatNow";
 import { Acknowledgements } from "./components/Acknowledgements";
 import Loader from "./components/Loader";
+import { Header } from "./components/Headers";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -20,6 +21,8 @@ function App() {
   return (
     <HashRouter>
       <div>
+        <Header />
+        {/* <Header open={open} setOpen={setOpen} /> */}
         <AppWrapper>
           <Switch>
             <Route exact path="/" component={Home} />
