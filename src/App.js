@@ -1,4 +1,6 @@
 import "./App.css";
+import styled from "styled-components";
+
 import { HashRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./components/Home";
 import { Themes } from "./components/Themes";
@@ -6,12 +8,19 @@ import { Destinations } from "./components/Destinations";
 import { Shows } from "./components/Shows";
 import { WhatNow } from "./components/WhatNow";
 import { Acknowledgements } from "./components/Acknowledgements";
+import Loader from "./components/Loader";
+
+const AppWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+`;
 
 function App() {
   return (
     <HashRouter>
-      <div className="App">
-        <div>
+      <div>
+        <AppWrapper>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/themes" component={Themes} />
@@ -19,8 +28,9 @@ function App() {
             <Route path="/shows" component={Shows} />
             <Route path="/what_now" component={WhatNow} />
             <Route path="/acknowledgements" component={Acknowledgements} />
+            <Route path="/loader" component={Loader} />
           </Switch>
-        </div>
+        </AppWrapper>
       </div>
     </HashRouter>
   );
