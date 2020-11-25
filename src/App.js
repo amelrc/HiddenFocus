@@ -2,14 +2,16 @@ import "./App.css";
 import styled from "styled-components";
 
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { Home } from "./components/Home";
+
+import Home from "./components/Home/Home";
 import { Themes } from "./components/Themes";
 import { Destinations } from "./components/Destinations";
 import { Shows } from "./components/Shows";
 import { WhatNow } from "./components/WhatNow";
 import { Acknowledgements } from "./components/Acknowledgements";
 import Loader from "./components/Loader";
-import { Header } from "./components/Headers";
+import { Header } from "./components/Header/Header";
+import Galleries from "./components/Galleries/Galleries";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -27,6 +29,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/themes" component={Themes} />
+            <Route path="/galleries" component={Galleries} />
             <Route path="/destinations" component={Destinations} />
             <Route path="/shows" component={Shows} />
             <Route path="/what_now" component={WhatNow} />

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Galleries from '../Galleries/Galleries'
 
 const HeaderHome = styled.h1`
   text-align: left;
@@ -21,7 +22,7 @@ const Phrase = styled.h3`
   color: #1c161f;
 `;
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <div style={{ alignSelf: "center" }}>
@@ -29,14 +30,14 @@ export const Home = () => {
           <HeaderHome>hidden focus</HeaderHome>
           <SubTitle>photography by ray hanson</SubTitle>
         </div>
-        <img src="https://via.placeholder.com/600x400.png/09f/fff" alt="1" />
+        <Link to='/galleries'><img src="https://via.placeholder.com/600x400.png/09f/fff" alt="1" /></Link>
+        
+        
+        
         <Phrase>Each of our lives is a different way of seeing</Phrase>
-        {/* <ul>
-          <NavLink to="/themes">Themes</NavLink>
-          <NavLink to="/destinations">Destinations</NavLink>
-          <NavLink to="/shows">Shows</NavLink>
-        </ul> */}
+      
       </div>
     </>
   );
 };
+export default Home;
