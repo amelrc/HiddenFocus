@@ -1,5 +1,11 @@
 import React from "react";
 
-export const WhatNow = () => {
-  return <div>What Now</div>;
+const WhatNow = () => {
+  return (
+    <div>
+      <h1>What Now Page</h1>
+    </div>
+  );
 };
+
+export default WhatNow;
