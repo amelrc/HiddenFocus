@@ -1,40 +1,46 @@
-export const gallery = {
-  destinations: [
-    {
-      id: 1,
-      name: "canada",
-      show: [
-        {
-          id: 1,
-          image: "",
-          name: "canada 1",
-          hasText: true,
-          title: "this is a title",
-          text: "this is some text",
-        },
-        {
-          id: 2,
-          image: "",
-          name: "canada 2",
-          hasText: true,
-          title: "this is a title",
-          text: "this is some text",
-        },
-      ],
-    },
-    {
-      id: 2,
-      name: "angkor",
-      show: [
-        {
-          id: 1,
-          image: "",
-          name: "angkor 1",
-          hasText: true,
-          title: "this is a title",
-          text: "this is some text",
-        },
-      ],
-    },
-  ],
-};
+export const galleries = [
+	{
+		name: 'Param',
+		belongsTo: 'themes',
+		galleries: [
+			{
+				img: 'img 1 param theme',
+				personal: [{ firstname: 'Param' }, { lastname: 'Harrison' }],
+			},
+			{
+				img: 'img 2 param theme',
+				employer: {
+					name: 'Jobbatical',
+					city: 'Tallinn, Estonia',
+				},
+			},
+		],
+	},
+	{
+		name: 'Miguel',
+		belongsTo: 'destinations',
+		galleries: [
+			{
+				img: 'img 1 miguel destination',
+				content: {
+					firstname: 'Miguel',
+					lastname: 'Medina',
+				},
+			},
+			{
+				img: 'img 2 miguel destination',
+				content: {
+					name: 'Skype',
+					city: 'Arizona, US',
+				},
+			},
+			{
+				name: 'other',
+				content: {
+					country: 'Mexico',
+					age: 30,
+				},
+			},
+		],
+	},
+];
