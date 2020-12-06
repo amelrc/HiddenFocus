@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/amelrc/hidden_focus/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/amelrc/hidden_focus/static/js/main.d8c9dd03.chunk.js",
-    "main.js.map": "/amelrc/hidden_focus/static/js/main.d8c9dd03.chunk.js.map",
-    "runtime-main.js": "/amelrc/hidden_focus/static/js/runtime-main.abe05063.js",
-    "runtime-main.js.map": "/amelrc/hidden_focus/static/js/runtime-main.abe05063.js.map",
-    "static/js/2.6f889d0c.chunk.js": "/amelrc/hidden_focus/static/js/2.6f889d0c.chunk.js",
-    "static/js/2.6f889d0c.chunk.js.map": "/amelrc/hidden_focus/static/js/2.6f889d0c.chunk.js.map",
-    "static/js/3.dab9b4df.chunk.js": "/amelrc/hidden_focus/static/js/3.dab9b4df.chunk.js",
-    "static/js/3.dab9b4df.chunk.js.map": "/amelrc/hidden_focus/static/js/3.dab9b4df.chunk.js.map",
-    "index.html": "/amelrc/hidden_focus/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/amelrc/hidden_focus/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.6f889d0c.chunk.js.LICENSE.txt": "/amelrc/hidden_focus/static/js/2.6f889d0c.chunk.js.LICENSE.txt"
+    "main.css": "/amelrc/HiddenFocus/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/amelrc/HiddenFocus/static/js/main.cb35bd17.chunk.js",
+    "main.js.map": "/amelrc/HiddenFocus/static/js/main.cb35bd17.chunk.js.map",
+    "runtime-main.js": "/amelrc/HiddenFocus/static/js/runtime-main.226868c3.js",
+    "runtime-main.js.map": "/amelrc/HiddenFocus/static/js/runtime-main.226868c3.js.map",
+    "static/js/2.c0c6a1e9.chunk.js": "/amelrc/HiddenFocus/static/js/2.c0c6a1e9.chunk.js",
+    "static/js/2.c0c6a1e9.chunk.js.map": "/amelrc/HiddenFocus/static/js/2.c0c6a1e9.chunk.js.map",
+    "static/js/3.7d39c12c.chunk.js": "/amelrc/HiddenFocus/static/js/3.7d39c12c.chunk.js",
+    "static/js/3.7d39c12c.chunk.js.map": "/amelrc/HiddenFocus/static/js/3.7d39c12c.chunk.js.map",
+    "index.html": "/amelrc/HiddenFocus/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/amelrc/HiddenFocus/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.c0c6a1e9.chunk.js.LICENSE.txt": "/amelrc/HiddenFocus/static/js/2.c0c6a1e9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.abe05063.js",
-    "static/js/2.6f889d0c.chunk.js",
+    "static/js/runtime-main.226868c3.js",
+    "static/js/2.c0c6a1e9.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.d8c9dd03.chunk.js"
+    "static/js/main.cb35bd17.chunk.js"
   ]
 }
