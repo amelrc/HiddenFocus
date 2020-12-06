@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "./components/Home.jsx";
@@ -9,10 +9,9 @@ import Gallery from "./components/Gallery.jsx";
 import Show from "./components/Show.jsx";
 // import Error from "./Error";
 
-console.log("hello");
 const ReactRouterSetup = () => {
   return (
-    <Router>
+    <HashRouter>
       <AnimatePresence exitBeforeEnter>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -24,7 +23,7 @@ const ReactRouterSetup = () => {
           <Route exact path="/gallery/:userName/:tabName" component={Show} />
         </Switch>
       </AnimatePresence>
-    </Router>
+    </HashRouter>
   );
 };
 
