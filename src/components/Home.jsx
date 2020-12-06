@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Menu from "./Menu";
 
 const HeaderHome = styled.h1`
   text-align: left;
-  font: normal normal 100 78px/40px Roxborough CF;
+  // font: normal normal 100 78px/40px Roxborough CF;
   color: #331c65;
   text-transform: capitalize;
 `;
@@ -21,10 +23,27 @@ const Phrase = styled.h3`
   color: #1c161f;
 `;
 
+export const PageTransition = {
+  in: {
+    opacity: 1,
+    // x: 0,
+  },
+  out: {
+    opacity: 0,
+    // x: "-100vh",
+  },
+};
 const Home = () => {
   return (
     <>
-      <div style={{ alignSelf: "center" }}>
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={PageTransition}
+        style={{ alignSelf: "center" }}
+      >
+        <Menu />
         <div>
           <HeaderHome>hidden focus</HeaderHome>
           <SubTitle>photography by ray hanson</SubTitle>
@@ -35,7 +54,7 @@ const Home = () => {
         </Link>
 
         <Phrase>Each of our lives is a different way of seeing</Phrase>
-      </div>
+      </motion.div>
     </>
   );
 };
