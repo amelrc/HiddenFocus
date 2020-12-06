@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/amelrc/HiddenFocus/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/amelrc/HiddenFocus/static/js/main.cb35bd17.chunk.js",
-    "main.js.map": "/amelrc/HiddenFocus/static/js/main.cb35bd17.chunk.js.map",
-    "runtime-main.js": "/amelrc/HiddenFocus/static/js/runtime-main.226868c3.js",
-    "runtime-main.js.map": "/amelrc/HiddenFocus/static/js/runtime-main.226868c3.js.map",
-    "static/js/2.c0c6a1e9.chunk.js": "/amelrc/HiddenFocus/static/js/2.c0c6a1e9.chunk.js",
-    "static/js/2.c0c6a1e9.chunk.js.map": "/amelrc/HiddenFocus/static/js/2.c0c6a1e9.chunk.js.map",
-    "static/js/3.7d39c12c.chunk.js": "/amelrc/HiddenFocus/static/js/3.7d39c12c.chunk.js",
-    "static/js/3.7d39c12c.chunk.js.map": "/amelrc/HiddenFocus/static/js/3.7d39c12c.chunk.js.map",
-    "index.html": "/amelrc/HiddenFocus/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/amelrc/HiddenFocus/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.c0c6a1e9.chunk.js.LICENSE.txt": "/amelrc/HiddenFocus/static/js/2.c0c6a1e9.chunk.js.LICENSE.txt"
+    "main.css": "//HiddenFocus/static/css/main.6dea0f05.chunk.css",
+    "main.js": "//HiddenFocus/static/js/main.d8c9dd03.chunk.js",
+    "main.js.map": "//HiddenFocus/static/js/main.d8c9dd03.chunk.js.map",
+    "runtime-main.js": "//HiddenFocus/static/js/runtime-main.2faa4c39.js",
+    "runtime-main.js.map": "//HiddenFocus/static/js/runtime-main.2faa4c39.js.map",
+    "static/js/2.e0c36d86.chunk.js": "//HiddenFocus/static/js/2.e0c36d86.chunk.js",
+    "static/js/2.e0c36d86.chunk.js.map": "//HiddenFocus/static/js/2.e0c36d86.chunk.js.map",
+    "static/js/3.dab9b4df.chunk.js": "//HiddenFocus/static/js/3.dab9b4df.chunk.js",
+    "static/js/3.dab9b4df.chunk.js.map": "//HiddenFocus/static/js/3.dab9b4df.chunk.js.map",
+    "index.html": "//HiddenFocus/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "//HiddenFocus/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.e0c36d86.chunk.js.LICENSE.txt": "//HiddenFocus/static/js/2.e0c36d86.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.226868c3.js",
-    "static/js/2.c0c6a1e9.chunk.js",
+    "static/js/runtime-main.2faa4c39.js",
+    "static/js/2.e0c36d86.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.cb35bd17.chunk.js"
+    "static/js/main.d8c9dd03.chunk.js"
   ]
 }
