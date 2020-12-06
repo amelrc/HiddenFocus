@@ -2,7 +2,7 @@
   "name": "hidden_focus",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://amelrc.github.io//HiddenFocus",
+  "homepage": "https://amelrc.github.io/HiddenFocus",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
