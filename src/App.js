@@ -9,6 +9,7 @@ import Gallery from "./components/Gallery.jsx";
 import Show from "./components/Show.jsx";
 // import Error from "./Error";
 
+console.log("hello");
 const ReactRouterSetup = () => {
   return (
     <Router>
