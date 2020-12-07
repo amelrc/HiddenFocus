@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import "../App.css";
+
 import Menu from "./Menu";
+import ImgHome from "../images/WEB 0789-1500x1000--517-kb.jpg";
 
 const HeaderHome = styled.h1`
   text-align: left;
@@ -50,7 +53,9 @@ const Home = () => {
         </div>
 
         <Link to="/gallery">
-          <img src="https://via.placeholder.com/600x400.png/09f/fff" alt="1" />
+          <div className="img-hover-zoom">
+            <img style={{ width: "50%" }} src={ImgHome} alt="home" />
+          </div>
         </Link>
 
         <Phrase>Each of our lives is a different way of seeing</Phrase>
