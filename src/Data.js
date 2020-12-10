@@ -1,6 +1,10 @@
+import GImg1 from "./images/WEB-9598-2000x1333--251kb.jpg";
+import GImg2 from "./images/WEB-6417--2000x1333--256kb.jpg";
+
 export const galleries = [
   {
     name: "Param",
+    img: GImg1,
     belongsTo: "themes",
     galleries: [
       {
@@ -18,6 +22,7 @@ export const galleries = [
   },
   {
     name: "Miguel",
+    img: GImg2,
     belongsTo: "destinations",
     galleries: [
       {

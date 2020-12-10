@@ -54,7 +54,7 @@ const Home = () => {
 
         <Link to="/gallery">
           <div className="img-hover-zoom">
-            <img style={{ width: "50%" }} src={ImgHome} alt="home" />
+            <img style={{ width: "100%" }} src={ImgHome} alt="home" />
           </div>
         </Link>
 

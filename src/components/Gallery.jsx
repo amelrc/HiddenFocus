@@ -19,18 +19,43 @@ const Gallery = ({ match }) => {
         variants={PageTransition}
       >
         <h1>Gallery</h1>
-        <ul className="unlist">
+        <ul
+          className="unlist"
+          style={{
+            overflowX: "hidden",
+            overflowY: "auto",
+            height: "100%",
+            width: "80vh",
+            transform: "rotate(-90deg) translateY(-100px)",
+            transformOrigin: "right top",
+          }}
+        >
           {galleries.map((gallery, i) =>
             gallery.belongsTo === userName ? (
-              <li key={i}>
+              <li
+                key={i}
+                style={{
+                  width: 100,
+                  height: 100,
+                  transform: "rotate(90deg)",
+                  transformOrigin: "right top",
+                }}
+              >
                 <Link to={`/gallery/${gallery.belongsTo}/${gallery.name}`}>
                   {gallery.name}
                 </Link>
               </li>
             ) : match.path === "/gallery" ? (
-              <li>
+              <li
+                style={{
+                  width: 100,
+                  height: 100,
+                  transform: "rotate(90deg)",
+                  transformOrigin: "right top",
+                }}
+              >
                 <Link to={`/gallery/${gallery.belongsTo}/${gallery.name}`}>
-                  {gallery.name}
+                  <img style={{ height: "70vh" }} src={gallery.img} alt="" />
                 </Link>
               </li>
             ) : null
