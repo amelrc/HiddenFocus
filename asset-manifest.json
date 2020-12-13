@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/HiddenFocus/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/HiddenFocus/static/js/main.5ef9bc4b.chunk.js",
-    "main.js.map": "/HiddenFocus/static/js/main.5ef9bc4b.chunk.js.map",
-    "runtime-main.js": "/HiddenFocus/static/js/runtime-main.38323b86.js",
-    "runtime-main.js.map": "/HiddenFocus/static/js/runtime-main.38323b86.js.map",
-    "static/js/2.acfc91ed.chunk.js": "/HiddenFocus/static/js/2.acfc91ed.chunk.js",
-    "static/js/2.acfc91ed.chunk.js.map": "/HiddenFocus/static/js/2.acfc91ed.chunk.js.map",
-    "static/js/3.dab9b4df.chunk.js": "/HiddenFocus/static/js/3.dab9b4df.chunk.js",
-    "static/js/3.dab9b4df.chunk.js.map": "/HiddenFocus/static/js/3.dab9b4df.chunk.js.map",
+    "main.css": "/HiddenFocus/static/css/main.2d000b4d.chunk.css",
+    "main.js": "/HiddenFocus/static/js/main.9f27581f.chunk.js",
+    "main.js.map": "/HiddenFocus/static/js/main.9f27581f.chunk.js.map",
+    "runtime-main.js": "/HiddenFocus/static/js/runtime-main.b6858bf8.js",
+    "runtime-main.js.map": "/HiddenFocus/static/js/runtime-main.b6858bf8.js.map",
+    "static/js/2.3c555980.chunk.js": "/HiddenFocus/static/js/2.3c555980.chunk.js",
+    "static/js/2.3c555980.chunk.js.map": "/HiddenFocus/static/js/2.3c555980.chunk.js.map",
+    "static/js/3.3789a346.chunk.js": "/HiddenFocus/static/js/3.3789a346.chunk.js",
+    "static/js/3.3789a346.chunk.js.map": "/HiddenFocus/static/js/3.3789a346.chunk.js.map",
     "index.html": "/HiddenFocus/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/HiddenFocus/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.acfc91ed.chunk.js.LICENSE.txt": "/HiddenFocus/static/js/2.acfc91ed.chunk.js.LICENSE.txt"
+    "static/css/main.2d000b4d.chunk.css.map": "/HiddenFocus/static/css/main.2d000b4d.chunk.css.map",
+    "static/js/2.3c555980.chunk.js.LICENSE.txt": "/HiddenFocus/static/js/2.3c555980.chunk.js.LICENSE.txt",
+    "static/media/IMG_1384 Final Metallic Glossy.c5ab12a3.jpg": "/HiddenFocus/static/media/IMG_1384 Final Metallic Glossy.c5ab12a3.jpg",
+    "static/media/Logo_Official.da71a373.svg": "/HiddenFocus/static/media/Logo_Official.da71a373.svg",
+    "static/media/WEB 0789-1500x1000--517-kb.af290c3a.jpg": "/HiddenFocus/static/media/WEB 0789-1500x1000--517-kb.af290c3a.jpg",
+    "static/media/WEB-6417--2000x1333--256kb.f14c9269.jpg": "/HiddenFocus/static/media/WEB-6417--2000x1333--256kb.f14c9269.jpg",
+    "static/media/WEB-9598-2000x1333--251kb.bfb3afd1.jpg": "/HiddenFocus/static/media/WEB-9598-2000x1333--251kb.bfb3afd1.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.38323b86.js",
-    "static/js/2.acfc91ed.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.5ef9bc4b.chunk.js"
+    "static/js/runtime-main.b6858bf8.js",
+    "static/js/2.3c555980.chunk.js",
+    "static/css/main.2d000b4d.chunk.css",
+    "static/js/main.9f27581f.chunk.js"
   ]
 }
