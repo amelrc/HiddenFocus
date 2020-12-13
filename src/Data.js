@@ -48,4 +48,32 @@ export const galleries = [
       },
     ],
   },
+  {
+    name: "Miguel",
+    img: GImg2,
+    belongsTo: "shows",
+    galleries: [
+      {
+        img: "img 1 miguel destination",
+        content: {
+          firstname: "Miguel",
+          lastname: "Medina",
+        },
+      },
+      {
+        img: "img 2 miguel destination",
+        content: {
+          name: "Skype",
+          city: "Arizona, US",
+        },
+      },
+      {
+        name: "other",
+        content: {
+          country: "Mexico",
+          age: 30,
+        },
+      },
+    ],
+  },
 ];

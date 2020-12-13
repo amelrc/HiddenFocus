@@ -8,7 +8,6 @@ const Gallery = ({ match }) => {
   const {
     params: { userName },
   } = match;
-  console.log(match);
 
   return (
     <>
@@ -19,41 +18,16 @@ const Gallery = ({ match }) => {
         variants={PageTransition}
       >
         <h1>Gallery</h1>
-        <ul
-          className="unlist"
-          style={{
-            overflowX: "hidden",
-            overflowY: "auto",
-            height: "100%",
-            width: "80vh",
-            transform: "rotate(-90deg) translateY(-100px)",
-            transformOrigin: "right top",
-          }}
-        >
+        <ul className="unlist">
           {galleries.map((gallery, i) =>
             gallery.belongsTo === userName ? (
-              <li
-                key={i}
-                style={{
-                  width: 100,
-                  height: 100,
-                  transform: "rotate(90deg)",
-                  transformOrigin: "right top",
-                }}
-              >
+              <li key={i}>
                 <Link to={`/gallery/${gallery.belongsTo}/${gallery.name}`}>
                   {gallery.name}
                 </Link>
               </li>
             ) : match.path === "/gallery" ? (
-              <li
-                style={{
-                  width: 100,
-                  height: 100,
-                  transform: "rotate(90deg)",
-                  transformOrigin: "right top",
-                }}
-              >
+              <li>
                 <Link to={`/gallery/${gallery.belongsTo}/${gallery.name}`}>
                   <img style={{ height: "70vh" }} src={gallery.img} alt="" />
                 </Link>
