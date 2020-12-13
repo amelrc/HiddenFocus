@@ -43,18 +43,26 @@ const Home = () => {
         animate="in"
         exit="out"
         variants={PageTransition}
-        style={{ alignSelf: "center" }}
+        style={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
       >
         <div>
           <HeaderHome>hidden focus</HeaderHome>
           <SubTitle>photography by ray hanson</SubTitle>
         </div>
 
-        <Link to="/gallery">
-          <div className="img-hover-zoom">
-            <motion.img style={{ width: "100%" }} src={ImgHome} alt="home" />
-          </div>
-        </Link>
+        <div
+          className="img-hover-zoom"
+          style={{ width: "40%", margin: "0 auto" }}
+        >
+          <Link to="/gallery">
+            <motion.img style={{ width: "100%" }} src={ImgHome} alt="home" />{" "}
+          </Link>
+        </div>
 
         <Phrase>Each of our lives is a different way of seeing</Phrase>
       </motion.div>

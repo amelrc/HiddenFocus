@@ -14,7 +14,8 @@ const HeaderWrapper = styled.div`
   align-items: center;
   padding: 10px 64px;
   position: absolute;
-  width: 90vw;
+  width: 90%;
+  z-index: 100;
 `;
 const Header = () => {
   //   const { open, setOpen } = props;

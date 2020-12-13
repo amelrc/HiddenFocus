@@ -10,6 +10,7 @@ const MenuWrapper = styled.div`
   background-color: #1c161f;
   font-family: Roxborough CF;
   align-items: center;
+  width: 100%;
 `;
 
 const LeftMenu = styled.div`
