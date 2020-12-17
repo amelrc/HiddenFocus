@@ -33,11 +33,11 @@ const WhatNow = () => {
       <div style={{ backgroundColor: "aqua", height: "100vh", width: "100%" }}>
         <HorizontalScroll>
           <div style={child}>
-            <div>
+            {/* <div>
               <img style={{ height: "90%" }} src={img1} alt="" />
               <p>hello ser how are you</p>
               <img style={{ height: "70%" }} src={img1} alt="" />
-            </div>
+            </div> */}
           </div>
           <div style={child}>
             <img style={{ height: "90%" }} src={img1} alt="" />

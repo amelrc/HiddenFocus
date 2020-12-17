@@ -1,22 +1,20 @@
-import React from 'react';
-import { galleries } from '../Data';
+import React from "react";
+import LATF1 from "../images/LATF/WEB 2348-260kb.jpg";
 
 const Show = ({ match }) => {
-	const {
-		params: { tabName },
-	} = match;
+  const {
+    params: { tabName },
+  } = match;
 
-	const show = galleries.find(({ name }) => name === tabName);
+  //   const show = galleries.find(({ name }) => name === tabName);
 
-	return (
-		<div style={{ backgroundColor: 'lightgreen' }}>
-			<ul className='unlist'>
-				{show.galleries.map((gallery, i) => {
-					return <div key={i}>{gallery.img}</div>;
-				})}
-			</ul>
-		</div>
-	);
+  console.log(match, tabName);
+
+  return (
+    <>
+      <img style={{ height: "90%" }} src={LATF1} alt="" />
+    </>
+  );
 };
 
 export default Show;

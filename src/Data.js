@@ -3,8 +3,26 @@ import GImg2 from "./images/WEB-6417--2000x1333--256kb.jpg";
 
 export const galleries = [
   {
-    name: "Param",
+    name: "Look-at-the-Flowers",
     img: GImg1,
+    belongsTo: "themes",
+    galleries: [
+      {
+        img: GImg1,
+        personal: [{ firstname: "Param" }, { lastname: "Harrison" }],
+      },
+      {
+        img: GImg2,
+        employer: {
+          name: "Jobbatical",
+          city: "Tallinn, Estonia",
+        },
+      },
+    ],
+  },
+  {
+    name: "Lightscapes",
+    img: GImg2,
     belongsTo: "themes",
     galleries: [
       {
@@ -21,8 +39,8 @@ export const galleries = [
     ],
   },
   {
-    name: "Miguel",
-    img: GImg2,
+    name: "Canada",
+    img: GImg1,
     belongsTo: "destinations",
     galleries: [
       {
@@ -49,7 +67,7 @@ export const galleries = [
     ],
   },
   {
-    name: "Miguel",
+    name: "4 amigos",
     img: GImg2,
     belongsTo: "shows",
     galleries: [

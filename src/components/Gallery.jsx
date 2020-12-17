@@ -27,7 +27,7 @@ const Gallery = ({ match }) => {
                 </Link>
               </li>
             ) : match.path === "/gallery" ? (
-              <li>
+              <li key={i}>
                 <Link to={`/gallery/${gallery.belongsTo}/${gallery.name}`}>
                   <img style={{ height: "70vh" }} src={gallery.img} alt="" />
                 </Link>
