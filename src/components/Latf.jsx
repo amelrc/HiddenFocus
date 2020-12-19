@@ -1,8 +1,6 @@
 import React from "react";
 // import { PageTransition } from 'reac';
 import W2555 from "../images/LATF/WEB-2555-263kb.jpg";
-import HorizontalScroll from "react-scroll-horizontal";
-import { Frame, Scroll } from "framer";
 
 const Latf = () => {
   const [posX, setposX] = React.useState(0);
