@@ -5,7 +5,7 @@ import Logo from "../images/SVG/Logo_Official.svg";
 import { Burger } from "./Burger";
 
 const HFlogo = styled.img`
-  width: 16px;
+  width: 14px;
   cursor: pointer;
 `;
 const HeaderWrapper = styled.div`

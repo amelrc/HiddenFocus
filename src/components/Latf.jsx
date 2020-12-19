@@ -1,22 +1,32 @@
-import React from 'react';
-import { PageTransition } from './Home';
-import W2555 from '../images/LATF/WEB-2555-263kb.jpg';
+import React from "react";
+// import { PageTransition } from 'reac';
+import W2555 from "../images/LATF/WEB-2555-263kb.jpg";
+import HorizontalScroll from "react-scroll-horizontal";
+import { Frame, Scroll } from "framer";
 
 const Latf = () => {
-	const child = {
-		width: `100%`,
-		height: `auto`,
-		backgroundColor: 'red',
+  const [posX, setposX] = React.useState(0);
 
-		margin: 40,
-	};
-	return (
-		<PageTransition>
-			<div style={child}>
-				<img style={{ height: '90%' }} src={W2555} alt='' />
-			</div>
-		</PageTransition>
-	);
+  React.useEffect(() => {
+    function handleScroll() {
+      const Xpos = window.scrollY;
+
+      console.log(Xpos);
+
+      setposX(Xpos);
+    }
+    window.addEventListener("scroll", handleScroll, false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll, false);
+    };
+  }, [posX]);
+  return (
+    <div style={{ transfrom: `translateX(${posX})` }}>
+      <img src={W2555} alt="" />
+      <img src={W2555} alt="" />
+      <img src={W2555} alt="" />
+    </div>
+  );
 };
 
 export default Latf;
