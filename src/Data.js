@@ -1,32 +1,32 @@
 export const museum = [
-  {
-    floors: "themes",
-    rooms: [
-      {
-        name: "look at the flowers",
-        img: ["intro latf image", "latf 1", "latf 2"],
-      },
-      {
-        name: "lightscapes",
-        img: ["intro light image", "scapes 1", "scapes 2"],
-      },
-    ],
-  },
-  {
-    floors: "destinations",
-    rooms: [
-      { name: "angkor wat", img: ["intro Angkor Wat image"] },
-      { name: "canada", img: ["intro canada image"] },
-      { name: "cuba", img: ["cuba intro image"] },
-    ],
-  },
-  {
-    floors: "shows",
-    rooms: [
-      { name: "4 amigos", img: ["img amigos intro"] },
-      { name: "mexico", img: ["img mexigo intro"] },
-    ],
-  },
+	{
+		floors: 'themes',
+		rooms: [
+			{
+				name: 'look at the flowers',
+				img: [['intro latf image', 'latf 1'], ['latf 2']],
+			},
+			{
+				name: 'lightscapes',
+				img: ['intro light image', 'scapes 1', 'scapes 2'],
+			},
+		],
+	},
+	{
+		floors: 'destinations',
+		rooms: [
+			{ name: 'angkor wat', img: ['intro Angkor Wat image'] },
+			{ name: 'canada', img: ['intro canada image'] },
+			{ name: 'cuba', img: ['cuba intro image'] },
+		],
+	},
+	{
+		floors: 'shows',
+		rooms: [
+			{ name: '4 amigos', img: ['img amigos intro'] },
+			{ name: 'mexico', img: ['img mexigo intro'] },
+		],
+	},
 ];
 
 // export const galleries = [
