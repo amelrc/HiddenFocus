@@ -1,14 +1,32 @@
+import W0241 from "./images/LATF/WEB-0241-281kb.jpg";
+import W0291 from "./images/LATF/WEB-0291-251kb.jpg";
+import W0563 from "./images/LATF/WEB-0563-247kb.jpg";
+import W0900 from "./images/LATF/WEB-0900-247kb.jpg";
+import W2499 from "./images/LATF/WEB-2499-249kb.jpg";
+
+export const latf = [
+  {
+    id: 1,
+    name: "Tulips...2019",
+    img: [W0241],
+  },
+  {
+    id: 1,
+    name: "Tulips...2020",
+    img: [W0241, W0291, W0563, W0900, W2499],
+  },
+];
+
 export const museum = [
   {
     floors: "themes",
     rooms: [
       {
         name: "look at the flowers",
-        img: [["intro latf image", "latf 1"], ["latf 2"]],
       },
+
       {
         name: "lightscapes",
-        img: ["intro light image", "scapes 1", "scapes 2"],
       },
     ],
   },

@@ -81,6 +81,10 @@ import W1111 from "../images/LATF/WEB-1111-251kb.jpg";
 //
 import W0831 from "../images/LATF/WEB-0831-252kb.jpg";
 
+///////////////////
+import One from "./One";
+import { latf } from "../Data";
+
 // const Image = styled.div`
 //   width: ${(props) => props.width};
 //   background-image: url(${(props) => props.backgroundImage});
@@ -89,6 +93,7 @@ import W0831 from "../images/LATF/WEB-0831-252kb.jpg";
 const Latf = () => {
   const ref = React.useRef();
   //   const height = ref.current.clientHeight;
+  const name = latf.map((l) => l.name);
 
   return (
     <>
@@ -133,6 +138,8 @@ const Latf = () => {
           </div>
         </div>
         {/* ///////////////////////////////// */}
+        <One name={name} />
+        {/* //////////EXPERIMENT///////////// */}
         <div className="child">
           <h2>Tulips...2019</h2>
           <div
