@@ -56,3 +56,30 @@
 .img-hover-zoom:hover img {
   transform: scale(1.1);
 }
+
+/* //////////////////// */
+/* SCROLL CLASSES */
+
+.child {
+  width: 100vw;
+  height: auto;
+  background-color: red;
+}
+.bgImg {
+  background-size: cover;
+  background-position: center;
+}
+
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+
+.centerH {
+  justify-content: center;
+}
+.centerV {
+  align-items: center;
+}
