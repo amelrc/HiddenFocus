@@ -83,3 +83,9 @@
 .centerV {
   align-items: center;
 }
+.flexWrap {
+  flex-wrap: wrap;
+}
+.flexEnd {
+  justify-content: flex-end;
+}

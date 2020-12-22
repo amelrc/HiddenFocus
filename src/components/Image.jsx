@@ -9,14 +9,14 @@ const Image = (props) => {
   const { image, width, id } = props;
   return (
     <>
-      <div
+      {/* <div
         style={{
           flexWrap: "wrap",
           height: "100%",
         }}
-      >
-        <Img src={image} width={width} alt={id} />
-      </div>
+      > */}
+      <Img src={image} width={width} alt={id} />
+      {/* </div> */}
     </>
   );
 };
