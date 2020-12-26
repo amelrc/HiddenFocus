@@ -1,13 +1,23 @@
-import React from "react";
-import styled from "styled-components";
+import { useState, useEffect } from "react";
 
-const Image = styled.img`
-  width: ${(props) => props.width};
-`;
+export default function useWindowSize() {
+  function getSize() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
 
-const useImg = (props) => {
-  const { width } = props;
-  return <Image width={width} />;
-};
+  const [windowSize, setWindowSize] = useState(getSize);
 
-export default useImg;
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize(getSize());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowSize;
+}

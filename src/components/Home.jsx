@@ -60,7 +60,7 @@ const Home = () => {
           style={{ width: "40%", margin: "0 auto" }}
         >
           <Link to="/gallery">
-            <motion.img style={{ width: "100%" }} src={ImgHome} alt="home" />{" "}
+            <img style={{ width: "100%" }} src={ImgHome} alt="home" />
           </Link>
         </div>
 

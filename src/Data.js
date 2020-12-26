@@ -1,3 +1,5 @@
+////////// LATF //////////
+import W2555 from "./images/LATF/WEB-2555-263kb.jpg";
 import W0241 from "./images/LATF/WEB-0241-281kb.jpg";
 import W0291 from "./images/LATF/WEB-0291-251kb.jpg";
 import W0563 from "./images/LATF/WEB-0563-247kb.jpg";
@@ -9,15 +11,28 @@ import W4243 from "./images/LATF/WEB-4243-243kb.jpg";
 import W3887 from "./images/LATF/WEB-3887-288kb.jpg";
 import W6417 from "./images/LATF/WEB-6417-256kb.jpg";
 import W2348 from "./images/LATF/WEB 2348-260kb.jpg";
-
 import W2613 from "./images/LATF/WEB-2613-257kb.jpg";
-//
 import W8135 from "./images/LATF/WEB-8135-249kb.jpg";
-//
 import W7020 from "./images/LATF/WEB-7020-254kb.jpg";
-//
 import W3589 from "./images/LATF/WEB-3589-249kb.jpg";
-//
+
+///////// LIGHTSPCAPES //////////
+
+import LS1 from "./images/LS/WEB-LS1-3838-249kb.jpg";
+import LS2 from "./images/LS/WEB-LS-7742-259kb.jpg";
+import LS3 from "./images/LS/WEB-LS3-RAY-6862-253kb.jpg";
+import LS4 from "./images/LS/WEB-LS4-RAY-4194-251kb.jpg";
+import LS5 from "./images/LS/WEB-LS5-RAY-7766-263kb.jpg";
+import LS6 from "./images/LS/WEB-LS6-RAY-6989-261kb.jpg";
+import LS7 from "./images/LS/WEB-LS7-RAY-7013-265kb.jpg";
+import LS8 from "./images/LS/WEB-LS8-RAY-6931-422kb.JPG";
+import LS9 from "./images/LS/WEB-LS9-RAY-6781-256kb.jpg";
+import LS10 from "./images/LS/WEB-LS10-RAY-7776-257kb.jpg";
+import LS11 from "./images/LS/WEB-LS11-2N7A8243-249kb.jpg";
+import LS12 from "./images/LS/WEB-LS12-RAY-4937-257kb.jpg";
+import LS13 from "./images/LS/WEB-LS13-RAY-3652-246kb.jpg";
+import LS14 from "./images/LS/WEB-LS14-RAY-3832-261kb.jpg";
+import LS15 from "./images/LS/WEB-LS-7742-259kb.jpg";
 
 export const p1 = {
   id: 1,
@@ -68,19 +83,69 @@ export const p8 = {
   img: [W3589],
   text: "",
 };
+//////////////////////////////
+
+export const LS = {
+  img: [
+    // LS1,
+    LS2,
+    LS3,
+    LS4,
+    LS5,
+    LS6,
+    LS7,
+    LS8,
+    LS9,
+    LS10,
+    LS11,
+    LS12,
+    LS13,
+    LS14,
+    LS15,
+  ],
+  text: [
+    "Homage to Monet",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Unstill Life",
+    "",
+    "",
+    "",
+    "Elysium",
+  ],
+};
 
 //////////////////////////////
 export const museum = [
   {
     floors: "themes",
-    rooms: [{ name: "look at the flowers" }, { name: "lightscapes" }],
+    rooms: [
+      { name: "look at the flowers", introImg: W2555 },
+      { name: "lightscapes", introImg: LS1 },
+      { name: "explorations", introImg: "" },
+      { name: "protraits", introImg: "" },
+    ],
   },
   {
     floors: "destinations",
-    rooms: [{ name: "angkor wat" }, { name: "canada" }, { name: "cuba" }],
+    rooms: [
+      { name: "angkor wat", introImg: "" },
+      { name: "cuba", introImg: "" },
+      { name: "new york", introImg: "" },
+    ],
   },
   {
     floors: "shows",
-    rooms: [{ name: "4 amigos" }, { name: "mexico" }],
+    rooms: [
+      { name: "4 amigos", introImg: "" },
+      { name: "mexico", introImg: "" },
+    ],
   },
 ];

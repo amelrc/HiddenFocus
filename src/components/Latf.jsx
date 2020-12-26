@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Image from "./Image";
 import { p1, p2, p3, p4, p5, p6, p7, p8 } from "../Data";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 import W2555 from "../images/LATF/WEB-2555-263kb.jpg";
 
 import W9486 from "../images/LATF/WEB-9486-313kb.jpg";
@@ -60,7 +62,7 @@ import W1111 from "../images/LATF/WEB-1111-251kb.jpg";
 //
 import W0831 from "../images/LATF/WEB-0831-252kb.jpg";
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100vw;
   height: auto;
   background-color: red;
@@ -68,7 +70,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 `;
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,6 +89,9 @@ const SubHeader = styled.h2`
 // `;
 
 const Latf = () => {
+  const ref = React.useRef();
+
+  //   ref.current.style.margin = 100;
   return (
     <>
       <h1
@@ -132,7 +137,7 @@ const Latf = () => {
         </div>
         {/* ///////////////////////////////// */}
         <Container>
-          <SubHeader>{p1.name}</SubHeader>
+          <SubHeader data-aos="fade-up">{p1.name}</SubHeader>
           <Wrapper>
             {p1.img.map((i) => (
               <Image image={i} width={"30%"} alt={i} />
@@ -140,7 +145,7 @@ const Latf = () => {
           </Wrapper>
         </Container>
         {/* ///////////////////////////////// */}
-        <Container>
+        <Container ref={ref}>
           <SubHeader>{p2.name}</SubHeader>
           <Wrapper>
             {p2.img.map((i) => (
@@ -205,6 +210,7 @@ const Latf = () => {
           </Wrapper>
         </Container>
         {/* ///////////////////////////////// */}
+
         <div className="child">
           <SubHeader>When Orchids Fly</SubHeader>
           <div
@@ -214,11 +220,13 @@ const Latf = () => {
               height: "90%",
             }}
           >
-            <img src={W9598} width={"30%"} alt={W9598} />
+            <img data-aos="fade-left" src={W9598} width={"30%"} alt={W9598} />
+
             <img src={W9486} width={"30%"} alt={W9486} />
             <img src={W9590} width={"30%"} alt={W9590} />
           </div>
         </div>
+
         {/* ///////////////////////////////// */}
         <div className="child">
           <SubHeader>Annunciation</SubHeader>

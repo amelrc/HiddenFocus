@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Img = styled.img`
   width: ${(props) => props.width};
@@ -7,6 +9,11 @@ const Img = styled.img`
 
 const Image = (props) => {
   const { image, width, id } = props;
+  React.useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <>
       {/* <div
@@ -15,7 +22,14 @@ const Image = (props) => {
           height: "100%",
         }}
       > */}
-      <Img src={image} width={width} alt={id} />
+      <Img
+        data-aos-mirror="true"
+        data-aos-delay="500"
+        data-aos="flip-left"
+        src={image}
+        width={width}
+        alt={id}
+      />
       {/* </div> */}
     </>
   );

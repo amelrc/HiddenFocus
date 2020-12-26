@@ -25,9 +25,7 @@ const Header = () => {
         <Link to="/">
           <HFlogo src={Logo} alt="logo" />
         </Link>
-        <Link to="/menu">
-          <Burger />
-        </Link>
+        <Link to="/menu">menu</Link>
       </HeaderWrapper>
     </>
   );
