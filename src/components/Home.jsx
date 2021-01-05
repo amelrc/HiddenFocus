@@ -4,25 +4,37 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-import ImgHome from "../images/WEB 0789-1500x1000--517-kb.jpg";
+import ImgHome from "../images/WEB-0789-1500x1000--517-kb.jpg";
+import Header from "./Header";
+
+const HeaderWrapper = styled.div`
+  width: 68.3%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  z-index: 1;
+`;
 
 const HeaderHome = styled.h1`
   text-align: left;
-  // font: normal normal 100 78px/40px Roxborough CF;
+  font: normal normal 100 78px/40px Roxborough CF Thin;
   color: #331c65;
   text-transform: capitalize;
+  margin: 0;
 `;
 const SubTitle = styled.h4`
-  text-align: left;
   font: normal normal normal 22px/27px Lato;
   color: #331c65;
-  text-transform: capitalize;
+  margin: 40px auto -40px 0;
 `;
 const Phrase = styled.h3`
-  text-align: left;
   font: normal normal normal 46px/56px Mrs Saint Delafield;
   letter-spacing: 0px;
   color: #1c161f;
+  margin: -70px 0 0 0;
+  width: 47.7%;
+  align-self: flex-end;
+  z-index: 1;
 `;
 
 export const PageTransition = {
@@ -50,11 +62,10 @@ const Home = () => {
           justifyContent: "center",
         }}
       >
-        <div>
+        <HeaderWrapper>
           <HeaderHome>hidden focus</HeaderHome>
-          <SubTitle>photography by ray hanson</SubTitle>
-        </div>
-
+          <SubTitle>Photography by Ray Hanson</SubTitle>
+        </HeaderWrapper>
         <div
           className="img-hover-zoom"
           style={{ width: "40%", margin: "0 auto" }}

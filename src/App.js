@@ -13,6 +13,7 @@ import Influences from "./components/Influences";
 import Header from "./components/Header.jsx";
 import Latf from "./components/Latf.jsx";
 import Lightscapes from "./components/Lightscapes.jsx";
+import Contest from "./pages/Contest.jsx";
 
 // import Error from "./Error";
 
@@ -39,6 +40,7 @@ const ReactRouterSetup = () => {
             <Route exact path="/look at the flowers" component={Latf} />
             <Route exact path="/lightscapes" component={Lightscapes} />
             <Route exact path="/influences" component={Influences} />
+            <Route exact path="/contest" component={Contest} />
             <Route exact path="/menu/:userName" component={Gallery} />
             <Route exact path="/gallery/:userName" component={Show} />
             <Route exact path="/gallery/:userName/:tabName" component={Show} />

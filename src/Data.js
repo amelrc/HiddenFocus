@@ -129,23 +129,23 @@ export const museum = [
     rooms: [
       { name: "look at the flowers", introImg: W2555 },
       { name: "lightscapes", introImg: LS1 },
-      { name: "explorations", introImg: "" },
-      { name: "protraits", introImg: "" },
+      { name: "explorations", introImg: W2555 },
+      { name: "protraits", introImg: LS1 },
     ],
   },
   {
     floors: "destinations",
     rooms: [
-      { name: "angkor wat", introImg: "" },
-      { name: "cuba", introImg: "" },
-      { name: "new york", introImg: "" },
+      { name: "angkor wat", introImg: W2555 },
+      { name: "cuba", introImg: LS1 },
+      { name: "new york", introImg: W2555 },
     ],
   },
-  {
-    floors: "shows",
-    rooms: [
-      { name: "4 amigos", introImg: "" },
-      { name: "mexico", introImg: "" },
-    ],
-  },
+  // {
+  //   floors: "shows",
+  //   rooms: [
+  //     { name: "4 amigos", introImg: "" },
+  //     { name: "mexico", introImg: "" },
+  //   ],
+  // },
 ];

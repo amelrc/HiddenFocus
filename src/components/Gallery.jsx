@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { museum } from "../Data";
 import { PageTransition } from "./Home";
 import HorizontalScroll from "react-scroll-horizontal";
+import { Container, Wrapper } from "./Latf";
+import styled from "styled-components";
 
 const Gallery = ({ match }) => {
   const {
@@ -17,10 +19,24 @@ const Gallery = ({ match }) => {
         animate="in"
         exit="out"
         variants={PageTransition}
+        style={{
+          width: "100%",
+          backgroundColor: "antiquewhite",
+        }}
       >
-        <h1>Gallery</h1>
+        <h1
+          style={{
+            position: "absolute",
+            zIndex: 1,
+            height: "10%",
+            margin: "auto",
+            alignItems: "flex-end",
+          }}
+        >
+          Gallery
+        </h1>
 
-        <ul>
+        <ul className="unlist column">
           {museum.map((room) =>
             room.floors === userName
               ? room.rooms.map((r, i) => (

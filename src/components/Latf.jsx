@@ -2,6 +2,7 @@ import React from "react";
 import HorizontalScroll from "react-scroll-horizontal";
 import styled from "styled-components";
 import Image from "./Image";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { p1, p2, p3, p4, p5, p6, p7, p8 } from "../Data";
 
 import AOS from "aos";
@@ -89,12 +90,9 @@ const SubHeader = styled.h2`
 // `;
 
 const Latf = () => {
-  const ref = React.useRef();
-
-  //   ref.current.style.margin = 100;
   return (
     <>
-      <h1
+      <motion.h1
         className="flex"
         style={{
           position: "absolute",
@@ -103,9 +101,10 @@ const Latf = () => {
           margin: "auto",
           alignItems: "flex-end",
         }}
+        initial={{ scale: 1 }}
       >
         Look at the Flowers
-      </h1>
+      </motion.h1>
 
       <HorizontalScroll>
         <div className="child flex centerH centerV bgImg">
@@ -118,7 +117,7 @@ const Latf = () => {
               backgroundSize: "cover",
             }}
           >
-            <p>
+            <p style={{ width: "50%", backgroundColor: "aqua", padding: 40 }}>
               Focus. When we look at something, really look, what captures our
               attention stands out in sharp relief. Everything else blurs away.
               These flower “portraits” are taken with a 100mm Macro lens, and
@@ -136,43 +135,43 @@ const Latf = () => {
           </div>
         </div>
         {/* ///////////////////////////////// */}
-        <Container>
+        {/* <Container>
           <SubHeader data-aos="fade-up">{p1.name}</SubHeader>
           <Wrapper>
             {p1.img.map((i) => (
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
-        <Container ref={ref}>
+        {/* <Container ref={ref}>
           <SubHeader>{p2.name}</SubHeader>
           <Wrapper>
             {p2.img.map((i) => (
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
-        <Container>
+        {/* <Container>
           <SubHeader>{p3.name}</SubHeader>
           <Wrapper>
             {p3.img.map((i) => (
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
-        <Container>
+        {/* <Container>
           <SubHeader>{p4.name}</SubHeader>
           <Wrapper>
             {p4.img.map((i) => (
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
-        <Container>
+        {/* <Container>
           <SubHeader>{p5.name}</SubHeader>
 
           <Wrapper>
@@ -180,9 +179,9 @@ const Latf = () => {
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
-        <Container>
+        {/* <Container>
           <SubHeader>{p6.name}</SubHeader>
           <p>{p6.text}</p>
           <Wrapper>
@@ -190,25 +189,25 @@ const Latf = () => {
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
-        <Container>
+        {/* <Container>
           <SubHeader>{p7.name}</SubHeader>
           <Wrapper>
             {p7.img.map((i) => (
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
-        <Container>
+        {/* <Container>
           <SubHeader>{p8.name}</SubHeader>
           <Wrapper>
             {p8.img.map((i) => (
               <Image image={i} width={"30%"} alt={i} />
             ))}
           </Wrapper>
-        </Container>
+        </Container> */}
         {/* ///////////////////////////////// */}
 
         <div className="child">
@@ -220,8 +219,7 @@ const Latf = () => {
               height: "90%",
             }}
           >
-            <img data-aos="fade-left" src={W9598} width={"30%"} alt={W9598} />
-
+            <img src={W9598} width={"30%"} alt={W9598} />
             <img src={W9486} width={"30%"} alt={W9486} />
             <img src={W9590} width={"30%"} alt={W9590} />
           </div>
