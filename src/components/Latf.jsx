@@ -1,14 +1,31 @@
-import React from "react";
-import HorizontalScroll from "react-scroll-horizontal";
+import React, { useRef, useState, useLayoutEffect, useCallback } from "react";
+import ResizeObserver from "resize-observer-polyfill";
 import styled from "styled-components";
 import Image from "./Image";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import {
+  motion,
+  useTransform,
+  useViewportScroll,
+  useSpring,
+} from "framer-motion";
+import PageTransition from "../components/Home";
 import { p1, p2, p3, p4, p5, p6, p7, p8 } from "../Data";
-
-import AOS from "aos";
-import "aos/dist/aos.css";
 import W2555 from "../images/LATF/WEB-2555-263kb.jpg";
-
+import W0241 from "../images/LATF/WEB-0241-281kb.jpg";
+import W0291 from "../images/LATF/WEB-0291-251kb.jpg";
+import W0563 from "../images/LATF/WEB-0563-247kb.jpg";
+import W0900 from "../images/LATF/WEB-0900-247kb.jpg";
+import W2499 from "../images/LATF/WEB-2499-249kb.jpg";
+import W3881 from "../images/LATF/WEB-3881-251kb.jpg";
+import W4223 from "../images/LATF/WEB-4223-249kb.jpg";
+import W4243 from "../images/LATF/WEB-4243-243kb.jpg";
+// import W3887 from "../images/LATF/WEB-3887-288kb.jpg";
+import W6417 from "../images/LATF/WEB-6417-256kb.jpg";
+import W2348 from "../images/LATF/WEB 2348-260kb.jpg";
+// import W2613 from "../images/LATF/WEB-2613-257kb.jpg";
+// import W8135 from "../images/LATF/WEB-8135-249kb.jpg";
+// import W7020 from "../images/LATF/WEB-7020-254kb.jpg";
+// import W3589 from "../images/LATF/WEB-3589-249kb.jpg";
 import W9486 from "../images/LATF/WEB-9486-313kb.jpg";
 import W9590 from "../images/LATF/WEB-9590-250kb.jpg";
 import W9598 from "../images/LATF/WEB-9598-250kb.jpg";
@@ -65,15 +82,16 @@ import W0831 from "../images/LATF/WEB-0831-252kb.jpg";
 
 export const Container = styled.div`
   width: 100vw;
-  height: auto;
-  background-color: red;
+  height: 100%;
+  // background-color: red;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 `;
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -82,6 +100,8 @@ export const Wrapper = styled.div`
 
 const SubHeader = styled.h2`
   margin: 0;
+  font: 300 26px / 30px Lato;
+  color: #331c65;
 `;
 
 // const Image = styled.div`
@@ -90,408 +110,402 @@ const SubHeader = styled.h2`
 // `;
 
 const Latf = () => {
+  const scrollRef = useRef(null);
+  const ghostRef = useRef(null);
+  const [scrollRange, setScrollRange] = useState(0);
+  const [viewportW, setViewportW] = useState(0);
+
+  useLayoutEffect(() => {
+    scrollRef && setScrollRange(scrollRef.current.scrollWidth);
+  }, [scrollRef]);
+
+  const onResize = useCallback((entries) => {
+    for (let entry of entries) {
+      setViewportW(entry.contentRect.width);
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    const resizeObserver = new ResizeObserver((entries) => onResize(entries));
+    resizeObserver.observe(ghostRef.current);
+    return () => resizeObserver.disconnect();
+  }, [onResize]);
+
+  const { scrollYProgress } = useViewportScroll();
+  const transform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, -scrollRange + viewportW]
+  );
+  const physics = { damping: 15, mass: 0.27, stiffness: 55 };
+  const spring = useSpring(transform, physics);
+
   return (
-    <>
-      <motion.h1
-        className="flex"
-        style={{
-          position: "absolute",
-          zIndex: 1,
-          height: "10%",
-          margin: "auto",
-          alignItems: "flex-end",
-        }}
-        initial={{ scale: 1 }}
-      >
-        Look at the Flowers
-      </motion.h1>
-
-      <HorizontalScroll>
-        <div className="child flex centerH centerV bgImg">
+    <motion.div initial="out" animate="in" exit="out" variants={PageTransition}>
+      <div className="scroll-container flex column">
+        <motion.h1
+          className="flex"
+          style={{
+            position: "absolute",
+            zIndex: 1,
+            height: "10%",
+            margin: "auto",
+            alignItems: "flex-end",
+            width: "100%",
+            justifyContent: "center",
+            font: "normal normal 100 64px/40px Roxborough CF Thin",
+            color: "#331c65",
+          }}
+          initial={{ scale: 1 }}
+        >
+          Look at the Flowers
+        </motion.h1>
+        <motion.div
+          className="thumbnails-container"
+          ref={scrollRef}
+          style={{ x: spring, padding: 0 }}
+        >
           <div
-            className="flex centerV centerH"
-            style={{
-              height: "100%",
-              backgroundImage: `url(${W2555})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
+            className="child flex centerH centerV bgImg"
+            style={{ height: "100%" }}
           >
-            <p style={{ width: "50%", backgroundColor: "aqua", padding: 40 }}>
-              Focus. When we look at something, really look, what captures our
-              attention stands out in sharp relief. Everything else blurs away.
-              These flower “portraits” are taken with a 100mm Macro lens, and
-              make deliberate use of the focal plane as a major part of the
-              composition, along with the placement of objects and blocks of
-              color. The goal is to use all the elements of composition to
-              invite the viewer to see the flowers in a particular way.
-              Together, these images make up an imaginary exhibition called Look
-              at the Flowers… It is a still growing body of work that began in
-              the Spring and Summer of 2019. When Spring came around this year,
-              I wondered what would happen when I looked through the lens. Would
-              anything “new” show up? Please take a look with me and see!
-            </p>
-            {/* <img style={{ height: "40%" }} src={W2555} alt="" /> */}
+            <div
+              className="flex centerV centerH"
+              style={{
+                height: "100%",
+                backgroundImage: `url(${W2555})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              <p
+                style={{
+                  width: "50%",
+                  backgroundColor: "white",
+                  padding: 40,
+                  font: "normal normal 300 18px/30px Lato",
+                }}
+              >
+                Focus. When we look at something, really look, what captures our
+                attention stands out in sharp relief. Everything else blurs
+                away. These flower “portraits” are taken with a 100mm Macro
+                lens, and make deliberate use of the focal plane as a major part
+                of the composition, along with the placement of objects and
+                blocks of color. The goal is to use all the elements of
+                composition to invite the viewer to see the flowers in a
+                particular way. Together, these images make up an imaginary
+                exhibition called Look at the Flowers… It is a still growing
+                body of work that began in the Spring and Summer of 2019. When
+                Spring came around this year, I wondered what would happen when
+                I looked through the lens. Would anything “new” show up? Please
+                take a look with me and see!
+              </p>
+            </div>
           </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        {/* <Container>
-          <SubHeader data-aos="fade-up">{p1.name}</SubHeader>
-          <Wrapper>
-            {p1.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-        {/* <Container ref={ref}>
-          <SubHeader>{p2.name}</SubHeader>
-          <Wrapper>
-            {p2.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-        {/* <Container>
-          <SubHeader>{p3.name}</SubHeader>
-          <Wrapper>
-            {p3.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-        {/* <Container>
-          <SubHeader>{p4.name}</SubHeader>
-          <Wrapper>
-            {p4.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-        {/* <Container>
-          <SubHeader>{p5.name}</SubHeader>
-
-          <Wrapper>
-            {p5.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-        {/* <Container>
-          <SubHeader>{p6.name}</SubHeader>
-          <p>{p6.text}</p>
-          <Wrapper>
-            {p6.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-        {/* <Container>
-          <SubHeader>{p7.name}</SubHeader>
-          <Wrapper>
-            {p7.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-        {/* <Container>
-          <SubHeader>{p8.name}</SubHeader>
-          <Wrapper>
-            {p8.img.map((i) => (
-              <Image image={i} width={"30%"} alt={i} />
-            ))}
-          </Wrapper>
-        </Container> */}
-        {/* ///////////////////////////////// */}
-
-        <div className="child">
-          <SubHeader>When Orchids Fly</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W9598} width={"30%"} alt={W9598} />
-            <img src={W9486} width={"30%"} alt={W9486} />
-            <img src={W9590} width={"30%"} alt={W9590} />
-          </div>
-        </div>
-
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Annunciation</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={N7A7897} width={"80%"} alt={N7A7897} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Windhover</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W5841} width={"80%"} alt={W5841} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>The Alium</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W5075} width={"40%"} alt={W5075} />
-            <img src={W4590} width={"40%"} alt={W4590} />
-            <img src={W1763} width={"40%"} alt={W1763} />
-            <img src={W4799} width={"40%"} alt={W4799} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>The Alium</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W4767} width={"80%"} alt={W4767} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Peonies</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W0347} width={"40%"} alt={W0347} />
-            <img src={W5679} width={"40%"} alt={W5679} />
-            <img src={W2421} width={"40%"} alt={W2421} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Peonies</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W0362} width={"90%"} alt={W0362} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Homage to Monet</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W3838} width={"40%"} alt={W3838} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>In the Still of the Night</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <p>
-              Like the moon growing dim on the rim of the hill in the chill,
-              still of the night... Cole Porter
-            </p>
-            <img src={W6408} width={"90%"} alt={W6408} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Unexpected Guests</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <p>
-              Like the moon growing dim on the rim of the hill in the chill,
-              still of the night... Cole Porter
-            </p>
-            <img src={W0430} width={"40%"} alt={W0430} />
-            <img src={W0907} width={"40%"} alt={W0907} />
-            <img src={W6897} width={"40%"} alt={W6897} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Alien</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W2N7A8251} width={"40%"} alt={W2N7A8251} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Animations</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W9225} width={"40%"} alt={W9225} />
-            <img src={W9387} width={"40%"} alt={W9387} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Homage to Georgia O'Keefe</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W4447} width={"40%"} alt={W4447} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Chrysanthemums</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W9170} width={"40%"} alt={W9170} />
-            <img src={W9171} width={"40%"} alt={W9171} />
-            <img src={W9059} width={"40%"} alt={W9059} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Unstill Life</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W2N7A8243} width={"40%"} alt={W2N7A8243} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Hydrangeas</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W1571} width={"40%"} alt={W1571} />
-            <img src={W0713} width={"40%"} alt={W0713} />
-            <img src={W2N7A8110} width={"40%"} alt={W2N7A8110} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Homage to Mandelbrot</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <img src={W1059} width={"40%"} alt={W1059} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Lilies of the Field</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <p>
-              Consider the lilies of the field, how they grow: they neither toil
-              nor spin, yet I tell you, even Solomon in all his glory was not
-              arranged like one of these. Matthew 6:28-29
-            </p>
-            <img src={W1669} width={"40%"} alt={W1669} />
-            <img src={W1111} width={"40%"} alt={W1111} />
-          </div>
-        </div>
-        {/* ///////////////////////////////// */}
-        <div className="child">
-          <SubHeader>Homage to Robert Mapplethorpe</SubHeader>
-          <div
-            className="flex centerV centerH"
-            style={{
-              flexWrap: "wrap",
-              height: "90%",
-            }}
-          >
-            <p>
-              Consider the lilies of the field, how they grow: they neither toil
-              nor spin, yet I tell you, even Solomon in all his glory was not
-              arranged like one of these. Matthew 6:28-29
-            </p>
-            <img src={W0831} width={"40%"} alt={W0831} />
-          </div>
-        </div>
-      </HorizontalScroll>
-    </>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p1.name}</SubHeader>
+            <Wrapper>
+              <Image
+                image={W0241}
+                width={"20%"}
+                alt={W0241}
+                style={{ margin: 10 }}
+              />
+              <Image
+                image={W0291}
+                width={"40%"}
+                alt={W0291}
+                style={{ margin: 10 }}
+              />
+              <Image
+                image={W0563}
+                width={"20%"}
+                alt={W0563}
+                style={{ margin: 10 }}
+              />
+              <Image
+                image={W0900}
+                width={"20%"}
+                alt={W0900}
+                style={{ margin: 10 }}
+              />
+              <Image
+                image={W2499}
+                width={"20%"}
+                alt={W2499}
+                style={{ margin: 10 }}
+              />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p2.name}</SubHeader>
+            <Wrapper>
+              <Image
+                image={W4223}
+                width={"30%"}
+                alt={W4223}
+                style={{ marginTop: -400 }}
+              />
+              <Image
+                image={W4243}
+                width={"30%"}
+                alt={W4243}
+                style={{ marginTop: 100 }}
+              />
+              <Image
+                image={W3881}
+                width={"30%"}
+                alt={W3881}
+                style={{ marginTop: -400 }}
+              />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p3.name}</SubHeader>
+            <Wrapper>
+              {p3.img.map((i) => (
+                <Image image={i} width={"30%"} alt={i} />
+              ))}
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p4.name}</SubHeader>
+            <Wrapper>
+              <Image
+                image={W6417}
+                width={"40%"}
+                alt={W6417}
+                style={{ marginTop: -300 }}
+              />
+              <Image
+                image={W2348}
+                width={"40%"}
+                alt={W2348}
+                style={{ marginTop: 300 }}
+              />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p5.name}</SubHeader>
+            <Wrapper>
+              {p5.img.map((i) => (
+                <Image image={i} width={"80%"} alt={i} />
+              ))}
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p6.name}</SubHeader>
+            <Wrapper style={{ flexWrap: "nowrap", width: "80%" }}>
+              {p6.img.map((i) => (
+                <Image image={i} width={"60%"} alt={i} />
+              ))}
+              <p>{p6.text}</p>
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p7.name}</SubHeader>
+            <Wrapper>
+              {p7.img.map((i) => (
+                <Image image={i} width={"80%"} alt={i} />
+              ))}
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>{p8.name}</SubHeader>
+            <Wrapper>
+              {p8.img.map((i) => (
+                <Image image={i} width={"80%"} alt={i} />
+              ))}
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>When Orchids Fly</SubHeader>
+            <Wrapper>
+              <Image
+                image={W9598}
+                width={"30%"}
+                alt={W9598}
+                style={{ marginTop: 385 }}
+              />
+              <Image image={W9486} width={"30%"} alt={W9486} />
+              <Image
+                image={W9590}
+                width={"30%"}
+                alt={W9590}
+                style={{ marginTop: -363 }}
+              />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Annunciation</SubHeader>
+            <Wrapper>
+              <Image image={N7A7897} width={"30%"} alt={N7A7897} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Windhover</SubHeader>
+            <Wrapper>
+              <Image image={W5841} width={"80%"} alt={W5841} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>The Alium</SubHeader>
+            <Wrapper>
+              <Image image={W5075} width={"40%"} alt={W5075} />
+              <Image image={W4590} width={"40%"} alt={W4590} />
+              <Image image={W1763} width={"40%"} alt={W1763} />
+              <Image image={W4799} width={"40%"} alt={W4799} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>The Alium</SubHeader>
+            <Wrapper>
+              <Image image={W4767} width={"80%"} alt={W4767} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Peonies</SubHeader>
+            <Wrapper>
+              <Image image={W0347} width={"40%"} alt={W0347} />
+              <Image image={W5679} width={"40%"} alt={W5679} />
+              <Image image={W2421} width={"40%"} alt={W2421} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Peonies</SubHeader>
+            <Wrapper>
+              <Image image={W0362} width={"70%"} alt={W0362} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Homage to Monet</SubHeader>
+            <Wrapper>
+              <Image image={W3838} width={"30%"} alt={W3838} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>In the Still of the Night</SubHeader>
+            <Wrapper>
+              <p>
+                Like the moon growing dim on the rim of the hill in the chill,
+                still of the night... Cole Porter
+              </p>
+              <Image image={W6408} width={"70%"} alt={W6408} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Unexpected Guests</SubHeader>
+            <Wrapper>
+              <p>
+                Like the moon growing dim on the rim of the hill in the chill,
+                still of the night... Cole Porter
+              </p>
+              <Image image={W0430} width={"40%"} alt={W0430} />
+              <Image image={W0907} width={"40%"} alt={W0907} />
+              <Image image={W6897} width={"40%"} alt={W6897} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Alien</SubHeader>
+            <Wrapper>
+              <Image image={W2N7A8251} width={"70%"} alt={W2N7A8251} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Animations</SubHeader>
+            <Wrapper>
+              <Image image={W9225} width={"40%"} alt={W9225} />
+              <Image image={W9387} width={"40%"} alt={W9387} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Homage to Georgia O'Keefe</SubHeader>
+            <Wrapper>
+              <Image image={W4447} width={"40%"} alt={W4447} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Chrysanthemums</SubHeader>
+            <Wrapper>
+              <Image image={W9170} width={"40%"} alt={W9170} />
+              <Image image={W9171} width={"40%"} alt={W9171} />
+              <Image image={W9059} width={"40%"} alt={W9059} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Unstill Life</SubHeader>
+            <Wrapper>
+              <Image image={W2N7A8243} width={"70%"} alt={W2N7A8243} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Hydrangeas</SubHeader>
+            <Wrapper>
+              <Image image={W1571} width={"40%"} alt={W1571} />
+              <Image image={W0713} width={"40%"} alt={W0713} />
+              <Image image={W2N7A8110} width={"40%"} alt={W2N7A8110} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Homage to Mandelbrot</SubHeader>
+            <Wrapper>
+              <Image image={W1059} width={"80%"} alt={W1059} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Lilies of the Field</SubHeader>
+            <Wrapper>
+              <p>
+                Consider the lilies of the field, how they grow: they neither
+                toil nor spin, yet I tell you, even Solomon in all his glory was
+                not arranged like one of these. Matthew 6:28-29
+              </p>
+              <Image image={W1669} width={"40%"} alt={W1669} />
+              <Image image={W1111} width={"40%"} alt={W1111} />
+            </Wrapper>
+          </Container>
+          {/* ///////////////////////////////// */}
+          <Container>
+            <SubHeader>Homage to Robert Mapplethorpe</SubHeader>
+            <Wrapper>
+              <p>
+                Consider the lilies of the field, how they grow: they neither
+                toil nor spin, yet I tell you, even Solomon in all his glory was
+                not arranged like one of these. Matthew 6:28-29
+              </p>
+              <Image image={W0831} width={"40%"} alt={W0831} />
+            </Wrapper>
+          </Container>
+        </motion.div>
+      </div>
+      <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" />
+    </motion.div>
   );
 };
 

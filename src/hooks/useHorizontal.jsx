@@ -6,6 +6,7 @@ import {
   useTransform,
   useSpring,
 } from "framer-motion";
+import W4447 from "../images/LATF/WEB-4447-253kb.jpg";
 
 const SmoothScroll = () => {
   const scrollRef = useRef(null);
@@ -37,39 +38,39 @@ const SmoothScroll = () => {
   );
 
   //////
-  //   const y1 = useTransform(scrollYProgress, [0, 1], [0, -viewportW]);
-  //   const y2 = useTransform(scrollYProgress, [0, 1], [0, -viewportW + 100]);
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -viewportW]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -viewportW + 100]);
   /////
 
   const physics = { damping: 15, mass: 0.27, stiffness: 55 };
   const spring = useSpring(transform, physics);
 
-  return { spring, scrollRange, viewportW };
-
-  //   return (
-  //     <>
-  //       <div className="scroll-container">
-  //         <motion.section
-  //           ref={scrollRef}
-  //           style={{ x: spring }}
-  //           className="thumbnails-container"
-  //         >
-  //           <div className="thumbnails">
-  //             <motion.div className="thumbnail" style={{ x: y1 }} />
-  //             <motion.div
-  //               className="thumbnail"
-  //               style={{ x: y2, background: "salmon" }}
-  //             />
-  //             <div className="thumbnail" />
-  //             <div className="thumbnail" />
-  //             <div className="thumbnail" />
-  //             <div className="thumbnail" />
-  //           </div>
-  //         </motion.section>
-  //       </div>
-  //       <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" />
-  //     </>
-  //   );
+  return (
+    <>
+      <div className="scroll-container">
+        <motion.section
+          ref={scrollRef}
+          style={{ x: spring }}
+          className="thumbnails-container"
+        >
+          <div className="thumbnails">
+            <motion.div className="thumbnail" style={{ x: y1 }} />
+            <motion.div
+              className="thumbnail"
+              style={{ x: y2, background: "salmon" }}
+            />
+            <div className="thumbnail">
+              <img src={W4447} alt="" />
+            </div>
+            <div className="thumbnail" />
+            <div className="thumbnail" />
+            <div className="thumbnail" />
+          </div>
+        </motion.section>
+      </div>
+      <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" />
+    </>
+  );
 };
 
 export default SmoothScroll;

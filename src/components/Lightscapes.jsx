@@ -1,63 +1,131 @@
-import React from "react";
-import HorizontalScroll from "react-scroll-horizontal";
-import styled from "styled-components";
+import React, { useRef, useState, useLayoutEffect, useCallback } from "react";
+import ResizeObserver from "resize-observer-polyfill";
+import {
+  motion,
+  useTransform,
+  useViewportScroll,
+  useSpring,
+} from "framer-motion";
+import PageTransition from "../components/Home";
 import Image from "./Image";
 import { LS } from "../Data";
-import LS1 from "../images/LS/WEB-LS1-3838-249kb.jpg";
+import LS1 from "../images/LS/WEB-LS1-RAY-3838-249kb.jpg";
 import { Container, Wrapper } from "./Latf";
 
 const Lightscapes = () => {
-  console.log(LS.img.map);
+  const scrollRef = useRef(null);
+  const ghostRef = useRef(null);
+  const [scrollRange, setScrollRange] = useState(0);
+  const [viewportW, setViewportW] = useState(0);
+
+  useLayoutEffect(() => {
+    scrollRef && setScrollRange(scrollRef.current.scrollWidth);
+  }, [scrollRef]);
+
+  const onResize = useCallback((entries) => {
+    for (let entry of entries) {
+      setViewportW(entry.contentRect.width);
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    const resizeObserver = new ResizeObserver((entries) => onResize(entries));
+    resizeObserver.observe(ghostRef.current);
+    return () => resizeObserver.disconnect();
+  }, [onResize]);
+
+  const { scrollYProgress } = useViewportScroll();
+  const transform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, -scrollRange + viewportW]
+  );
+  const physics = { damping: 15, mass: 0.27, stiffness: 55 };
+  const spring = useSpring(transform, physics);
+
   return (
-    <>
-      <h1
-        className="flex"
-        style={{
-          position: "absolute",
-          zIndex: 1,
-          height: "10%",
-          margin: "auto",
-          alignItems: "flex-end",
-        }}
-      >
-        Lightscapes
-      </h1>
-      <HorizontalScroll>
-        <div className="child flex centerH centerV bgImg">
-          <div
-            className="flex centerV centerH"
-            style={{
-              height: "100%",
-              backgroundImage: `url(${LS1})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          >
-            <p>
-              Focus. When we look at something, really look, what captures our
-              attention stands out in sharp relief. Everything else blurs away.
-              These flower “portraits” are taken with a 100mm Macro lens, and
-              make deliberate use of the focal plane as a major part of the
-              composition, along with the placement of objects and blocks of
-              color. The goal is to use all the elements of composition to
-              invite the viewer to see the flowers in a particular way.
-              Together, these images make up an imaginary exhibition called Look
-              at the Flowers… It is a still growing body of work that began in
-              the Spring and Summer of 2019. When Spring came around this year,
-              I wondered what would happen when I looked through the lens. Would
-              anything “new” show up? Please take a look with me and see!
-            </p>
-          </div>
-        </div>
-        {LS.img.map((i) => (
-          <Container>
-            <Wrapper>
-              <Image image={i} width={"30%"} alt={i} />
-            </Wrapper>
+    <motion.div initial="out" animate="in" exit="out" variants={PageTransition}>
+      <div className="scroll-container flex column">
+        <h1
+          className="flex"
+          style={{
+            position: "absolute",
+            zIndex: 1,
+            height: "10%",
+            margin: "auto",
+            alignItems: "flex-end",
+            width: "100%",
+            justifyContent: "center",
+            font: "normal normal 100 64px/40px Roxborough CF Thin",
+            color: "#331c65",
+          }}
+        >
+          Lightscapes
+        </h1>
+        <motion.div
+          className="thumbnails-container"
+          ref={scrollRef}
+          style={{ x: spring, padding: 0 }}
+        >
+          <Container style={{ flexDirection: "row" }}>
+            <div
+              style={{
+                width: "35%",
+                padding: 30,
+                font: "normal normal 300 18px/30px Lato",
+              }}
+            >
+              <p>
+                I began taking "portraits" of flowers in the Spring of 2019.  By
+                summer, they had grown into a body of work called "Look at the
+                Flowers..." and, in the fall, became the subject of four local
+                exhibits (insert link to Shows/Look at the Flowers).  As winter
+                unfolded, I began to wonder what would show up through the lens
+                come Spring.  Would the 2020 blossoms look the same?
+              </p>
+              <p>
+                "Homage to Monet" appeared on the first photo-shoot of Spring,
+                and radiated the answer: the possibilities, even within the
+                confines of my small garden, are infinite. 
+              </p>
+              <p>
+                The visual feel of this image and of others soon to follow is
+                decidedly watercolor.  Since the distinctive medium for all
+                these images is light, I've settled on a new name to describe
+                them: "Lightscapes."
+              </p>
+            </div>
+            <div
+              className="flex column"
+              style={{ width: "40%", alignItems: "center" }}
+            >
+              <Image image={LS1} width={"70%"} alt={LS1} />
+              <p style={{ font: "normal normal 300 18px/30px Lato" }}>
+                "Homage to Monet"
+              </p>
+            </div>
           </Container>
-        ))}
-      </HorizontalScroll>
-    </>
+
+          {LS.map((el, i) => (
+            <Container key={i}>
+              <Wrapper className="column">
+                <img src={el.img} alt={i.img} style={el.css} />
+                {el.text === "" ? (
+                  <p style={{ font: "normal normal 300 18px/30px Lato" }}>
+                    {el.text}
+                  </p>
+                ) : (
+                  <p style={{ font: "normal normal 300 18px/30px Lato" }}>
+                    "{el.text}"
+                  </p>
+                )}
+              </Wrapper>
+            </Container>
+          ))}
+        </motion.div>
+      </div>
+      <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" />
+    </motion.div>
   );
 };
 

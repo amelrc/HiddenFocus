@@ -15,12 +15,14 @@ import Latf from "./components/Latf.jsx";
 import Lightscapes from "./components/Lightscapes.jsx";
 import Contest from "./pages/Contest.jsx";
 
+import SmoothScroll from "./hooks/useHorizontal.jsx";
+
 // import Error from "./Error";
 
 const App = styled.div`
-  position: relative;
+  // position: relative;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   justify-content: center;
   display: flex;
 `;
@@ -40,6 +42,7 @@ const ReactRouterSetup = () => {
             <Route exact path="/look at the flowers" component={Latf} />
             <Route exact path="/lightscapes" component={Lightscapes} />
             <Route exact path="/influences" component={Influences} />
+            <Route exact path="/smooth" component={SmoothScroll} />
             <Route exact path="/contest" component={Contest} />
             <Route exact path="/menu/:userName" component={Gallery} />
             <Route exact path="/gallery/:userName" component={Show} />
