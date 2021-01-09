@@ -73,6 +73,7 @@ const Lightscapes = () => {
                 width: "35%",
                 padding: 30,
                 font: "normal normal 300 18px/30px Lato",
+                color: "#331c65",
               }}
             >
               <p>
@@ -100,7 +101,12 @@ const Lightscapes = () => {
               style={{ width: "40%", alignItems: "center" }}
             >
               <Image image={LS1} width={"70%"} alt={LS1} />
-              <p style={{ font: "normal normal 300 18px/30px Lato" }}>
+              <p
+                style={{
+                  font: "normal normal 300 18px/30px Lato",
+                  color: "#331c65",
+                }}
+              >
                 "Homage to Monet"
               </p>
             </div>
@@ -111,11 +117,14 @@ const Lightscapes = () => {
               <Wrapper className="column">
                 <img src={el.img} alt={i.img} style={el.css} />
                 {el.text === "" ? (
-                  <p style={{ font: "normal normal 300 18px/30px Lato" }}>
-                    {el.text}
-                  </p>
+                  <p>{el.text}</p>
                 ) : (
-                  <p style={{ font: "normal normal 300 18px/30px Lato" }}>
+                  <p
+                    style={{
+                      font: "normal normal 300 18px/30px Lato",
+                      color: "#331c65",
+                    }}
+                  >
                     "{el.text}"
                   </p>
                 )}

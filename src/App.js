@@ -16,6 +16,7 @@ import Lightscapes from "./components/Lightscapes.jsx";
 import Contest from "./pages/Contest.jsx";
 
 import SmoothScroll from "./hooks/useHorizontal.jsx";
+import Angkor from "./components/Angkor.jsx";
 
 // import Error from "./Error";
 
@@ -42,6 +43,7 @@ const ReactRouterSetup = () => {
             <Route exact path="/look at the flowers" component={Latf} />
             <Route exact path="/lightscapes" component={Lightscapes} />
             <Route exact path="/influences" component={Influences} />
+            <Route exact path="/angkor" component={Angkor} />
             <Route exact path="/smooth" component={SmoothScroll} />
             <Route exact path="/contest" component={Contest} />
             <Route exact path="/menu/:userName" component={Gallery} />
