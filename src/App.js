@@ -3,20 +3,20 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 
-import Home from "./components/Home.jsx";
-import Menu from "./components/Menu";
-
-import WhatNow from "./components/WhatNow";
-import Gallery from "./components/Gallery.jsx";
 import Show from "./components/Show.jsx";
-import Influences from "./components/Influences";
 import Header from "./components/Header.jsx";
-import Latf from "./components/Latf.jsx";
-import Lightscapes from "./components/Lightscapes.jsx";
+
+import Home from "./pages/Home.jsx";
+import Menu from "./pages/Menu";
+import WhatNow from "./pages/WhatNow";
+import Gallery from "./pages/Gallery.jsx";
+import Influences from "./pages/Influences";
+import Latf from "./pages/Latf.jsx";
+import Lightscapes from "./pages/Lightscapes.jsx";
 import Contest from "./pages/Contest.jsx";
+import Angkor from "./pages/Angkor.jsx";
 
 import SmoothScroll from "./hooks/useHorizontal.jsx";
-import Angkor from "./components/Angkor.jsx";
 
 // import Error from "./Error";
 

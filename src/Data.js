@@ -35,6 +35,18 @@ import LS14 from "./images/LS/WEB-LS14-RAY-3652-246kb.jpg";
 import LS15 from "./images/LS/WEB-LS15-RAY-3832-261kb.jpg";
 import LS16 from "./images/LS/WEB-LS16-7742-259kb.jpg";
 
+///////// ANGKOR WAT //////////
+
+import AW1 from "./images/AW/WEB--0665-302kb--Angkor--p.1.jpg";
+
+///////// WHY NOW //////////
+
+import xmas from "./images/WHYNOW/WEB-Xmas-img675--314kb.jpg";
+import olp from "./images/WHYNOW/WEB-631-252kb-OLP.jpg";
+import passport from "./images/WHYNOW/WEB-IMG_3980--250kb.jpg";
+import venice from "./images/WHYNOW/WEB-img169-257kb-Venice-by-Ray.jpg";
+import singing from "./images/WHYNOW/WEB--280kb--------Butterfly-Up-High.jpg";
+
 export const p1 = {
   id: 1,
   name: "Tulips...2019",
@@ -105,6 +117,12 @@ export const LS = [
 ];
 
 //////////////////////////////
+
+export const imagesWN = [xmas, olp, passport, venice, singing];
+export const styleWN = ["50%", "50%", "50%", "50%", "35%"];
+export const textWN = ["xmas", "olp", "pass", "venice", "singing"];
+
+//////////////////////////////
 export const museum = [
   {
     floors: "themes",
@@ -118,7 +136,7 @@ export const museum = [
   {
     floors: "destinations",
     rooms: [
-      { name: "angkor wat", introImg: W2555 },
+      { name: "angkor wat", introImg: AW1 },
       { name: "cuba", introImg: LS1 },
       { name: "new york", introImg: W2555 },
     ],

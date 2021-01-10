@@ -1,14 +1,14 @@
 import React, { useRef, useState, useLayoutEffect, useCallback } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 import styled from "styled-components";
-import Image from "./Image";
+import Image from "../components/Image";
 import {
   motion,
   useTransform,
   useViewportScroll,
   useSpring,
 } from "framer-motion";
-import PageTransition from "../components/Home";
+import PageTransition from "./Home";
 import { p1, p2, p3, p4, p5, p6, p7, p8 } from "../Data";
 import W2555 from "../images/LATF/WEB-2555-263kb.jpg";
 import W0241 from "../images/LATF/WEB-0241-281kb.jpg";
@@ -98,7 +98,7 @@ export const Wrapper = styled.div`
   height: 85%;
 `;
 
-const SubHeader = styled.h2`
+export const SubHeader = styled.h2`
   margin: 0;
   font: 300 26px / 30px Lato;
   color: #331c65;

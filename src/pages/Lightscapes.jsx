@@ -6,8 +6,8 @@ import {
   useViewportScroll,
   useSpring,
 } from "framer-motion";
-import PageTransition from "../components/Home";
-import Image from "./Image";
+import PageTransition from "./Home";
+import Image from "../components/Image";
 import { LS } from "../Data";
 import LS1 from "../images/LS/WEB-LS1-RAY-3838-249kb.jpg";
 import { Container, Wrapper } from "./Latf";

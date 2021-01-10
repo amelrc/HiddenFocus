@@ -1,7 +1,7 @@
 import React, { useRef, useState, useLayoutEffect, useCallback } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 import styled from "styled-components";
-import Image from "./Image";
+import Image from "../components/Image";
 import {
   motion,
   useTransform,
@@ -9,7 +9,7 @@ import {
   useSpring,
 } from "framer-motion";
 import PageTransition from "./Home";
-import { Container, Wrapper } from "./Latf";
+import { Container, Wrapper, SubHeader } from "./Latf";
 
 import I1P1 from "../images/AW/WEB--0665-302kb--Angkor--p.1.jpg";
 import I2P1 from "../images/AW/WEB--0440--253kb--Angkor--p.1.jpg";
@@ -112,6 +112,35 @@ const I2P4D = styled.div`
 const I3P4D = styled.div`
   &:after {
     content: "Ta Prohm";
+    position: relative;
+    left: 94%;
+    color: #331c65;
+    font-size: 20px;
+  }
+`;
+const I1P5D = styled.div`
+  &:after {
+    content: "Ta Prohm";
+    position: relative;
+    left: 100%;
+    color: #331c65;
+    font-size: 20px;
+    bottom: 23px;
+    margin: 10px;
+  }
+`;
+const I2P5D = styled.div`
+  &:after {
+    content: "Angkor Wat";
+    position: relative;
+    left: 85%;
+    color: #331c65;
+    font-size: 20px;
+  }
+`;
+const I3P5D = styled.div`
+  &:after {
+    content: "Phnom Bakheng";
     position: relative;
     left: 94%;
     color: #331c65;
@@ -386,50 +415,70 @@ const Angkor = () => {
 
           <Container>
             <div
-              style={{ height: "85%", width: "90%" }}
+              style={{ height: "85%", width: "90%", alignItems: "center" }}
               className="flex column"
             >
-              <div className="flex" style={{ justifyContent: "flex-end" }}>
-                <I1P4D style={{ margin: 10 }}>
+              <div className="flex" style={{ justifyContent: "center" }}>
+                <I1P5D style={{ margin: 10, width: "34%" }}>
                   <Image
                     style={{
                       maxWidth: "100%",
                       width: "fit-content",
                       margin: 0,
                     }}
-                    image={I2P4}
-                    alt={I2P4}
+                    image={I2P5}
+                    alt={I2P5}
                   />
-                </I1P4D>
+                </I1P5D>
               </div>
+              <p
+                style={{
+                  font: "normal normal 300 14px/16px Lato",
+                  color: "#331c65",
+                  width: "40%",
+                  textAlign: "center",
+                  margin: "30px 0",
+                }}
+              >
+                Two of these images capture something of our cultural disconnect
+                from spiritual moorings. The third reminds us of who we really
+                are…
+              </p>
               <div
                 className="flex"
-                style={{ alignItems: "center", justifyContent: "center" }}
+                style={{ alignItems: "center", justifyContent: "space-evenly" }}
               >
-                <I2P4D style={{ width: "60%", margin: 10 }}>
+                <I2P5D style={{ width: "34%", margin: 10 }}>
                   <Image
                     style={{
                       maxWidth: "100%",
                       width: "fit-content",
                       margin: 0,
                     }}
-                    image={I1P4}
-                    alt={I1P4}
+                    image={I1P5}
+                    alt={I1P5}
                   />
-                </I2P4D>
-                <I3P4D style={{ width: "54%", margin: 10 }}>
+                </I2P5D>
+                <I3P5D style={{ width: "34%", margin: 10 }}>
                   <Image
                     style={{
                       maxWidth: "100%",
                       width: "fit-content",
                       margin: 0,
                     }}
-                    image={I3P4}
-                    alt={I3P4}
+                    image={I3P5}
+                    alt={I3P5}
                   />
-                </I3P4D>
+                </I3P5D>
               </div>
             </div>
+          </Container>
+          {/* //////////////////////// */}
+          <Container>
+            <Wrapper className="column">
+              <Image image={I1P6} width={"70%"} alt={I1P6} />
+              <SubHeader>“The Sentinel”</SubHeader>
+            </Wrapper>
           </Container>
         </motion.div>
       </div>

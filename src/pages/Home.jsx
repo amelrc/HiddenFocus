@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 import ImgHome from "../images/WEB-0789-1500x1000--517-kb.jpg";
-import Header from "./Header";
+import Header from "../components/Header";
 
 const HeaderWrapper = styled.div`
   width: 68.3%;

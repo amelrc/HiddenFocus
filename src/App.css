@@ -152,3 +152,48 @@ body {
 .flexEnd {
   justify-content: flex-end;
 }
+
+/* //////////////////// */
+/* SLIDER CLASSES */
+
+.example-container {
+  /* width: 100vw;
+  height: 100vh;
+  position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next,
+.prev {
+  /* top: calc(50% - 20px); */
+  /* position: absolute; */
+  background: transparent;
+  border: solid #331c65 1px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  /* z-index: 2; */
+}
+
+.next {
+  /* right: 10px; */
+}
+
+.prev {
+  /* left: 10px; */
+  transform: scale(-1);
+}
+
+.sliderImage {
+  /* position: absolute; */
+  width: 34%;
+}
