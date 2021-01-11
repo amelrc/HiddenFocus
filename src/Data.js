@@ -47,6 +47,8 @@ import passport from "./images/WHYNOW/WEB-IMG_3980--250kb.jpg";
 import venice from "./images/WHYNOW/WEB-img169-257kb-Venice-by-Ray.jpg";
 import singing from "./images/WHYNOW/WEB--280kb--------Butterfly-Up-High.jpg";
 
+////////// LATF //////////
+
 export const p1 = {
   id: 1,
   name: "Tulips...2019",
@@ -96,7 +98,8 @@ export const p8 = {
   img: [W3589],
   text: "",
 };
-//////////////////////////////
+
+///////// LIGHTSPCAPES //////////
 
 export const LS = [
   { img: LS2, text: "", css: { width: "70%" } },
@@ -116,13 +119,13 @@ export const LS = [
   { img: LS16, text: "Elysium", css: { width: "70%" } },
 ];
 
-//////////////////////////////
+///////// WHY NOW //////////
 
 export const imagesWN = [xmas, olp, passport, venice, singing];
 export const styleWN = ["50%", "50%", "50%", "50%", "35%"];
 export const textWN = ["xmas", "olp", "pass", "venice", "singing"];
 
-//////////////////////////////
+///////// GALLERY //////////
 export const museum = [
   {
     floors: "themes",
