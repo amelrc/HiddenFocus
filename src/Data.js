@@ -47,7 +47,9 @@ import passport from "./images/WHYNOW/WEB-IMG_3980--250kb.jpg";
 import venice from "./images/WHYNOW/WEB-img169-257kb-Venice-by-Ray.jpg";
 import singing from "./images/WHYNOW/WEB--280kb--------Butterfly-Up-High.jpg";
 
-////////// LATF //////////
+////////// GEORGE //////////
+
+import W0001 from "./images/GE/WEB-0001-251kb.jpg";
 
 export const p1 = {
   id: 1,
@@ -130,25 +132,25 @@ export const museum = [
   {
     floors: "themes",
     rooms: [
-      { name: "look-at-the-flowers", introImg: W2555 },
+      { name: "look at the flowers", introImg: W2555 },
       { name: "lightscapes", introImg: LS1 },
-      { name: "explorations", introImg: W2555 },
-      { name: "protraits", introImg: LS1 },
+      // { name: "explorations", introImg: W2555 },
+      // { name: "protraits", introImg: LS1 },
     ],
   },
   {
     floors: "destinations",
     rooms: [
-      { name: "angkor-wat", introImg: AW1 },
-      { name: "cuba", introImg: LS1 },
-      { name: "new york", introImg: W2555 },
+      { name: "angkor wat", introImg: AW1 },
+      // { name: "cuba", introImg: LS1 },
+      // { name: "new york", introImg: W2555 },
     ],
   },
-  // {
-  //   floors: "shows",
-  //   rooms: [
-  //     { name: "4 amigos", introImg: "" },
-  //     { name: "mexico", introImg: "" },
-  //   ],
-  // },
+  {
+    floors: "shows",
+    rooms: [
+      { name: "George-Enescu's Secret Garden", introImg: W0001 },
+      { name: "Look at the Flowers", introImg: W2555 },
+    ],
+  },
 ];
