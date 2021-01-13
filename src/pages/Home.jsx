@@ -6,6 +6,7 @@ import "../App.css";
 
 import ImgHome from "../images/WEB-0789-1500x1000--517-kb.jpg";
 import Header from "../components/Header";
+import Close from "../components/Close";
 
 const HeaderWrapper = styled.div`
   width: 68.3%;
@@ -63,6 +64,7 @@ const Home = () => {
           justifyContent: "center",
         }}
       >
+        <Close />
         <HeaderWrapper>
           <HeaderHome>hidden focus</HeaderHome>
           <SubTitle>Photography by Ray Hanson</SubTitle>

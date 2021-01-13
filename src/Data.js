@@ -130,7 +130,7 @@ export const museum = [
   {
     floors: "themes",
     rooms: [
-      { name: "look at the flowers", introImg: W2555 },
+      { name: "look-at-the-flowers", introImg: W2555 },
       { name: "lightscapes", introImg: LS1 },
       { name: "explorations", introImg: W2555 },
       { name: "protraits", introImg: LS1 },
@@ -139,7 +139,7 @@ export const museum = [
   {
     floors: "destinations",
     rooms: [
-      { name: "angkor wat", introImg: AW1 },
+      { name: "angkor-wat", introImg: AW1 },
       { name: "cuba", introImg: LS1 },
       { name: "new york", introImg: W2555 },
     ],

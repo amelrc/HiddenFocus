@@ -40,10 +40,10 @@ const ReactRouterSetup = () => {
             <Route exact path="/menu" component={Menu} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/whatnow" component={WhatNow} />
-            <Route exact path="/look at the flowers" component={Latf} />
+            <Route exact path="/look-at-the-flowers" component={Latf} />
             <Route exact path="/lightscapes" component={Lightscapes} />
             <Route exact path="/influences" component={Influences} />
-            <Route exact path="/angkor" component={Angkor} />
+            <Route exact path="/angkor-wat" component={Angkor} />
             <Route exact path="/smooth" component={SmoothScroll} />
             <Route exact path="/contest" component={Contest} />
             <Route exact path="/menu/:userName" component={Gallery} />
