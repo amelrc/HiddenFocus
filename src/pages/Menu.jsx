@@ -42,9 +42,9 @@ const Menu = () => {
 						<Navigation>
 							<Link
 								style={{ textDecoration: 'none', color: '#fbf8fd' }}
-								to='/whatnow'
+								to='/whynow'
 							>
-								What Now
+								Why Now
 							</Link>
 						</Navigation>
 					</li>
