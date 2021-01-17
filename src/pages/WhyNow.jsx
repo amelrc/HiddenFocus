@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { PageTransition } from "./Home";
-import Slider from "../components/Slider";
+import ImageSlider from "../components/imageSlider";
 import WhoMe from "../images/WHYNOW/WEB-9574-252kb--Who-Me.jpg";
 import Leather from "../images/WHYNOW/Leather.png";
+import { WNData } from "../Data";
 
 const Block1 = styled.div`
   display: flex;
@@ -80,9 +81,7 @@ const WhatNow = () => {
           </p>
         </div>
       </Block1>
-      <SliderWrapper>
-        <Slider />
-      </SliderWrapper>
+      <ImageSlider slides={WNData} />
       <Block2>
         <p>
           I retired in October, 2013. Now I could devote serious time and effort
