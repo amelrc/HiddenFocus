@@ -18,15 +18,13 @@ import Angkor from "./pages/Angkor.jsx";
 import Enescu from "./pages/Enescu";
 import Mexico from "./pages/Mexico";
 import Amigos from "./pages/Amigos";
+import WrongHeader from "./components/WrongHeader.jsx";
 
 // import Error from "./Error";
 
 const App = styled.div`
-  // position: relative;
-  width: 100%;
-  // height: 100vh;
-  justify-content: center;
   display: flex;
+  flex-direction: column;
 `;
 
 const ReactRouterSetup = () => {
@@ -35,7 +33,8 @@ const ReactRouterSetup = () => {
     <HashRouter>
       <AnimatePresence exitBeforeEnter>
         <App>
-          <Header />
+          {/* <Header /> */}
+          <WrongHeader />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/menu" component={Menu} />
@@ -48,7 +47,6 @@ const ReactRouterSetup = () => {
             <Route exact path="/cuatro-amigos" component={Amigos} />
             <Route exact path="/influences" component={Influences} />
             <Route exact path="/angkor-wat" component={Angkor} />
-
             <Route exact path="/contest" component={Contest} />
             <Route exact path="/menu/:userName" component={Gallery} />
             <Route exact path="/gallery/:userName" component={Show} />
