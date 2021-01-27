@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Hamburger from "./WrongHamburger";
 import styled from "styled-components";
+import Logo from "../images/SVG/Logo_Official.svg";
+
+const HFlogo = styled.img`
+  width: 14px;
+  cursor: pointer;
+`;
 
 const Header = ({ history }) => {
   // State of our Menu
@@ -56,9 +62,9 @@ const Header = ({ history }) => {
       <div>
         <div className="wrapper">
           <div className="inner-header">
-            <div className="logo">
-              <Link to="/">HAMBRG.</Link>
-            </div>
+            <Link to="/">
+              <HFlogo src={Logo} alt="logo" />
+            </Link>
             <div className="menu">
               <button disabled={disabled} onClick={handleMenu}>
                 {state.menuName}

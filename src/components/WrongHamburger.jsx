@@ -13,12 +13,17 @@ import {
   handleCity,
   staggerRevealClose,
 } from "./WrongAnimations";
+import Contest from "../images/IMG_1384 Final Metallic Glossy.jpg";
 
 const LeftMenu = styled.div`
-  width: 40%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
 `;
 const RightMenu = styled.div`
-  width: 60%;
+  width: 50%;
   display: flex;
   align-items: center;
 `;
@@ -26,7 +31,8 @@ const RightMenu = styled.div`
 const Li = styled.li`
   font: 500 60px/80px Roxborough CF;
   letter-spacing: 0px;
-  color: #fbf8fd;
+  color: #f9efff;
+  list-style: none;
   &:hover {
     color: green;
   }
@@ -40,7 +46,7 @@ const LiSmall = styled.li`
 
 const Links = styled(Link)`
   text-transform: uppercase;
-  color: #fbf8fd;
+  color: #f9efff;
   text-decoration: none;
 `;
 
@@ -51,6 +57,13 @@ const Ul = styled.ul`
   & ${LiSmall}:nth-child(6) {
     margin-left: 200px;
   }
+`;
+
+const ContestText = styled.h3`
+  font: 300 26px/60px Lato;
+  text-transform: uppercase;
+  color: #f9efff;
+  margin: 0;
 `;
 
 const Hamburger = ({ state }) => {
@@ -90,9 +103,10 @@ const Hamburger = ({ state }) => {
       ></div>
       <div ref={(el) => (reveal2 = el)} className="menu-layer flex">
         <LeftMenu>
-          <h3>Hidden Focus</h3>
-          {/* <img width={300} height={200} src={Contest} alt='' /> */}
-          <h3>name the picture context</h3>
+          <Li>Hidden Focus</Li>
+          <img width={"70%"} src={Contest} alt="" />
+          <ContestText>name the picture context</ContestText>
+          <ContestText style={{ font: "200 26px/20px Lato" }}>2020</ContestText>
         </LeftMenu>
         <RightMenu>
           <nav>

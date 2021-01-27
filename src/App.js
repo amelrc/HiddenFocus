@@ -19,6 +19,7 @@ import Enescu from "./pages/Enescu";
 import Mexico from "./pages/Mexico";
 import Amigos from "./pages/Amigos";
 import WrongHeader from "./components/WrongHeader.jsx";
+import Test from "./components/slider/dot.jsx";
 
 // import Error from "./Error";
 
@@ -38,6 +39,7 @@ const ReactRouterSetup = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/menu" component={Menu} />
+            <Route exact path="/test" component={Test} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/whynow" component={WhatNow} />
             <Route exact path="/look-at-the-flowers" component={Latf} />
