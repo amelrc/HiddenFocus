@@ -208,6 +208,10 @@ body {
   transform: scale(1.08);
 }
 
+.unsetWidth {
+  width: unset !important;
+}
+
 /* //////////////WONRGGGGGGGGGG ////////////// */
 
 .wrapper {

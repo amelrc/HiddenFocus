@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ImageSlider from "../components/imageSlider";
 import Image from "../components/Image";
 
@@ -233,7 +233,7 @@ const info = [
     id: 0,
     date: "1000",
     image: [
-      { img: Enrico, css: { width: "70%" } },
+      { img: Enrico, css: { width: "100%" } },
       { img: Circles, css: { width: "70%" } },
     ],
     name: "Enrico Garzilli",
@@ -251,7 +251,7 @@ const info = [
   {
     id: 2,
     date: "3000",
-    image: [{ img: Lawrence, css: { width: "70%" } }],
+    image: [{ img: Lawrence, css: { width: "60%" } }],
     name: "Lawrence Tan",
     content: LawrenceText,
     css: { width: "80%" },
@@ -283,7 +283,7 @@ const info = [
   {
     id: 6,
     date: "7000",
-    image: [{ img: Amel, css: { width: "70%" } }],
+    image: [{ img: Amel, css: { width: "60%" } }],
     name: "Amel Caballero",
     content: AmelText,
     css: { width: "70%" },
@@ -307,11 +307,22 @@ const info = [
 ];
 
 const Dot = styled.div`
-  background-color: ${(props) => (props.selected ? `white` : `black`)};
-  width: 10px;
-  height: 10px;
+  background-color: ${({ selected, past }) =>
+    selected ? `#ced4a7` : past ? `#b0c13f` : `#180920`};
+  width: ${({ selected }) => (selected ? `24px` : `10px`)};
+  height: ${({ selected }) => (selected ? `24px` : `10px`)};
   border-radius: 50%;
-  border: solid gray 4px;
+  border: ${({ selected, past }) =>
+    selected || past ? `solid 4px #b0c13f` : `solid 4px gray`};
+  position: absolute;
+  top: ${({ selected }) => (selected ? `28px` : `36px`)};
+`;
+
+const Year = styled.span`
+  font: 40px/16px Mrs Saint Delafield;
+  color: #b3c53f;
+  position: absolute;
+  opacity: ${({ selected }) => (selected ? 1 : 0)};
 `;
 
 const Test = () => {
@@ -320,12 +331,15 @@ const Test = () => {
 
   const handleNext = (i) => {
     console.log("state", state);
-    console.log(i);
+    console.log("i", i);
     setState(info[i]);
     setLength(i);
   };
 
   let width = 100 / (info.length - 1);
+  const singleImage = state.image.map((img, i) => (
+    <img src={img.img} style={img.css} alt={i} />
+  ));
 
   return (
     <div
@@ -363,14 +377,18 @@ const Test = () => {
                 width: "50%",
               }}
             >
-              <ImageSlider
-                styles={{
-                  display: "flex",
-                  width: "30%",
-                  justifyContent: "space-between",
-                }}
-                slides={state.image}
-              />
+              {state.image.length > 1 ? (
+                <ImageSlider
+                  styles={{
+                    display: "flex",
+                    width: "30%",
+                    justifyContent: "space-between",
+                  }}
+                  slides={state.image}
+                />
+              ) : (
+                singleImage
+              )}
             </div>
 
             <div
@@ -402,61 +420,75 @@ const Test = () => {
               </span>
             </div>
           </div>
-
+          {/* ///////// */}
           <div
             style={{
+              width: "80%",
+              position: "relative",
               display: "flex",
-              justifyContent: "space-between",
-              position: "absolute",
-              width: "100%",
+
+              margin: "auto",
             }}
           >
             <div
               style={{
-                height: 4,
-                backgroundColor: "aqua",
+                display: "flex",
+                justifyContent: "space-between",
+                position: "absolute",
                 width: "100%",
-                position: "absolute",
               }}
-            ></div>
+            >
+              <div
+                style={{
+                  height: 4,
+                  backgroundColor: "gray",
+                  width: "100%",
+                  position: "absolute",
+                }}
+              ></div>
+              <div
+                style={{
+                  height: 4,
+                  backgroundColor: "#b0c13f",
+                  width: `calc(${width} * ${length}%)`,
+                  position: "absolute",
+                }}
+              ></div>
+            </div>
             <div
               style={{
-                height: 4,
-                backgroundColor: "red",
-                width: `calc(${width} * ${length}%)`,
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+                marginTop: -24,
                 position: "absolute",
               }}
             ></div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-              marginTop: -8,
-              position: "absolute",
-            }}
-          ></div>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-              marginTop: -8,
-              position: "absolute",
-            }}
-          >
-            {info.map((date, i) => (
-              <div key={i} className="flex column centerV">
-                <span>{date.date}</span>
-                <Dot
-                  // className={i === state.id ? "dateActive" : "dateInactive"}
-                  selected={i === state.id}
-                  onClick={() => handleNext(i)}
-                ></Dot>
-              </div>
-            ))}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+                marginTop: -43,
+                position: "absolute",
+              }}
+            >
+              {info.map((date, i) => (
+                <div
+                  key={i}
+                  className="flex column centerV"
+                  style={{ position: "relative" }}
+                >
+                  <Year selected={i === state.id}>{date.date}</Year>
+                  <Dot
+                    selected={i === state.id}
+                    past={i < state.id}
+                    onClick={() => handleNext(i)}
+                  ></Dot>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

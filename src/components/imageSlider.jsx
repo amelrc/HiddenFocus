@@ -31,13 +31,15 @@ const ImageSlider = ({ slides, styles }) => {
   }
 
   return (
-    <div className="flex column centerV">
+    <div className="flex column centerV" style={{ width: "80%" }}>
       <div className="flex centerH centerV" style={{ height: "50vh" }}>
         {slides.map((slide, index) => {
           return (
             <div
               style={slide.css}
-              className={index === current ? "slide active" : "slide"}
+              className={
+                index === current ? "slide active" : "slide unsetWidth"
+              }
               key={index}
             >
               {index === current && (
