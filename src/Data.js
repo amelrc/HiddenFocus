@@ -124,11 +124,11 @@ export const LS = [
 ///////// WHY NOW //////////
 
 export const WNData = [
-  { img: xmas, text: "xmas" },
-  { img: olp, text: "olp" },
-  { img: passport, text: "pass" },
-  { img: venice, text: "venice" },
-  { img: singing, text: "singing" },
+  { img: xmas, text: "xmas", css: { width: "70%" } },
+  { img: olp, text: "olp", css: { width: "70%" } },
+  { img: passport, text: "pass", css: { width: "70%" } },
+  { img: venice, text: "venice", css: { width: "70%" } },
+  { img: singing, text: "singing", css: { width: "70%" } },
 ];
 
 ///////// GALLERY //////////

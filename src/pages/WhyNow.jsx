@@ -81,7 +81,17 @@ const WhatNow = () => {
           </p>
         </div>
       </Block1>
-      <ImageSlider slides={WNData} />
+      <ImageSlider
+        styles={{
+          display: " flex",
+          margin: "auto",
+          justifyContent: "space-between",
+          position: "absolute",
+          bottom: " 50%",
+          width: " 90%",
+        }}
+        slides={WNData}
+      />
       <Block2>
         <p>
           I retired in October, 2013. Now I could devote serious time and effort
