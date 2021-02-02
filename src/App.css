@@ -258,6 +258,7 @@ body {
   cursor: pointer;
   font-size: 0.8rem;
   mix-blend-mode: difference;
+  font: bold 20px/20px;
 }
 
 .hamburger-menu {
@@ -269,11 +270,11 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: aqua;
+  background-color: #4f5813;
 }
 
 .menu-secondary-background-color {
-  background: #b3c53f;
+  background: #7a8821;
   top: 0;
   left: 0;
   right: 0;

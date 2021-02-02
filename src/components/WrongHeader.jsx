@@ -3,6 +3,11 @@ import { withRouter, Link } from "react-router-dom";
 import Hamburger from "./WrongHamburger";
 import styled from "styled-components";
 import Logo from "../images/SVG/Logo_Official.svg";
+import CircleComponent from "./Circle";
+
+const MenuState = styled.button`
+  color: ${(open) => (open ? `#8b33b9` : `black`)};
+`;
 
 const HFlogo = styled.img`
   width: 14px;
@@ -18,7 +23,7 @@ const Header = ({ history }) => {
   });
   // State of our button
   const [disabled, setDisabled] = useState(false);
-
+  console.log(state);
   //Use Effect
   useEffect(() => {
     //Listening for page changes.
@@ -66,9 +71,13 @@ const Header = ({ history }) => {
               <HFlogo src={Logo} alt="logo" />
             </Link>
             <div className="menu">
-              <button disabled={disabled} onClick={handleMenu}>
+              <MenuState
+                disabled={disabled}
+                open={state.clicked}
+                onClick={handleMenu}
+              >
                 {state.menuName}
-              </button>
+              </MenuState>
             </div>
           </div>
         </div>

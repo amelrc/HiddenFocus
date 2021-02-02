@@ -31,7 +31,10 @@ const ImageSlider = ({ slides, styles }) => {
   }
 
   return (
-    <div className="flex column centerV" style={{ width: "80%" }}>
+    <div
+      className="flex column centerV"
+      style={{ width: "80%", margin: "auto", position: "relative" }}
+    >
       <div className="flex centerH centerV" style={{ height: "50vh" }}>
         {slides.map((slide, index) => {
           return (

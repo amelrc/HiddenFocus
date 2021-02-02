@@ -124,11 +124,56 @@ export const LS = [
 ///////// WHY NOW //////////
 
 export const WNData = [
-  { img: xmas, text: "xmas", css: { width: "70%" } },
-  { img: olp, text: "olp", css: { width: "70%" } },
-  { img: passport, text: "pass", css: { width: "70%" } },
-  { img: venice, text: "venice", css: { width: "70%" } },
-  { img: singing, text: "singing", css: { width: "70%" } },
+  {
+    img: xmas,
+    text: "xmas",
+    css: {
+      width: "35%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
+  {
+    img: olp,
+    text: "olp",
+    css: {
+      width: "35%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
+  {
+    img: passport,
+    text: "pass",
+    css: {
+      width: "35%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
+  {
+    img: venice,
+    text: "venice",
+    css: {
+      width: "35%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
+  {
+    img: singing,
+    text: "singing",
+    css: {
+      width: "30%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
 ];
 
 ///////// GALLERY //////////
