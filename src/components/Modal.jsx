@@ -4,23 +4,25 @@ import styled from "styled-components";
 const Background = styled.div`
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: white;
   position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-const ModalWrapper = styled.div`
-  width: 800px;
-  height: 500px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
   z-index: 10;
-  border-radius: 10px;
+`;
+
+const CloseWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 94%;
+  position: fixed;
+  top: 0;
+`;
+const ImageWrapper = styled.div`
+  width: fit-content;
+  max-width: 90%;
 `;
 
 const Modal = ({ showModal, setShowModal, children }) => {
@@ -34,11 +36,10 @@ const Modal = ({ showModal, setShowModal, children }) => {
     <>
       {showModal ? (
         <Background onClick={closeModal} ref={modalRef}>
-          <ModalWrapper showModal={showModal}>
-            <p onClick={() => setShowModal((prev) => !prev)}>close</p>
-
-            {children}
-          </ModalWrapper>
+          <CloseWrapper>
+            <p onClick={() => setShowModal((prev) => !prev)}>Close</p>
+          </CloseWrapper>
+          <ImageWrapper showModal={showModal}>{children}</ImageWrapper>
         </Background>
       ) : null}
     </>

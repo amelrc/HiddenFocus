@@ -9,7 +9,7 @@ import Header from "./components/Header.jsx";
 import Home from "./pages/Home.jsx";
 import Menu from "./pages/Menu";
 import WhatNow from "./pages/WhyNow";
-import Gallery from "./pages/Gallery.jsx";
+import Gallery from "./pages/Gallery/Gallery.jsx";
 import Influences from "./pages/Influences";
 import Latf from "./pages/Latf.jsx";
 import Lightscapes from "./pages/Lightscapes.jsx";
@@ -20,6 +20,7 @@ import Mexico from "./pages/Mexico";
 import Amigos from "./pages/Amigos";
 import WrongHeader from "./components/WrongHeader.jsx";
 import CircleComponent from "./components/Circle.jsx";
+import Test from "./pages/Test.jsx";
 
 // import Error from "./Error";
 

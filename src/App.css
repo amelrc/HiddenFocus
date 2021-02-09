@@ -10,6 +10,10 @@
   background: transparent; /* make scrollbar transparent */
 }
 
+.unlist {
+  list-style: none;
+}
+
 body {
   overscroll-behavior: none;
   -ms-overflow-style: none;
@@ -91,12 +95,12 @@ body {
   }
 }
 
-.unlist {
+/* .unlist {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0;
-}
+} */
 
 .img-hover-zoom {
   overflow: hidden; /* [1.2] Hide the overflowing of child elements */

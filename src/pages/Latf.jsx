@@ -79,6 +79,21 @@ import W1669 from "../images/LATF/WEB-1669-254kb.jpg";
 import W1111 from "../images/LATF/WEB-1111-251kb.jpg";
 //
 import W0831 from "../images/LATF/WEB-0831-252kb.jpg";
+import Modal from "../components/Modal";
+import Five from "../components/Five";
+
+const Tulips19 = [
+  { id: 1, image: W0241, css: { width: "20%", margin: 10 } },
+  { id: 2, image: W0291, css: { width: "40%", margin: 10 } },
+  { id: 3, image: W0563, css: { width: "20%", margin: 10 } },
+  { id: 4, image: W0900, css: { width: "20%", margin: 10 } },
+  { id: 5, image: W2499, css: { width: "20%", margin: 10 } },
+];
+const Tulips20 = [
+  { id: 1, image: W4223, css: { width: "20%", margin: 10 } },
+  { id: 2, image: W4243, css: { width: "40%", margin: 10 } },
+  { id: 3, image: W3881, css: { width: "20%", margin: 10 } },
+];
 
 export const Container = styled.div`
   width: 100vw;
@@ -140,8 +155,24 @@ const Latf = () => {
   const physics = { damping: 15, mass: 0.27, stiffness: 55 };
   const spring = useSpring(transform, physics);
 
+  ///////////////////
+  const [showModal, setShowModal] = useState(false);
+  const [selected, setSelected] = useState(Tulips19[0]);
+
+  console.log("outside", selected);
+
+  const openModal = (id) => {
+    console.log("hello", id);
+    setSelected(id);
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <motion.div initial="out" animate="in" exit="out" variants={PageTransition}>
+      <Modal showModal={showModal} setShowModal={setShowModal}>
+        <img style={{ width: "100%" }} src={selected.image} alt={selected.i} />
+      </Modal>
+
       <div className="scroll-container flex column">
         <motion.h1
           className="flex"
@@ -202,64 +233,36 @@ const Latf = () => {
               </p>
             </div>
           </div>
+
           {/* ///////////////////////////////// */}
           <Container>
             <SubHeader>{p1.name}</SubHeader>
             <Wrapper>
-              <Image
-                image={W0241}
-                width={"20%"}
-                alt={W0241}
-                style={{ margin: 10 }}
-              />
-              <Image
-                image={W0291}
-                width={"40%"}
-                alt={W0291}
-                style={{ margin: 10 }}
-              />
-              <Image
-                image={W0563}
-                width={"20%"}
-                alt={W0563}
-                style={{ margin: 10 }}
-              />
-              <Image
-                image={W0900}
-                width={"20%"}
-                alt={W0900}
-                style={{ margin: 10 }}
-              />
-              <Image
-                image={W2499}
-                width={"20%"}
-                alt={W2499}
-                style={{ margin: 10 }}
-              />
+              {Tulips19.map((el, i) => (
+                <img
+                  key={i}
+                  style={el.css}
+                  onClick={() => openModal(el)}
+                  src={el.image}
+                  alt={el.i}
+                />
+              ))}
             </Wrapper>
           </Container>
           {/* ///////////////////////////////// */}
+
           <Container>
             <SubHeader>{p2.name}</SubHeader>
             <Wrapper>
-              <Image
-                image={W4223}
-                width={"30%"}
-                alt={W4223}
-                style={{ marginTop: -400 }}
-              />
-              <Image
-                image={W4243}
-                width={"30%"}
-                alt={W4243}
-                style={{ marginTop: 100 }}
-              />
-              <Image
-                image={W3881}
-                width={"30%"}
-                alt={W3881}
-                style={{ marginTop: -400 }}
-              />
+              {Tulips20.map((el, i) => (
+                <img
+                  key={i}
+                  style={el.css}
+                  onClick={() => openModal(el)}
+                  src={el.image}
+                  alt={el.i}
+                />
+              ))}
             </Wrapper>
           </Container>
           {/* ///////////////////////////////// */}
