@@ -5,94 +5,100 @@
   padding: 0;
   box-sizing: border-box;
 } */
+
+/* .img__wrap:hover .img__description {
+	visibility: visible;
+	opacity: 1;
+} */
+
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+	width: 0px;
+	background: transparent; /* make scrollbar transparent */
 }
 
 .unlist {
-  list-style: none;
+	list-style: none;
 }
 
 body {
-  overscroll-behavior: none;
-  -ms-overflow-style: none;
-  font-size: 16px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	overscroll-behavior: none;
+	-ms-overflow-style: none;
+	font-size: 16px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .scroll-container {
-  position: fixed;
-  left: 0;
-  right: 0;
-  will-change: transform;
+	position: fixed;
+	left: 0;
+	right: 0;
+	will-change: transform;
 }
 .ghost {
-  width: 100vw;
+	width: 100vw;
 }
 
 .thumbnails-container {
-  position: relative;
-  height: 100vh;
-  width: max-content;
-  display: flex;
-  align-items: center;
-  padding: 0px 160px;
-  /* background-color: black;
+	position: relative;
+	height: 100vh;
+	width: max-content;
+	display: flex;
+	align-items: center;
+	padding: 0px 160px;
+	/* background-color: black;
   border: 40px solid yellowGreen; */
 }
 .thumbnails {
-  position: relative;
-  display: flex;
-  /* border: 20px solid yellow; */
+	position: relative;
+	display: flex;
+	/* border: 20px solid yellow; */
 }
 .thumbnails:not(:last-child) {
-  margin-right: 45px;
+	margin-right: 45px;
 }
 .thumbnail {
-  height: 40vh;
-  width: 700px;
-  /* background-color: royalblue;
+	height: 40vh;
+	width: 700px;
+	/* background-color: royalblue;
   border: 15px solid magenta; */
 }
 
 /* /////////////// */
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 /* .unlist {
@@ -103,268 +109,268 @@ body {
 } */
 
 .img-hover-zoom {
-  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-  width: 70%;
-  width: auto;
-  height: auto;
+	overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+	width: 70%;
+	width: auto;
+	height: auto;
 }
 
 /* [2] Transition property for smooth transformation of images */
 .img-hover-zoom img {
-  transition: transform 0.8s ease;
-  margin-bottom: -10px;
-  width: 100%;
-  height: 100%;
+	transition: transform 0.8s ease;
+	margin-bottom: -10px;
+	width: 100%;
+	height: 100%;
 }
 
 /* [3] Finally, transforming the image when container gets hovered */
 .img-hover-zoom:hover img {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 /* //////////////////// */
 /* SCROLL CLASSES */
 
 .child {
-  width: 100vw;
-  height: auto;
-  background-color: red;
+	width: 100vw;
+	height: auto;
+	background-color: red;
 }
 .bgImg {
-  background-size: cover;
-  background-position: center;
+	background-size: cover;
+	background-position: center;
 }
 
 .flex {
-  display: flex;
+	display: flex;
 }
 .column {
-  flex-direction: column;
+	flex-direction: column;
 }
 
 .centerH {
-  justify-content: center;
+	justify-content: center;
 }
 .centerV {
-  align-items: center;
+	align-items: center;
 }
 .flexWrap {
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .flexEnd {
-  justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 /* //////////////////// */
 /* SLIDER CLASSES */
 
 .example-container {
-  /* width: 100vw;
+	/* width: 100vw;
   height: 100vh;
   position: relative; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .next,
 .prev {
-  /* top: calc(50% - 20px); */
-  /* position: absolute; */
-  background: transparent;
-  border: solid #331c65 1px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  /* z-index: 2; */
+	/* top: calc(50% - 20px); */
+	/* position: absolute; */
+	background: transparent;
+	border: solid #331c65 1px;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 18px;
+	/* z-index: 2; */
 }
 
 .next {
-  /* right: 10px; */
+	/* right: 10px; */
 }
 
 .prev {
-  /* left: 10px; */
-  transform: scale(-1);
+	/* left: 10px; */
+	transform: scale(-1);
 }
 
 .sliderImage {
-  /* position: absolute; */
-  width: 34%;
+	/* position: absolute; */
+	width: 34%;
 }
 
 .slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-  /* position: absolute; */
+	opacity: 0;
+	transition-duration: 1s ease;
+	/* position: absolute; */
 }
 
 .slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
+	opacity: 1;
+	transition-duration: 1s;
+	transform: scale(1.08);
 }
 
 .unsetWidth {
-  width: unset !important;
+	width: unset !important;
 }
 
 /* //////////////WONRGGGGGGGGGG ////////////// */
 
 .wrapper {
-  padding: 0 48px;
+	padding: 0 48px;
 }
 .home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
 }
 .home p {
-  font-size: 0.75rem;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  font-weight: 500;
+	font-size: 0.75rem;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	font-weight: 500;
 }
 .home h5 {
-  margin-top: 260px;
-  font-size: 24px;
-  font-weight: 600;
-  padding-right: 360px;
+	margin-top: 260px;
+	font-size: 24px;
+	font-weight: 600;
+	padding-right: 360px;
 }
 
 .inner-header {
-  position: relative;
-  z-index: 10;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	position: relative;
+	z-index: 10;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .logo a {
-  font-weight: 700;
-  font-size: 1rem;
-  text-decoration: none;
-  color: "#b3c53f";
+	font-weight: 700;
+	font-size: 1rem;
+	text-decoration: none;
+	color: '#b3c53f';
 }
 .menu button {
-  border: none;
-  background: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 0.8rem;
-  mix-blend-mode: difference;
-  font: bold 20px/20px;
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 0.8rem;
+	mix-blend-mode: difference;
+	font: bold 20px/20px;
 }
 
 .hamburger-menu {
-  display: none;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: #4f5813;
+	display: none;
+	z-index: 9;
+	top: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: #4f5813;
 }
 
 .menu-secondary-background-color {
-  background: #7a8821;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+	background: #7a8821;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
 }
 .menu-layer {
-  position: relative;
-  background: #191a15;
-  height: 100%;
-  overflow: hidden;
+	position: relative;
+	background: #191a15;
+	height: 100%;
+	overflow: hidden;
 }
 
 .menu-city-background {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation-name: backgroundEffect;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation-name: backgroundEffect;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
 }
 .wrapper {
-  position: relative;
+	position: relative;
 }
 
 .menu-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  top: 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	top: 200px;
 }
 
 .info {
-  color: #fff;
-  width: 300px;
+	color: #fff;
+	width: 300px;
 }
 
 .info h3 {
-  font-size: 1.2rem;
-  margin: 8px auto;
+	font-size: 1.2rem;
+	margin: 8px auto;
 }
 .info p {
-  margin: 0 auto;
-  font-size: 0.8rem;
+	margin: 0 auto;
+	font-size: 0.8rem;
 }
 
 .locations {
-  position: absolute;
-  bottom: -80px;
-  color: #fff;
-  margin-top: 16px;
-  font-size: 0.8rem;
-  font-weight: 600;
+	position: absolute;
+	bottom: -80px;
+	color: #fff;
+	margin-top: 16px;
+	font-size: 0.8rem;
+	font-weight: 600;
 }
 
 .locations span {
-  cursor: pointer;
-  font-weight: 400;
-  margin: 0 32px;
-  transition: 0.3s ease-in-out;
+	cursor: pointer;
+	font-weight: 400;
+	margin: 0 32px;
+	transition: 0.3s ease-in-out;
 }
 @keyframes backgroundEffect {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 40% 10%;
-  }
-  50% {
-    background-position: 0 10%;
-  }
-  75% {
-    background-position: 10% 40%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+	0% {
+		background-position: 0% 0%;
+	}
+	25% {
+		background-position: 40% 10%;
+	}
+	50% {
+		background-position: 0 10%;
+	}
+	75% {
+		background-position: 10% 40%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
 }
