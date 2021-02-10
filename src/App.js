@@ -12,7 +12,7 @@ import WhatNow from "./pages/WhyNow";
 import Gallery from "./pages/Gallery/Gallery.jsx";
 import Influences from "./pages/Influences";
 import Latf from "./pages/Latf.jsx";
-import Lightscapes from "./pages/Lightscapes.jsx";
+import Lightscapes from "./pages/Lightscapes/Lightscapes.jsx";
 import Contest from "./pages/Contest.jsx";
 import Angkor from "./pages/Angkor.jsx";
 import Enescu from "./pages/Enescu";
