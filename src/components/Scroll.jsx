@@ -7,6 +7,27 @@ import {
   useSpring,
 } from "framer-motion";
 import { PageTransition } from "../pages/Home";
+import styles from "styled-components";
+import { device } from "../pages/Gallery/styles";
+
+const ScrollContainer = styles.div`
+position: fixed;
+left: 0;
+right: 0;
+will-change: transform;
+display: flex;
+flex-direction: column;`;
+
+const ThumbnailsContainer = styles(motion.div)`
+position: relative;
+height: 100vh;
+width: max-content;
+display: flex;
+align-items: center;
+padding: 0px;
+@media ${device.tablet} {
+  // maybe some padding
+}`;
 
 const Scroll = ({ children }) => {
   const scrollRef = useRef(null);
@@ -47,16 +68,12 @@ const Scroll = ({ children }) => {
         exit="out"
         variants={PageTransition}
       >
-        <div className="scroll-container flex column">
-          <motion.div
-            className="thumbnails-container"
-            ref={scrollRef}
-            style={{ x: spring }}
-          >
+        <ScrollContainer>
+          <ThumbnailsContainer ref={scrollRef} style={{ x: spring }}>
             {children}
-          </motion.div>
-        </div>
-        <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" />
+          </ThumbnailsContainer>
+        </ScrollContainer>
+        <div ref={ghostRef} style={{ height: scrollRange, width: "100vw" }} />
       </motion.div>
     </>
   );

@@ -157,7 +157,7 @@ const Latf = () => {
 
   ///////////////////
   const [showModal, setShowModal] = useState(false);
-  const [selected, setSelected] = useState(Tulips19[0]);
+  const [selected, setSelected] = useState(0);
 
   console.log("outside", selected);
 
