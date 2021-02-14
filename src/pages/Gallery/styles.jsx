@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const device = {
-  tablet: `(min-width: 768px)`,
-  small: `(min-width: 1024px)`,
-  medium: `(min-width: 1366px)`,
-  large: `(min-width: 1920px)`,
-};
-
 export const Ul = styled.ul`
   height: 70%;
   align-items: center;

@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import { PageTransition } from "../pages/Home";
 import styles from "styled-components";
-import { device } from "../pages/Gallery/styles";
+import { device } from "../generalStyles";
 
 const ScrollContainer = styles.div`
 position: fixed;
