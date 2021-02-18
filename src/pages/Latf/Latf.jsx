@@ -1,356 +1,397 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
-  Container,
-  SubHeader,
-  Wrapper,
-  ImageWrapper,
-  FotoWrapper,
-  PeoniesWrapper,
-} from "./styles";
+	Container,
+	SubHeader,
+	Wrapper,
+	ImageWrapper,
+	FotoWrapper,
+	PeoniesWrapper,
+} from './styles';
 import {
-  RW,
-  TA,
-  Windhover,
-  TAA,
-  Peonies,
-  ITSOTN,
-  LOTF,
-  Winter19,
-  QAG,
-  Elysium,
-} from "./dataLatf";
+	RW,
+	TA,
+	Windhover,
+	TAA,
+	Peonies,
+	ITSOTN,
+	LOTF,
+	Winter19,
+	QAG,
+	Elysium,
+} from './dataLatf';
 import {
-  objects1,
-  objects2,
-  objects3,
-  objects4,
-  objects5,
-  objects6,
-} from "./dataLatf";
+	objects1,
+	objects2,
+	objects3,
+	objects4,
+	objects5,
+	objects6,
+} from './dataLatf';
 
-import Modal from "../../components/Modal";
-import PageHeaders from "../../components/PageHeaders";
-import Scroll from "../../components/Scroll";
-import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
-import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
+import Modal from '../../components/Modal';
+import PageHeaders from '../../components/PageHeaders';
+import Scroll from '../../components/Scroll';
+import W2555 from '../../images/LATF/WEB-2555-263kb.jpg';
+import { IntroContainer, WrapperIntroText } from '../Lightscapes/styles';
 
 const Latf = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [selected, setSelected] = useState(0);
+	const [showModal, setShowModal] = useState(false);
+	const [selected, setSelected] = useState(0);
 
-  const openModal = (id) => {
-    setSelected(id);
-    setShowModal((prev) => !prev);
-  };
+	const openModal = (id) => {
+		setSelected(id);
+		setShowModal((prev) => !prev);
+	};
 
-  return (
-    <div style={{ backgroundColor: "#f5f5f5" }}>
-      <Modal showModal={showModal} setShowModal={setShowModal}>
-        <img style={{ width: "100%" }} src={selected.image} alt={selected.i} />
-      </Modal>
-      <PageHeaders>Look at the Flowers</PageHeaders>
-      <Scroll>
-        <IntroContainer>
-          <WrapperIntroText>
-            <p>
-              Focus. When we look at something, really look, what captures our
-              attention stands out in sharp relief. Everything else blurs away.
-              These flower “portraits” are taken with a 100mm Macro lens, and
-              make deliberate use of the focal plane as a major part of the
-              composition, along with the placement of objects and blocks of
-              color. The goal is to use all the elements of composition to
-              invite the viewer to see the flowers in a particular way.
-            </p>
-            <br />
-            <p>
-              Together, these images make up an imaginary exhibition called Look
-              at the Flowers… It is a still growing body of work that began in
-              the Spring and Summer of 2019. When Spring came around this year,
-              I wondered what would happen when I looked through the lens. Would
-              anything “new” show up? Please take a look with me and see!
-            </p>
-          </WrapperIntroText>
-          <ImageWrapper>
-            <img src={W2555} width={"100%"} alt={W2555} />
-          </ImageWrapper>
-        </IntroContainer>
+	return (
+		<div style={{ backgroundColor: '#f5f5f5' }}>
+			<Modal showModal={showModal} setShowModal={setShowModal}>
+				<img style={{ width: '100%' }} src={selected.image} alt={selected.i} />
+			</Modal>
+			<PageHeaders>Look at the Flowers</PageHeaders>
+			<Scroll>
+				<IntroContainer>
+					<WrapperIntroText>
+						<p>
+							Focus. When we look at something, really look, what captures our
+							attention stands out in sharp relief. Everything else blurs away.
+							These flower “portraits” are taken with a 100mm Macro lens, and
+							make deliberate use of the focal plane as a major part of the
+							composition, along with the placement of objects and blocks of
+							color. The goal is to use all the elements of composition to
+							invite the viewer to see the flowers in a particular way.
+						</p>
+						<br />
+						<p>
+							Together, these images make up an imaginary exhibition called Look
+							at the Flowers… It is a still growing body of work that began in
+							the Spring and Summer of 2019. When Spring came around this year,
+							I wondered what would happen when I looked through the lens. Would
+							anything “new” show up? Please take a look with me and see!
+						</p>
+					</WrapperIntroText>
+					<ImageWrapper>
+						<img src={W2555} width={'100%'} alt={W2555} />
+					</ImageWrapper>
+				</IntroContainer>
 
-        {objects1.map((obj, i) => (
-          <Container key={i}>
-            <SubHeader>{obj.name}</SubHeader>
-            <Wrapper>
-              {obj.page.map((el, i) => (
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <p>{obj.text}</p>
-            </Wrapper>
-          </Container>
-        ))}
+				{objects1.map((obj, i) => (
+					<Container key={i}>
+						<SubHeader>{obj.name}</SubHeader>
+						<Wrapper>
+							{obj.page.map((el, i) => (
+								<img
+									key={i}
+									style={el.css}
+									onClick={() => openModal(el)}
+									src={el.image}
+									alt={el.i}
+								/>
+							))}
+							<p>{obj.text}</p>
+						</Wrapper>
+					</Container>
+				))}
 
-        <Container>
-          <SubHeader>{RW.name}</SubHeader>
-          <Wrapper style={{ flexWrap: "nowrap", width: "80%" }}>
-            {RW.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-            <div>
-              <p>
-                <span style={{ font: "36px/28px Mrs Saint Delafield" }}>
-                  My
-                </span>{" "}
-                love for you is an evening star that glows once more toward the
-                end of day
-              </p>
-              <p>
-                My love for you is an ancient scar a gash in youth that bled
-                away
-              </p>
-              <p>
-                {" "}
-                My love for you is the morning star the glint of light that
-                leads the way
-              </p>
-            </div>
-          </Wrapper>
-        </Container>
+				<Container>
+					<SubHeader>{RW.name}</SubHeader>
+					<Wrapper style={{ flexWrap: 'nowrap', width: '80%' }}>
+						{RW.page.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={i}
+							/>
+						))}
+						<div
+							style={{
+								font: '14px/18px Lato',
+								color: '#331c65',
+								width: '30%',
+								marginTop: 70,
+							}}
+						>
+							<p>
+								<span style={{ font: '30px/26px Mrs Saint Delafield' }}>
+									My
+								</span>
+								{'     '}
+								love for you is an evening star that glows once more toward the
+								end of day
+							</p>
+							<br />
+							<p>
+								My love for you is an ancient scar a gash in youth that bled
+								away
+							</p>
+							<br />
+							<p>
+								{' '}
+								My love for you is the morning star the glint of light that
+								leads the way
+							</p>
+						</div>
+					</Wrapper>
+				</Container>
 
-        {objects2.map((obj, i) => (
-          <Container key={i}>
-            <SubHeader>{obj.name}</SubHeader>
-            <Wrapper>
-              {obj.page.map((el, i) => (
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <p>{obj.text}</p>
-            </Wrapper>
-          </Container>
-        ))}
+				{objects2.map((obj, i) => (
+					<Container key={i}>
+						<SubHeader>{obj.name}</SubHeader>
+						<Wrapper>
+							{obj.page.map((el, i) => (
+								<img
+									key={i}
+									style={el.css}
+									onClick={() => openModal(el)}
+									src={el.image}
+									alt={el.i}
+								/>
+							))}
+							<p>{obj.text}</p>
+						</Wrapper>
+					</Container>
+				))}
 
-        <Container>
-          <SubHeader>{Windhover.name}</SubHeader>
-          <Wrapper>
-            {Windhover.p11.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
+				<Container>
+					<SubHeader>{Windhover.name}</SubHeader>
+					<Wrapper>
+						<WrapperIntroText>
+							<p>
+								Focus. When we look at something, really look, what captures our
+								attention stands out in sharp relief. Everything else blurs
+								away. These flower “portraits” are taken with a 100mm Macro
+								lens, and make deliberate use of the focal plane as a major part
+								of the composition, along with the placement of objects and
+								blocks of color. The goal is to use all the elements of
+								composition to invite the viewer to see the flowers in a
+								particular way.
+							</p>
+							<br />
+							<p>
+								Together, these images make up an imaginary exhibition called
+								Look at the Flowers… It is a still growing body of work that
+								began in the Spring and Summer of 2019. When Spring came around
+								this year, I wondered what would happen when I looked through
+								the lens. Would anything “new” show up? Please take a look with
+								me and see!
+							</p>
+						</WrapperIntroText>
+						{Windhover.p11.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={i}
+							/>
+						))}
+					</Wrapper>
+				</Container>
 
-        <Container>
-          <SubHeader>{TA.name}</SubHeader>
-          <Wrapper>
-            {TA.p12.map((el, i) => (
-              <FotoWrapper>
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={i}
-                />
-              </FotoWrapper>
-            ))}
-          </Wrapper>
-        </Container>
+				<Container>
+					<SubHeader>{TA.name}</SubHeader>
+					<Wrapper>
+						{TA.p12.map((el, i) => (
+							<FotoWrapper>
+								<img
+									key={i}
+									style={el.css}
+									onClick={() => openModal(el)}
+									src={el.image}
+									alt={i}
+								/>
+							</FotoWrapper>
+						))}
+					</Wrapper>
+				</Container>
 
-        <Container>
-          <SubHeader>{TAA.name}</SubHeader>
-          <Wrapper>
-            {TAA.p13.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Peonies.name}</SubHeader>
-          <Wrapper>
-            {Peonies.p14.map((el, i) => (
-              <PeoniesWrapper>
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={i}
-                />
-              </PeoniesWrapper>
-            ))}
-          </Wrapper>
-        </Container>
+				<Container>
+					<SubHeader>{TAA.name}</SubHeader>
+					<Wrapper>
+						{TAA.p13.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={i}
+							/>
+						))}
+					</Wrapper>
+				</Container>
+				<Container>
+					<SubHeader>{Peonies.name}</SubHeader>
+					<Wrapper>
+						{Peonies.p14.map((el, i) => (
+							<PeoniesWrapper>
+								<img
+									key={i}
+									style={el.css}
+									onClick={() => openModal(el)}
+									src={el.image}
+									alt={i}
+								/>
+							</PeoniesWrapper>
+						))}
+					</Wrapper>
+				</Container>
 
-        {objects3.map((obj, i) => (
-          <Container key={i}>
-            <SubHeader>{obj.name}</SubHeader>
-            <Wrapper>
-              {obj.page.map((el, i) => (
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <p>{obj.text}</p>
-            </Wrapper>
-          </Container>
-        ))}
+				{objects3.map((obj, i) => (
+					<Container key={i}>
+						<SubHeader>{obj.name}</SubHeader>
+						<Wrapper>
+							{obj.page.map((el, i) => (
+								<img
+									key={i}
+									style={el.css}
+									onClick={() => openModal(el)}
+									src={el.image}
+									alt={el.i}
+								/>
+							))}
+							<p>{obj.text}</p>
+						</Wrapper>
+					</Container>
+				))}
 
-        <Container>
-          <SubHeader>{ITSOTN.name}</SubHeader>
-          <Wrapper>
-            {ITSOTN.p17.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-            <p>{ITSOTN.text}</p>
-          </Wrapper>
-        </Container>
+				<Container>
+					<SubHeader>{ITSOTN.name}</SubHeader>
+					<Wrapper>
+						{ITSOTN.p17.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={i}
+							/>
+						))}
+						<p
+							style={{
+								width: '40%',
+								font: '300 16px/20px Lato',
+								marginTop: '26%',
+							}}
+						>
+							{ITSOTN.text}
+						</p>
+					</Wrapper>
+				</Container>
 
-        {objects4.map((obj, i) => (
-          <Container key={i}>
-            <SubHeader>{obj.name}</SubHeader>
-            <Wrapper>
-              {obj.page.map((el, i) => (
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <p>{obj.text}</p>
-            </Wrapper>
-          </Container>
-        ))}
-        <Container>
-          <SubHeader>{LOTF.name}</SubHeader>
-          <Wrapper>
-            <p>{LOTF.text}</p>
-            {LOTF.p26.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        {objects5.map((obj, i) => (
-          <Container key={i}>
-            <SubHeader>{obj.name}</SubHeader>
-            <Wrapper>
-              {obj.page.map((el, i) => (
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <p>{obj.text}</p>
-            </Wrapper>
-          </Container>
-        ))}
-        <Container>
-          <SubHeader>{Winter19.name}</SubHeader>
-          <Wrapper>
-            {Winter19.p35.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={el.i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        {objects6.map((obj, i) => (
-          <Container key={i}>
-            <SubHeader>{obj.name}</SubHeader>
-            <Wrapper>
-              {obj.page.map((el, i) => (
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <p>{obj.text}</p>
-            </Wrapper>
-          </Container>
-        ))}
-        <Container>
-          <SubHeader>{QAG.name}</SubHeader>
-          <Wrapper>
-            {QAG.p39.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={el.i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Elysium.name}</SubHeader>
-          <Wrapper>
-            {Elysium.p40.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
+				{objects4.map((obj, i) => (
+					<Container key={i}>
+						<SubHeader>{obj.name}</SubHeader>
+						<Wrapper>
+							{obj.page.map((el, i) => (
+								<div>
+									<img
+										key={i}
+										style={el.css}
+										onClick={() => openModal(el)}
+										src={el.image}
+										alt={el.i}
+									/>
+								</div>
+							))}
+							<p>{obj.text}</p>
+						</Wrapper>
+					</Container>
+				))}
+				<Container>
+					<SubHeader>{LOTF.name}</SubHeader>
+					<Wrapper>
+						<p>{LOTF.text}</p>
+						{LOTF.p26.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={i}
+							/>
+						))}
+					</Wrapper>
+				</Container>
+				{objects5.map((obj, i) => (
+					<Container key={i}>
+						<SubHeader>{obj.name}</SubHeader>
+						<Wrapper>
+							{obj.page.map((el, i) => (
+								<img
+									key={i}
+									style={el.css}
+									onClick={() => openModal(el)}
+									src={el.image}
+									alt={el.i}
+								/>
+							))}
+							<p>{obj.text}</p>
+						</Wrapper>
+					</Container>
+				))}
+				<Container>
+					<SubHeader>{Winter19.name}</SubHeader>
+					<Wrapper>
+						{Winter19.p35.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={el.i}
+							/>
+						))}
+					</Wrapper>
+				</Container>
+				{objects6.map((obj, i) => (
+					<Container key={i}>
+						<SubHeader>{obj.name}</SubHeader>
+						<Wrapper>
+							{obj.page.map((el, i) => (
+								<img
+									key={i}
+									style={el.css}
+									onClick={() => openModal(el)}
+									src={el.image}
+									alt={el.i}
+								/>
+							))}
+							<p>{obj.text}</p>
+						</Wrapper>
+					</Container>
+				))}
+				<Container>
+					<SubHeader>{QAG.name}</SubHeader>
+					<Wrapper>
+						{QAG.p39.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={el.i}
+							/>
+						))}
+					</Wrapper>
+				</Container>
+				<Container>
+					<SubHeader>{Elysium.name}</SubHeader>
+					<Wrapper>
+						{Elysium.p40.map((el, i) => (
+							<img
+								key={i}
+								style={el.css}
+								onClick={() => openModal(el)}
+								src={el.image}
+								alt={i}
+							/>
+						))}
+					</Wrapper>
+				</Container>
 
-        {/* <Container>
+				{/* <Container>
           <SubHeader>{Tulips19.name}</SubHeader>
           <Wrapper>
             {Tulips19.p1.map((el, i) => (
@@ -651,9 +692,9 @@ const Latf = () => {
             ))}
           </Wrapper>
         </Container> */}
-      </Scroll>
-    </div>
-  );
+			</Scroll>
+		</div>
+	);
 };
 
 export default Latf;
