@@ -404,17 +404,17 @@ export const FL = {
       id: 1,
       image: W8064,
       css: {
-        width: "20%",
+        width: "30%",
         margin: 10,
         display: "flex",
         alignSelf: "flex-start",
       },
     },
-    { id: 2, image: W8994, css: { width: "20%", margin: 10 } },
+    { id: 2, image: W8994, css: { width: "30%", margin: 10 } },
     {
       id: 3,
       image: W9139,
-      css: { width: "20%", margin: 10, display: "flex", alignSelf: "flex-end" },
+      css: { width: "30%", margin: 10, display: "flex", alignSelf: "flex-end" },
     },
   ],
 };
@@ -440,7 +440,7 @@ export const BLUY = {
 };
 export const QAG = {
   name: "Queen Anne Galaxy",
-  page: [{ id: 1, image: W3638, css: { width: "20%", margin: 10 } }],
+  page: [{ id: 1, image: W6925 }],
 };
 export const Elysium = {
   name: "Elysium",

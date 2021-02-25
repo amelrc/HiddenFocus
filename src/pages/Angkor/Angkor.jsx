@@ -1,42 +1,32 @@
 import React, { useState } from "react";
-import Image from "../../components/Image";
-import { Container, Wrapper, SubHeader } from "../Latf/styles";
+import { Container, Wrapper, SubHeader, SingleImage } from "../Latf/styles";
 import PageHeaders from "../../components/PageHeaders";
 import Scroll from "../../components/Scroll";
 import Modal from "../../components/Modal";
-import { objects1 } from "./dataAngkor";
+import {
+  PageOne,
+  PageTwo,
+  PageThree,
+  PageFour,
+  PageFive,
+  PageSix,
+} from "./dataAngkor";
 
-import I1P1 from "../../images/AW/WEB--0665-302kb--Angkor--p.1.jpg";
-import I2P1 from "../../images/AW/WEB--0440--253kb--Angkor--p.1.jpg";
-import I1P2 from "../../images/AW/WEB--0355--288kb--Angkor--p.2.jpg";
-import I2P2 from "../../images/AW/WEB--0371-257kb--Angkor--p.2.jpg";
-import I1P3 from "../../images/AW/WEB-0653--311kb--Angkor--p.3.jpg";
-import I2P3 from "../../images/AW/WEB--0592--249kb--Angkor--p.3.jpg";
-import I3P3 from "../../images/AW/WEB--0615--258kb--Angkor--p.3.jpg";
-import I1P4 from "../../images/AW/WEB--0511--261kb--Angkor--p.4.jpg";
-import I2P4 from "../../images/AW/WEB--1509--286kb--Angkor--p.4.jpg";
-import I3P4 from "../../images/AW/WEB--0536--378kb--Angkor--p.4.jpg";
-import I1P5 from "../../images/AW/WEB--0403--253kb--Angkor--p.5.jpg";
-import I2P5 from "../../images/AW/WEB--0577--251kb--Angkor--p.5.jpg";
-import I3P5 from "../../images/AW/WEB--1555--252kb--Angkor--p.5.jpg";
-import I1P6 from "../../images/AW/WEB--0529--250kb--Angkor--p.6.jpg";
 import {
   Images,
   I1P1D,
   I1P2D,
   I1P3D,
-  I1P4D,
   I1P5D,
   I2P1D,
   I2P2D,
-  I2P3D,
-  I2P4D,
   I2P5D,
   I3P3D,
-  I3P4D,
-  I3P5D,
   P1B,
   P1A,
+  P2A,
+  P2B,
+  TextFive,
 } from "./styles";
 
 const Angkor = () => {
@@ -51,186 +41,144 @@ const Angkor = () => {
   return (
     <div>
       <Modal showModal={showModal} setShowModal={setShowModal}>
-        <img
-          style={{ width: "100%" }}
-          src={selected.top.image}
-          alt={selected}
-        />
+        <img style={{ width: "100%" }} src={selected.image} alt={selected} />
       </Modal>
       <PageHeaders>Angkor Wat</PageHeaders>
       <Scroll>
-        {objects1.map((obj, i) => {
-          return (
-            <Container key={i}>
-              <Wrapper>
+        <Container>
+          <Wrapper>
+            {PageOne.top.map((obj, i) => {
+              return (
                 <div className="flex">
                   <I1P1D>
                     <Images
                       onClick={() => openModal(obj)}
-                      src={obj.top.image}
-                      alt=""
+                      src={obj.image}
+                      alt={i}
                     />
                   </I1P1D>
-                  <P1A>{obj.top.text}</P1A>
+                  <P1A>{obj.text}</P1A>
                 </div>
-
-                {/* <div
-                  className="flex"
-                  style={{ marginTop: -100, justifyContent: "flex-end" }}
-                >
-                  <P1B>{el.page[1].text}</P1B>
+              );
+            })}
+            {PageOne.btm.map((obj, i) => {
+              return (
+                <div className="flex" style={{ justifyContent: "flex-end" }}>
+                  <P1B>{obj.text}</P1B>
                   <I2P1D>
                     <Images
-                      onClick={() => openModal()}
-                      src={el.page[1].image}
-                      alt={I1P1}
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
                     />
                   </I2P1D>
-                </div> */}
-              </Wrapper>
-            </Container>
-          );
-        })}
-
-        {/* //////////////////////////////// */}
-        <Container>
-          <Wrapper style={{ width: "84%" }}>
-            <div className="flex">
-              <I1P2D>
-                <Images src={I1P2} alt={I1P2} />
-              </I1P2D>
-              <p
-                style={{
-                  font: "normal normal 300 14px/16px Lato",
-                  color: "#331c65",
-                  width: "20%",
-                }}
-              >
-                Angkor Wat was originally constructed as a Hindu temple
-                dedicated to the god Vishnu. Here we see the goddess Kali
-                receiving the mixed attentions of visitors.
-              </p>
-            </div>
-            <div
-              className="flex"
-              style={{ marginTop: "-20%", justifyContent: "flex-end" }}
-            >
-              <p
-                style={{
-                  font: "normal normal 300 14px/16px Lato",
-                  color: "#331c65",
-                  margin: "0 0px 40px 0",
-                  width: "20%",
-                  height: "fit-content",
-                  alignSelf: "flex-end",
-                }}
-              >
-                The best way to keep my fellow tourists from “intruding” upon my
-                idealized scene was to incorporate them directly into the
-                composition…
-              </p>
-              <I2P2D style={{ width: "36%", margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I2P2}
-                  alt={I1P2}
-                />
-              </I2P2D>
-            </div>
+                </div>
+              );
+            })}
           </Wrapper>
         </Container>
-        {/* //////////////////////////// */}
+        {/* ///// 2 //////// */}
         <Container>
-          <div style={{ height: "85%", width: "90%" }} className="flex">
-            <div className="flex column">
-              <I1P3D style={{ width: "70%", margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I3P3}
-                  alt={I3P3}
-                />
-              </I1P3D>
-              <I2P3D style={{ width: "70%", margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I1P3}
-                  alt={I1P3}
-                />
-              </I2P3D>
+          <Wrapper style={{ width: "84%" }}>
+            {PageTwo.top.map((obj, i) => {
+              return (
+                <div className="flex">
+                  <I1P2D>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I1P2D>
+                  <P2A>{obj.text}</P2A>
+                </div>
+              );
+            })}
+            {PageTwo.btm.map((obj, i) => {
+              return (
+                <div
+                  className="flex"
+                  style={{ justifyContent: "flex-end", marginTop: "-20%" }}
+                >
+                  <P2B>{obj.text}</P2B>
+                  <I2P2D>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I2P2D>
+                </div>
+              );
+            })}
+          </Wrapper>
+        </Container>
+
+        {/* /////////////  3  /////////////// */}
+        <Container>
+          <div style={{ display: "flex", height: "84%", width: "84%" }}>
+            <div className="flex column" style={{ alignItems: " center" }}>
+              {PageThree.left.map((obj, i) => {
+                return (
+                  <I1P3D>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I1P3D>
+                );
+              })}
             </div>
-            <div className="flex" style={{ justifyContent: "flex-end" }}>
-              <I3P3D style={{ margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I2P3}
-                  alt={I2P3}
-                />
-              </I3P3D>
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {PageThree.right.map((obj, i) => {
+                return (
+                  <I3P3D style={{ margin: 10 }}>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I3P3D>
+                );
+              })}
             </div>
           </div>
         </Container>
-        {/* //////////////////////////// */}
+        {/* /////////////  4  /////////////// */}
         <Container>
-          <div style={{ height: "85%", width: "90%" }} className="flex">
-            <div className="flex" style={{ justifyContent: "flex-end" }}>
-              <I1P4D style={{ margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I2P4}
-                  alt={I2P4}
-                />
-              </I1P4D>
+          <div style={{ display: "flex", height: "84%", width: "84%" }}>
+            <div style={{ display: "flex" }}>
+              {PageFour.right.map((obj, i) => {
+                return (
+                  <I3P3D style={{ margin: 10 }}>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I3P3D>
+                );
+              })}
             </div>
-            <div
-              className="flex column"
-              style={{ alignItems: "center", justifyContent: "center" }}
-            >
-              <I2P4D style={{ width: "60%", margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I1P4}
-                  alt={I1P4}
-                />
-              </I2P4D>
-              <I3P4D style={{ width: "54%", margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I3P4}
-                  alt={I3P4}
-                />
-              </I3P4D>
+            <div className="flex column" style={{ alignItems: " center" }}>
+              {PageFour.left.map((obj, i) => {
+                return (
+                  <I1P3D>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I1P3D>
+                );
+              })}
             </div>
           </div>
         </Container>
-        {/* ///////////////////////// */}
+
+        {/* ////////////  5  ///////////// */}
 
         <Container>
           <div
@@ -238,64 +186,53 @@ const Angkor = () => {
             className="flex column"
           >
             <div className="flex" style={{ justifyContent: "center" }}>
-              <I1P5D style={{ margin: 10, width: "34%" }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I2P5}
-                  alt={I2P5}
-                />
-              </I1P5D>
+              {PageFive.top.map((obj, i) => {
+                return (
+                  <I1P5D>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I1P5D>
+                );
+              })}
             </div>
-            <p
-              style={{
-                font: "normal normal 300 14px/16px Lato",
-                color: "#331c65",
-                width: "40%",
-                textAlign: "center",
-                margin: "30px 0",
-              }}
-            >
+            <TextFive>
               Two of these images capture something of our cultural disconnect
               from spiritual moorings. The third reminds us of who we really
               are…
-            </p>
+            </TextFive>
             <div
               className="flex"
               style={{ alignItems: "center", justifyContent: "space-evenly" }}
             >
-              <I2P5D style={{ width: "34%", margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I1P5}
-                  alt={I1P5}
-                />
-              </I2P5D>
-              <I3P5D style={{ width: "34%", margin: 10 }}>
-                <Image
-                  style={{
-                    maxWidth: "100%",
-                    width: "fit-content",
-                    margin: 0,
-                  }}
-                  image={I3P5}
-                  alt={I3P5}
-                />
-              </I3P5D>
+              {PageFive.btm.map((obj, i) => {
+                return (
+                  <I2P5D>
+                    <Images
+                      onClick={() => openModal(obj)}
+                      src={obj.image}
+                      alt={i}
+                    />
+                  </I2P5D>
+                );
+              })}
             </div>
           </div>
         </Container>
-        {/* //////////////////////// */}
+        {/* //////////  6  ////////////// */}
         <Container>
           <Wrapper className="column">
-            <Image image={I1P6} width={"70%"} alt={I1P6} />
+            {PageSix.page.map((obj, i) => {
+              return (
+                <SingleImage
+                  onClick={() => openModal(obj)}
+                  src={obj.image}
+                  alt={i}
+                />
+              );
+            })}
             <SubHeader>“The Sentinel”</SubHeader>
           </Wrapper>
         </Container>

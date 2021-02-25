@@ -30,13 +30,53 @@ const T2P1 = (
   </>
 );
 
+const T1P2 = (
+  <>
+    Angkor Wat was originally constructed as a Hindu temple dedicated to the god
+    Vishnu. Here we see the goddess Kali receiving the mixed attentions of
+    visitors.
+  </>
+);
+
+const T2P2 = (
+  <>
+    The best way to keep my fellow tourists from “intruding” upon my idealized
+    scene was to incorporate them directly into the composition…
+  </>
+);
+
 export const PageOne = {
-  top: { id: 1, image: I1P1, text: T1P1 },
-  btm: { id: 2, image: I2P1, text: T2P1 },
+  top: [{ id: 1, image: I1P1, text: T1P1 }],
+  btm: [{ id: 1, image: I2P1, text: T2P1 }],
 };
 export const PageTwo = {
-  top: { id: 1, image: I1P2, text: T1P1 },
-  btm: { id: 2, image: I2P2, text: T2P1 },
+  top: [{ id: 1, image: I1P2, text: T1P2 }],
+  btm: [{ id: 2, image: I2P2, text: T2P2 }],
+};
+export const PageThree = {
+  left: [
+    { id: 1, image: I1P3 },
+    { id: 2, image: I3P3 },
+  ],
+  right: [{ id: 2, image: I2P3 }],
+};
+export const PageFour = {
+  left: [
+    { id: 1, image: I1P4 },
+    { id: 2, image: I3P4 },
+  ],
+  right: [{ id: 2, image: I2P4 }],
+};
+export const PageFive = {
+  top: [{ id: 1, image: I1P5 }],
+  btm: [
+    { id: 2, image: I2P5 },
+    { id: 2, image: I3P5 },
+  ],
+};
+
+export const PageSix = {
+  page: [{ id: 1, image: I1P6 }],
 };
 
 export const objects1 = [PageOne, PageTwo];

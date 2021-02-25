@@ -10,7 +10,7 @@ export const Text = styled.p`
 `;
 
 export const I1P1D = styled.div`
-  width: 40%;
+  width: 30%;
   margin: 10px;
   &:after {
     content: "Angkor Wat";
@@ -27,121 +27,135 @@ export const P1A = styled(Text)`
 `;
 export const P1B = styled(Text)`
   width: 40%;
-  align-self: flex-end;
-  margin-bottom: 10px;
+  margin-top: 20px;
+`;
+export const P2A = styled(Text)`
+  width: 40%;
+`;
+export const P2B = styled(Text)`
+  width: 22%;
+  margin-top: 20px;
 `;
 
 export const I2P1D = styled.div`
-  width: 25%;
+  width: 20%;
   margin: 10px;
   &:after {
     content: "Angkor Wat";
     position: relative;
-    left: 50%;
+    left: 38%;
     color: #331c65;
     font-size: 16px;
   }
 `;
 export const I1P2D = styled.div`
-  width: 28%;
+  width: 22%;
   margin: 10px;
   &:after {
     content: "Angkor Wat";
     position: relative;
-    left: 87%;
+    left: 80%;
     color: #331c65;
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
 export const I2P2D = styled.div`
+  width: 30%;
+  margin: 10px;
   &:after {
     content: "Angkor Wat";
     position: relative;
     left: 76%;
     color: #331c65;
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
 export const I1P3D = styled.div`
+  width: 50%;
+  margin: 10px;
   &:after {
     content: "Bayon";
     position: relative;
     left: 90%;
     color: #331c65;
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
-export const I2P3D = styled.div`
-  &:after {
-    content: "Bayon";
-    position: relative;
-    left: 94%;
-    color: #331c65;
-    font-size: 20px;
-  }
-`;
+
 export const I3P3D = styled.div`
+  width: 70%;
+  margin: 10px;
   &:after {
     content: "Bayon";
     position: relative;
     left: 100%;
     color: #331c65;
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
-export const I1P4D = styled.div`
-  &:after {
-    content: "Phnon Bakheng";
-    position: relative;
-    left: 88%;
-    color: #331c65;
-    font-size: 20px;
-  }
-`;
-export const I2P4D = styled.div`
-  &:after {
-    content: "Ta Prohm";
-    position: relative;
-    left: 94%;
-    color: #331c65;
-    font-size: 20px;
-  }
-`;
-export const I3P4D = styled.div`
-  &:after {
-    content: "Ta Prohm";
-    position: relative;
-    left: 94%;
-    color: #331c65;
-    font-size: 20px;
-  }
-`;
+// export const I1P4D = styled.div`
+//   &:after {
+//     content: "Phnon Bakheng";
+//     position: relative;
+//     left: 88%;
+//     color: #331c65;
+//     font-size: 20px;
+//   }
+// `;
+// export const I2P4D = styled.div`
+//   &:after {
+//     content: "Ta Prohm";
+//     position: relative;
+//     left: 94%;
+//     color: #331c65;
+//     font-size: 20px;
+//   }
+// `;
+// export const I3P4D = styled.div`
+//   &:after {
+//     content: "Ta Prohm";
+//     position: relative;
+//     left: 94%;
+//     color: #331c65;
+//     font-size: 20px;
+//   }
+// `;
 export const I1P5D = styled.div`
+  margin: 10px;
+  width: 22%;
   &:after {
     content: "Ta Prohm";
     position: relative;
     left: 100%;
     color: #331c65;
-    font-size: 20px;
+    font-size: 16px;
     bottom: 23px;
     margin: 10px;
   }
 `;
 export const I2P5D = styled.div`
-  &:after {
+  width: 22%;
+  margin: 10px;
+  &:nth-child(1)::after {
     content: "Angkor Wat";
     position: relative;
     left: 85%;
     color: #331c65;
-    font-size: 20px;
+    font-size: 16px;
   }
-`;
-export const I3P5D = styled.div`
-  &:after {
+  &:nth-child(2)::after {
     content: "Phnom Bakheng";
     position: relative;
-    left: 94%;
+    left: 85%;
     color: #331c65;
-    font-size: 20px;
+    font-size: 16px;
   }
+`;
+
+export const TextFive = styled.p`
+  font: 300 14px/16px Lato;
+  color: #331c65;
+  width: 70%;
+  text-align: center;
+  margin: 0 0 20px 0;
 `;
