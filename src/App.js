@@ -15,7 +15,7 @@ import Latf from "./pages/Latf/Latf.jsx";
 import Lightscapes from "./pages/Lightscapes/Lightscapes.jsx";
 import Contest from "./pages/Contest.jsx";
 import Angkor from "./pages/Angkor/Angkor.jsx";
-import Enescu from "./pages/Enescu";
+import Enescu from "./pages/Enescu/Enescu.jsx";
 import Mexico from "./pages/Mexico";
 import Amigos from "./pages/Amigos";
 import WrongHeader from "./components/WrongHeader.jsx";

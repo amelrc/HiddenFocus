@@ -330,8 +330,6 @@ const Test = () => {
   const [length, setLength] = useState(0);
 
   const handleNext = (i) => {
-    console.log("state", state);
-    console.log("i", i);
     setState(info[i]);
     setLength(i);
   };
