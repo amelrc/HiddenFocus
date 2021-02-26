@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import { museum } from "../Data";
 import styled from "styled-components";
+import { device } from "../generalStyles";
 import {
   staggerText,
   staggerReveal,
@@ -29,41 +30,61 @@ const RightMenu = styled.div`
 `;
 
 const Li = styled.li`
-  font: 500 60px/80px Roxborough CF;
-  letter-spacing: 0px;
+  font: 4vw/5vw Roxborough CF;
   color: #f9efff;
   list-style: none;
   &:hover {
-    color: green;
+    color: #bfab25;
   }
-`;
-
-const LiSmall = styled.li`
-  color: #b3c53f;
-  font: 100 40px/60px Roxborough CF;
-  margin-left: 100px;
 `;
 
 const Links = styled(Link)`
   text-transform: uppercase;
   color: #f9efff;
   text-decoration: none;
+  &:hover {
+    color: #bfab25;
+  }
+`;
+const LiSmall = styled.li`
+  color: #b3c53f;
+  font: 4vw/4vw Roxborough CF;
+  margin-left: 10%;
+  & ${Links} {
+    color: #b3c53f;
+    font: 3vw/3vw Roxborough CF;
+    &:hover {
+      color: #bfab25;
+    }
+  }
 `;
 
 const Ul = styled.ul`
-  & ${LiSmall}:nth-child(5) {
-    margin-left: 150px;
+  padding: 0;
+  & ${LiSmall}:nth-child(4) {
+    margin-left: 20%;
   }
-  & ${LiSmall}:nth-child(6) {
-    margin-left: 200px;
+  & ${LiSmall}:nth-child(5) {
+    margin-left: 30%;
   }
 `;
 
 const ContestText = styled.h3`
-  font: 300 26px/60px Lato;
-  text-transform: uppercase;
+  font: 4vw/8vw "Mrs Saint Delafield";
+  text-transform: capitalize;
   color: #f9efff;
   margin: 0;
+  @media ${device.large} {
+    font: 3vw/5vw "Mrs Saint Delafield";
+  }
+`;
+
+const ContestNumber = styled(ContestText)`
+  font: 300 3vw/3vw Lato;
+  margin-top: -20px;
+  @media ${device.large} {
+    font: 200 2vw/2vw "Lato";
+  }
 `;
 
 const Hamburger = ({ state }) => {
@@ -104,9 +125,11 @@ const Hamburger = ({ state }) => {
       <div ref={(el) => (reveal2 = el)} className="menu-layer flex">
         <LeftMenu>
           <Li>Hidden Focus</Li>
-          <img width={"70%"} src={Contest} alt="" />
+          <Link to="/constest">
+            <img width={"70%"} src={Contest} alt="" />
+          </Link>
           <ContestText>name the picture context</ContestText>
-          <ContestText style={{ font: "200 26px/20px Lato" }}>2020</ContestText>
+          <ContestNumber>2020</ContestNumber>
         </LeftMenu>
         <RightMenu>
           <nav>
@@ -114,24 +137,24 @@ const Hamburger = ({ state }) => {
               <Li>
                 <Links to="/whynow">Why Now?</Links>
               </Li>
-              <Li>
-                <Links style={{ marginLeft: 100 }} to="/influences">
-                  Influences
+
+              <Li style={{ marginLeft: "5%" }}>
+                <Links style={{ textTransform: "capitalize" }} to="/gallery">
+                  Galleries
                 </Links>
               </Li>
-              <Li style={{ marginLeft: 50 }}>Galleries</Li>
               {museum.map((room, i) => {
                 return (
                   <LiSmall key={i}>
-                    <Links
-                      style={{ color: "#b3c53f" }}
-                      to={`/menu/${room.floors}`}
-                    >
-                      {room.floors}
-                    </Links>
+                    <Links to={`/menu/${room.floors}`}>{room.floors}</Links>
                   </LiSmall>
                 );
               })}
+              <Li>
+                <Links style={{ marginLeft: 20 }} to="/influences">
+                  Influences
+                </Links>
+              </Li>
             </Ul>
           </nav>
         </RightMenu>

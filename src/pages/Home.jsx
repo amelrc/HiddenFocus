@@ -3,12 +3,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "../App.css";
-
+import { device } from "../generalStyles";
 import ImgHome from "../images/WEB-0789-1500x1000--517-kb.jpg";
-import Header from "../components/Header";
-import Close from "../components/Close";
-import { imagesWN } from "../Data";
-import ImageSlider from "../components/imageSlider";
 
 const HeaderWrapper = styled.div`
   width: 68.3%;
@@ -17,27 +13,42 @@ const HeaderWrapper = styled.div`
   align-self: center;
   z-index: 1;
 `;
-
 const HeaderHome = styled.h1`
-  text-align: left;
-  font: normal normal 100 78px/40px Roxborough CF Thin;
+  font: 40px/40px Roxborough CF Thin;
   color: #331c65;
   text-transform: capitalize;
   margin: 0;
+  @media ${device.tablet} {
+    font: 5vw/5vw Roxborough CF Thin;
+  }
 `;
 const SubTitle = styled.h4`
-  font: normal normal normal 22px/27px Lato;
+  font: 16px/26px Lato;
   color: #331c65;
-  margin: 40px auto -40px 0;
+  margin: 14px auto - 36px 0;
+  @media ${device.tablet} {
+    font: 2vw/2vw Lato;
+    margin: 14px auto -34px 2px;
+  }
+  @media ${device.small} {
+    margin: 14px auto -4% 2px;
+  }
 `;
 const Phrase = styled.h3`
-  font: normal normal normal 38px/56px Mrs Saint Delafield;
-  letter-spacing: 0px;
+  font: 24px/24px Mrs Saint Delafield;
   color: #1c161f;
-  margin: -70px 0 0 0;
-  width: 47.7%;
+  margin: -30px 10px;
   align-self: flex-end;
   z-index: 1;
+  @media ${device.tablet} {
+    font: 30px/30px Mrs Saint Delafield;
+    align-self: center;
+    margin: -40px 0 0 46%;
+  }
+  @media ${device.small} {
+    font: 3vw/3vw Mrs Saint Delafield;
+    margin: -60px 0 0 46%;
+  }
 `;
 
 export const PageTransition = {
@@ -72,7 +83,7 @@ const Home = () => {
         </HeaderWrapper>
         <div
           className="img-hover-zoom"
-          style={{ width: "40%", margin: "0 auto" }}
+          style={{ width: "45%", margin: "0 auto" }}
         >
           <Link to="/gallery">
             <img style={{ width: "100%" }} src={ImgHome} alt="home" />
