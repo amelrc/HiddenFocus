@@ -32,7 +32,15 @@ const Enescu = () => {
 		<>
 			<div className='scroll-container flex column'>
 				<Modal showModal={showModal} setShowModal={setShowModal}>
-					<img style={{ width: '100%' }} src={selected.image} alt={selected} />
+					<img
+						style={{
+							maxWidth: '100%',
+							maxHeight: '100%',
+							objectFit: 'contain',
+						}}
+						src={selected.image}
+						alt={selected}
+					/>
 				</Modal>
 				<PageHeaders>George Enescu's Secret Garden</PageHeaders>
 				<Scroll>

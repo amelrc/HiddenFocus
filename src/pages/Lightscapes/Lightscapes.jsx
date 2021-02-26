@@ -25,7 +25,11 @@ const Lightscapes = () => {
 	return (
 		<div style={{ backgroundColor: '#f5f5f5' }}>
 			<Modal showModal={showModal} setShowModal={setShowModal}>
-				<img style={{ width: '100%' }} src={selected.img} alt={selected.i} />
+				<img
+					style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+					src={selected.img}
+					alt={selected.i}
+				/>
 			</Modal>
 			<PageHeaders>Lightscapes</PageHeaders>
 			<Scroll>
