@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
 	WrapperIntroText,
@@ -15,8 +15,15 @@ import LS1 from '../../images/LS/WEB-LS1-RAY-3838-249kb.jpg';
 import { Container } from '../Latf/styles';
 
 const Lightscapes = () => {
+	const ref = useRef();
 	const [showModal, setShowModal] = useState(false);
 	const [selected, setSelected] = useState(0);
+
+	console.log(ref);
+
+	useEffect(() => {
+		console.log('inside', ref.current.offsetHeight);
+	});
 
 	const openModal = (id) => {
 		setSelected(id);
@@ -34,7 +41,7 @@ const Lightscapes = () => {
 			<PageHeaders>Lightscapes</PageHeaders>
 			<Scroll>
 				<IntroContainer>
-					<WrapperIntroText>
+					<WrapperIntroText ref={ref}>
 						<p>
 							I began taking "portraits" of flowers in the Spring of 2019.  By
 							summer, they had grown into a body of work called{' '}
