@@ -326,7 +326,7 @@ export const HTMA = {
 export const LOTF = {
   name: "Lilies of the Field",
   page: [
-    { id: 1, image: W1669, css: { width: "42%", margin: 10 } },
+    { id: 1, image: W1669, css: { width: "40%", margin: 10 } },
     { id: 2, image: W1111, css: { width: "28%", margin: 10 } },
   ],
 };
@@ -440,7 +440,7 @@ export const BLUY = {
 };
 export const QAG = {
   name: "Queen Anne Galaxy",
-  page: [{ id: 1, image: W6925 }],
+  page: [{ id: 1, image: W6925, css: { width: "40%", margin: 10 } }],
 };
 export const Elysium = {
   name: "Elysium",

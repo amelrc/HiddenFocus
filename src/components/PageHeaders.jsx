@@ -15,6 +15,9 @@ const H1 = styled.h1`
   @media ${device.tablet} {
     height: 14%;
   }
+  @media ${device.large} {
+    font: normal normal 4vw/4vw Mrs Saint Delafield;
+  }
 `;
 
 const PageHeaders = ({ children }) => {

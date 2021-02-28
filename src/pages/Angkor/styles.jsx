@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../generalStyles";
 
 export const Images = styled.img`
   max-width: 100%;
@@ -7,6 +8,9 @@ export const Images = styled.img`
 export const Text = styled.p`
   font: 300 14px/16px Lato;
   color: #331c65;
+  @media ${device.medium} {
+    font: 300 18px/22px Lato;
+  }
 `;
 
 export const I1P1D = styled.div`
@@ -21,16 +25,33 @@ export const I1P1D = styled.div`
     margin-left: 10px;
     font-size: 16px;
   }
+  @media ${device.small} {
+    width: 48%;
+  }
+  @media ${device.medium} {
+    &:after {
+      font-size: 24px;
+    }
+  }
 `;
 export const P1A = styled(Text)`
   width: 40%;
+  @media ${device.small} {
+    width: 24%;
+  }
 `;
 export const P1B = styled(Text)`
   width: 40%;
   margin-top: 20px;
+  @media ${device.small} {
+    width: 30%;
+  }
 `;
 export const P2A = styled(Text)`
   width: 40%;
+  @media ${device.small} {
+    width: 30%;
+  }
 `;
 export const P2B = styled(Text)`
   width: 22%;
@@ -47,6 +68,18 @@ export const I2P1D = styled.div`
     color: #331c65;
     font-size: 16px;
   }
+  @media ${device.small} {
+    width: 30%;
+    &:after {
+      left: 72%;
+    }
+  }
+  @media ${device.medium} {
+    &:after {
+      font-size: 24px;
+      left: 70%;
+    }
+  }
 `;
 export const I1P2D = styled.div`
   width: 22%;
@@ -57,6 +90,14 @@ export const I1P2D = styled.div`
     left: 80%;
     color: #331c65;
     font-size: 16px;
+  }
+  @media ${device.small} {
+    width: 30%;
+  }
+  @media ${device.medium} {
+    &:after {
+      font-size: 24px;
+    }
   }
 `;
 export const I2P2D = styled.div`
@@ -69,6 +110,11 @@ export const I2P2D = styled.div`
     color: #331c65;
     font-size: 16px;
   }
+  @media ${device.medium} {
+    &:after {
+      font-size: 24px;
+    }
+  }
 `;
 export const I1P3D = styled.div`
   width: 50%;
@@ -79,6 +125,14 @@ export const I1P3D = styled.div`
     left: 90%;
     color: #331c65;
     font-size: 16px;
+  }
+  @media ${device.small} {
+    width: 70%;
+  }
+  @media ${device.medium} {
+    &:after {
+      font-size: 24px;
+    }
   }
 `;
 
@@ -91,6 +145,14 @@ export const I3P3D = styled.div`
     left: 100%;
     color: #331c65;
     font-size: 16px;
+  }
+  @media ${device.small} {
+    width: 90%;
+  }
+  @media ${device.medium} {
+    &:after {
+      font-size: 24px;
+    }
   }
 `;
 // export const I1P4D = styled.div`
@@ -132,6 +194,14 @@ export const I1P5D = styled.div`
     bottom: 23px;
     margin: 10px;
   }
+  @media ${device.small} {
+    width: 40%;
+  }
+  @media ${device.medium} {
+    &:after {
+      font-size: 24px;
+    }
+  }
 `;
 export const I2P5D = styled.div`
   width: 22%;
@@ -150,6 +220,17 @@ export const I2P5D = styled.div`
     color: #331c65;
     font-size: 16px;
   }
+  @media ${device.small} {
+    width: 40%;
+  }
+  @media ${device.medium} {
+    &:nth-child(1)::after {
+      font-size: 24px;
+    }
+    &:nth-child(2)::after {
+      font-size: 24px;
+    }
+  }
 `;
 
 export const TextFive = styled.p`
@@ -158,4 +239,16 @@ export const TextFive = styled.p`
   width: 70%;
   text-align: center;
   margin: 0 0 20px 0;
+  @media ${device.medium} {
+    font: 300 18px/22px Lato;
+  }
+`;
+
+export const SubHeader = styled.h2`
+  margin: -10px auto 1%;
+  font: 300 2vw/16px Lato;
+  color: #331c65;
+  @media ${device.small} {
+    margin: -10px auto 3%;
+  }
 `;

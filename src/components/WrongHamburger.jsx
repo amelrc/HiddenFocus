@@ -4,16 +4,7 @@ import { Link } from "react-router-dom";
 import { museum } from "../Data";
 import styled from "styled-components";
 import { device } from "../generalStyles";
-import {
-  staggerText,
-  staggerReveal,
-  fadeInUp,
-  handleHover,
-  handleHoverExit,
-  handleCityReturn,
-  handleCity,
-  staggerRevealClose,
-} from "./WrongAnimations";
+import { staggerReveal, staggerRevealClose } from "./WrongAnimations";
 import Contest from "../images/IMG_1384 Final Metallic Glossy.jpg";
 
 const LeftMenu = styled.div`

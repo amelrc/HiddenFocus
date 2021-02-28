@@ -3,7 +3,6 @@ import { withRouter, Link } from "react-router-dom";
 import Hamburger from "./WrongHamburger";
 import styled from "styled-components";
 import Logo from "../images/SVG/Logo_Official.svg";
-import CircleComponent from "./Circle";
 
 const MenuState = styled.button`
   color: ${(open) => (open ? `#8b33b9` : `black`)};
