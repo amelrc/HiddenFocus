@@ -9,7 +9,7 @@ const H1 = styled.h1`
   justify-content: center;
   display: flex;
   align-items: flex-end;
-  font: normal normal 5vw/5vw Mrs Saint Delafield;
+  font: normal normal 5vw/5vw Hidden Focus;
   z-index: 2;
   color: #331c65;
   @media ${device.tablet} {

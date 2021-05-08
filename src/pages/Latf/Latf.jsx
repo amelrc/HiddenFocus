@@ -64,18 +64,35 @@ import {
   BLUY,
 } from "./dataLatf";
 
+import W0241 from "../../images/LATF/WEB-0241-281kb.jpg";
+import W0563 from "../../images/LATF/WEB-0563-247kb.jpg";
+import W0900 from "../../images/LATF/WEB-0900-247kb.jpg";
+import W0291 from "../../images/LATF/WEB-0291-251kb.jpg";
+import W2499 from "../../images/LATF/WEB-2499-249kb.jpg";
+///////
+import W3881 from "../../images/LATF/WEB-3881-251kb.jpg";
+import W4223 from "../../images/LATF/WEB-4223-249kb.jpg";
+import W4243 from "../../images/LATF/WEB-4243-243kb.jpg";
+///////
+import W3887 from "../../images/LATF/WEB-3887-288kb.jpg";
+///////
+import W2613 from "../../images/LATF/WEB-2613-257kb.jpg";
+///////
+
 import Modal from "../../components/Modal";
 import PageHeaders from "../../components/PageHeaders";
 import Scroll from "../../components/Scroll";
 import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
+import Image from "../../components/Image";
 
 const Latf = () => {
   const [showModal, setShowModal] = useState(false);
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState("");
 
-  const openModal = (id) => {
-    setSelected(id);
+  const openModal = (e) => {
+    console.log(selected);
+    setSelected(e.target.src);
     setShowModal((prev) => !prev);
   };
 
@@ -84,11 +101,127 @@ const Latf = () => {
       <Modal showModal={showModal} setShowModal={setShowModal}>
         <img
           style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
-          src={selected.image}
-          alt={selected.i}
+          src={selected}
+          alt={selected}
         />
       </Modal>
       <PageHeaders>Look at the Flowers</PageHeaders>
+
+      <Image src={W2555} imgWidth={"100%"} alt={W2555} />
+      <WrapperIntroText>
+        <p>
+          <span style={{ font: "30px/26px Lato" }}>F</span>
+          ocus. When we look at something, really look, what captures our
+          attention stands out in sharp relief. Everything else blurs away.
+          These flower “portraits” are taken with a 100mm Macro lens, and make
+          deliberate use of the focal plane as a major part of the composition,
+          along with the placement of objects and blocks of color. The goal is
+          to use all the elements of composition to invite the viewer to see the
+          flowers in a particular way.
+        </p>
+        <br />
+        <p>
+          Together, these images make up an imaginary exhibition called Look at
+          the Flowers… It is a still growing body of work that began in the
+          Spring and Summer of 2019. When Spring came around this year, I
+          wondered what would happen when I looked through the lens. Would
+          anything “new” show up? Please take a look with me and see!
+        </p>
+      </WrapperIntroText>
+      <Image
+        mLeft={"24%"}
+        src={W0241}
+        imgWidth={"20%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        positionX={"flex-end"}
+        src={W0563}
+        imgWidth={"55%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        positionX={"flex-start"}
+        src={W0900}
+        imgWidth={"40%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        positionX={"flex-end"}
+        mTop={"-100px"}
+        mRight={"10%"}
+        src={W0291}
+        imgWidth={"16%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        positionX={"flex-end"}
+        mRight={"28%"}
+        src={W2499}
+        imgWidth={"30%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        mTop={"100px"}
+        src={W3881}
+        imgWidth={"100%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        mTop={"100px"}
+        mLeft={"20%"}
+        src={W4243}
+        imgWidth={"16%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        positionX={"flex-end"}
+        mRight={"10%"}
+        src={W4223}
+        imgWidth={"50%"}
+        onClick={(e) => openModal(e)}
+      />
+      <Image
+        positionX={"center"}
+        mTop={"10%"}
+        src={W3887}
+        imgWidth={"40%"}
+        onClick={(e) => openModal(e)}
+      />
+      <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+        <Image
+          style={{ margin: "10%" }}
+          positionX={"center"}
+          src={W2613}
+          imgWidth={"80%"}
+          onClick={(e) => openModal(e)}
+        />
+        <div style={{ justifyContent: "flex-end", display: "flex" }}>
+          <div
+            style={{
+              color: "#b3c53f",
+              display: "flex",
+              flexDirection: "column",
+              width: "35%",
+              alignItems: "flex-end",
+              paddingBottom: "10%",
+            }}
+          >
+            <div style={{ width: "80%" }}>
+              <p>I know even though I can't see it</p>
+              <p>somewhere waiting for me</p>
+              <p>there will always be love</p>
+            </div>
+            <br />
+            <div style={{ width: "60%" }}>
+              <p>Enrico Garzilli</p>
+              <p>from Rage of the Heart</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* //////////// */}
       <Scroll>
         <IntroContainer>
           <WrapperIntroText>

@@ -233,8 +233,8 @@ const info = [
     id: 0,
     date: "1000",
     image: [
-      { img: Enrico, css: { width: "100%" } },
-      { img: Circles, css: { width: "70%" } },
+      { image: Enrico, css: { width: "100%" } },
+      { image: Circles, css: { width: "70%" } },
     ],
     name: "Enrico Garzilli",
     content: EnricoText,

@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "Hidden Focus";
+  src: local("Hidden Focus"), url(./fonts/HiddenFocus.otf) format("truetype");
+}
