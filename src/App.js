@@ -51,9 +51,9 @@ const ReactRouterSetup = () => {
             <Route exact path="/influences" component={Influences} />
             <Route exact path="/angkor-wat" component={Angkor} />
             <Route exact path="/contest" component={Contest} />
-            <Route exact path="/menu/:userName" component={Gallery} />
-            <Route exact path="/gallery/:userName" component={Show} />
-            <Route exact path="/gallery/:userName/:tabName" component={Show} />
+            <Route exact path="/menu/:topic" component={Gallery} />
+            <Route exact path="/gallery/:topic" component={Show} />
+            <Route exact path="/gallery/:topic/:tabName" component={Show} />
           </Switch>
         </App>
       </AnimatePresence>

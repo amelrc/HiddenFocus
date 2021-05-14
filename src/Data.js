@@ -122,8 +122,20 @@ export const museum = [
         url: "look-at-the-flowers",
         introImg: W2555,
         name: "Look at the Flowers",
+        css: {
+          display: "flex",
+          width: "20%",
+          left: "16%",
+          bottom: "14%",
+          justifyContent: "center",
+        },
       },
-      { url: "lightscapes", introImg: LS1, name: "Lightscapes" },
+      {
+        url: "lightscapes",
+        introImg: LS1,
+        name: "Lightscapes",
+        css: { width: "60%", right: "12%", top: "8%" },
+      },
       // { url: "explorations", introImg: W2555 },
       // { url: "protraits", introImg: LS1 },
     ],
@@ -131,7 +143,12 @@ export const museum = [
   {
     floors: "destinations",
     rooms: [
-      { url: "angkor-wat", introImg: AW1, name: "Angkor Wat" },
+      {
+        url: "angkor-wat",
+        introImg: AW1,
+        name: "Angkor Wat",
+        css: { width: "60%", right: "20%", bottom: "10%" },
+      },
       // { url: "cuba", introImg: LS1 },
       // { url: "new york", introImg: W2555 },
     ],
@@ -143,13 +160,20 @@ export const museum = [
         url: "george-enescu",
         introImg: W0001,
         name: "George Enescu's Secret Garden",
+        css: { width: "60%" },
       },
       {
         url: "show-look-at-the-flowers",
         introImg: W0762,
         name: "Look at the Flowers",
+        css: { width: "60%" },
       },
-      { url: "cuatro-amigos", introImg: W0106, name: "Quatro Amigos:Una Cuba" },
+      {
+        url: "cuatro-amigos",
+        introImg: W0106,
+        name: "Quatro Amigos:Una Cuba",
+        css: { width: "60%" },
+      },
     ],
   },
 ];

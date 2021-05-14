@@ -110,14 +110,14 @@ const Latf = () => {
       <Image src={W2555} imgWidth={"100%"} alt={W2555} />
       <WrapperIntroText>
         <p>
-          <span style={{ font: "30px/26px Lato" }}>F</span>
-          ocus. When we look at something, really look, what captures our
-          attention stands out in sharp relief. Everything else blurs away.
-          These flower “portraits” are taken with a 100mm Macro lens, and make
-          deliberate use of the focal plane as a major part of the composition,
-          along with the placement of objects and blocks of color. The goal is
-          to use all the elements of composition to invite the viewer to see the
-          flowers in a particular way.
+          <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When we
+          look at something, really look, what captures our attention stands out
+          in sharp relief. Everything else blurs away. These flower “portraits”
+          are taken with a 100mm Macro lens, and make deliberate use of the
+          focal plane as a major part of the composition, along with the
+          placement of objects and blocks of color. The goal is to use all the
+          elements of composition to invite the viewer to see the flowers in a
+          particular way.
         </p>
         <br />
         <p>
