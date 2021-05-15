@@ -5,6 +5,7 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: ${(props) => props.positionX};
   width: 100%;
+  // position: absolute;
 `;
 
 const Img = styled.img`

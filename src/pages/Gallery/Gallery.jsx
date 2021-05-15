@@ -6,6 +6,8 @@ import { Ul, Li, Img, Hover, P } from "./styles";
 import PageHeaders from "../../components/PageHeaders";
 
 import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
+import Loader from "./galleryLoader";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 const Gallery = ({ match }) => {
   const {
@@ -15,6 +17,13 @@ const Gallery = ({ match }) => {
   return (
     <div style={{ backgroundColor: "#f5f5f5" }}>
       <PageHeaders>Galleries</PageHeaders>
+      <AnimateSharedLayout type="crossfade">
+        <AnimatePresence>
+          <motion.div key="loader">
+            <Loader />
+          </motion.div>
+        </AnimatePresence>
+      </AnimateSharedLayout>
       {/* <Scroll> */}
       {/* <Ul className="thumbnails">
         {museum.map((room) =>
@@ -45,7 +54,7 @@ const Gallery = ({ match }) => {
       </Ul> */}
 
       {/* ////////////////// */}
-      <div>
+      {/* <div>
         {match.path === "/gallery" ? (
           <Ul>
             <Li>
@@ -78,7 +87,7 @@ const Gallery = ({ match }) => {
             </Li>
           </Ul>
         ) : null}
-      </div>
+      </div> */}
 
       {/* </Scroll> */}
     </div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { device } from "../generalStyles";
-import ImgHome from "../images/WEB-0789-1500x1000--517-kb.jpg";
+import ImgHome from "../images/HOME/WEB-0789-1500x1000--517-kb.jpg";
 
 const HeaderWrapper = styled.div`
   width: 68.3%;
@@ -86,7 +86,15 @@ const Home = () => {
           style={{ width: "45%", margin: "0 auto" }}
         >
           <Link to="/gallery">
-            <img style={{ width: "100%" }} src={ImgHome} alt="home" />
+            <img
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+                // objectFit: "contain",
+              }}
+              src={ImgHome}
+              alt="home"
+            />
           </Link>
         </div>
 

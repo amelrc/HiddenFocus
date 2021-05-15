@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Show from "./components/Show.jsx";
 import Header from "./components/Header.jsx";
 
-import Home from "./pages/Home.jsx";
+import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import WhatNow from "./pages/WhyNow";
 import Gallery from "./pages/Gallery/Gallery.jsx";

@@ -38,25 +38,28 @@ export const P = styled.p`
   position: absolute;
   /* right: 0; */
   top: 0;
-  /* background: rgba(29,106,154,0.72); */
   color: #fff;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.2s, visibility 0.2s;
+  // -webkit-transition: opacity 0.2s, visibility 0.2s;
   transition: opacity 0.2s, visibility 0.2s;
   margin: auto;
-  font: 300 5vw/5vw Lato;
+  font: 300 5vw Kumbh Sans;
   color: #331c65;
   white-space: nowrap;
-  z-index: 1;
   text-align: center;
 `;
 export const Hover = styled.div`
-  position: relative;
+  // position: relative;
   &:hover {
     ${P} {
       visibility: visible;
       opacity: 1;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
     }
   }
 `;
