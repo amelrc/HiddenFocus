@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { PageTransition } from "./Home";
+
 import ImageSlider from "../components/imageSlider";
 import WhoMe from "../images/WHYNOW/WEB-9574-252kb--Who-Me.jpg";
 import Leather from "../images/WHYNOW/Leather.png";
 import { WNData } from "../Data";
+import { PageTransition } from "../generalStyles";
 
 const Block1 = styled.div`
   display: flex;

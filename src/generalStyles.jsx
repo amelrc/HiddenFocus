@@ -4,3 +4,12 @@ export const device = {
   medium: `(min-width: 1366px)`,
   large: `(min-width: 1920px)`,
 };
+
+export const PageTransition = {
+  in: {
+    opacity: 1,
+  },
+  out: {
+    opacity: 0,
+  },
+};

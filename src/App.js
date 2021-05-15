@@ -5,8 +5,10 @@ import styled from "styled-components";
 
 import Show from "./components/Show.jsx";
 import Header from "./components/Header.jsx";
+import WrongHeader from "./components/WrongHeader.jsx";
+import CircleComponent from "./components/Circle.jsx";
 
-import Home from "./pages/Home";
+
 import Menu from "./pages/Menu";
 import WhatNow from "./pages/WhyNow";
 import Gallery from "./pages/Gallery/Gallery.jsx";
@@ -18,11 +20,8 @@ import Angkor from "./pages/Angkor/Angkor.jsx";
 import Enescu from "./pages/Enescu/Enescu.jsx";
 import Mexico from "./pages/Mexico/Mexico.jsx";
 import Amigos from "./pages/Amigos/Amigos.jsx";
-import WrongHeader from "./components/WrongHeader.jsx";
-import CircleComponent from "./components/Circle.jsx";
 import Test from "./pages/Test.jsx";
-
-// import Error from "./Error";
+import Home from "./pages/Home/Home.jsx";
 
 const App = styled.div`
   display: flex;
@@ -30,12 +29,11 @@ const App = styled.div`
 `;
 
 const ReactRouterSetup = () => {
-  // const [open, setOpen] = React.useState(false);
+
   return (
     <HashRouter>
       <AnimatePresence exitBeforeEnter>
         <App>
-          {/* <Header /> */}
           <WrongHeader />
           <Switch>
             <Route exact path="/" component={Home} />

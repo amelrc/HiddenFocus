@@ -8,6 +8,7 @@ import PageHeaders from "../../components/PageHeaders";
 import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import Loader from "./galleryLoader";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { PageTransition } from "../../generalStyles";
 
 const Gallery = ({ match }) => {
   const {
@@ -15,7 +16,10 @@ const Gallery = ({ match }) => {
   } = match;
 
   return (
-    <div style={{ backgroundColor: "#f5f5f5" }}>
+    <div initial="out"
+    animate="in"
+    exit="out"
+    variants={PageTransition} style={{ backgroundColor: "#f5f5f5" }}>
       <PageHeaders>Galleries</PageHeaders>
       <AnimateSharedLayout type="crossfade">
         <AnimatePresence>
