@@ -8,10 +8,9 @@ import Header from "./components/Header.jsx";
 import WrongHeader from "./components/WrongHeader.jsx";
 import CircleComponent from "./components/Circle.jsx";
 
-
 import Menu from "./pages/Menu";
 import WhatNow from "./pages/WhyNow";
-import Gallery from "./pages/Gallery/Gallery.jsx";
+import Gallery from "./pages/Gallery/Gallery";
 import Influences from "./pages/Influences";
 import Latf from "./pages/Latf/Latf.jsx";
 import Lightscapes from "./pages/Lightscapes/Lightscapes.jsx";
@@ -29,7 +28,6 @@ const App = styled.div`
 `;
 
 const ReactRouterSetup = () => {
-
   return (
     <HashRouter>
       <AnimatePresence exitBeforeEnter>

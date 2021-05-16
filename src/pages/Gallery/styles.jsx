@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import Image from "../../components/Image";
 
 export const Ul = styled.ul`
   height: 70%;
@@ -44,22 +46,22 @@ export const P = styled.p`
   // -webkit-transition: opacity 0.2s, visibility 0.2s;
   transition: opacity 0.2s, visibility 0.2s;
   margin: auto;
-  font: 300 5vw Kumbh Sans;
+  font: 300 4vw Kumbh Sans;
   color: #331c65;
-  white-space: nowrap;
-  text-align: center;
+  // white-space: nowrap;
+  text-align: left;
 `;
 export const Hover = styled.div`
-  // position: relative;
+  position: relative;
   &:hover {
     ${P} {
       visibility: visible;
       opacity: 1;
-      z-index: 100;
       top: 0;
       right: 0;
       left: 0;
       bottom: 0;
+      z-index: 1;
     }
   }
 `;

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { device } from '../../generalStyles'
+import styled from "styled-components";
+import { device } from "../../generalStyles";
 
 export const HomePage = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ export const HomePage = styled.div`
   justify-content: center;
 `;
 export const HeaderWrapper = styled.div`
-width: 78.5%;
+  width: 78.5%;
   display: flex;
   flex-direction: column;
   align-self: center;

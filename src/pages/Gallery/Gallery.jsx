@@ -1,100 +1,96 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { museum } from "../../Data";
-import Scroll from "../../components/Scroll";
-import { Ul, Li, Img, Hover, P } from "./styles";
-import PageHeaders from "../../components/PageHeaders";
-
-import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
-import Loader from "./galleryLoader";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
-import { PageTransition } from "../../generalStyles";
 
-const Gallery = ({ match }) => {
+import { museum } from "../../Data";
+import Image from "../../components/Image";
+import { Hover, ImageBlocks, P } from "./styles";
+
+const container = {
+  show: {
+    transition: {
+      staggerChildren: 0.35,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 0 },
+  show: {
+    opacity: 1,
+    y: -50,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+};
+
+const Loader = ({ match }) => {
   const {
-    params: { userName },
+    params: { topic },
   } = match;
 
   return (
-    <div initial="out"
-    animate="in"
-    exit="out"
-    variants={PageTransition} style={{ backgroundColor: "#f5f5f5" }}>
-      <PageHeaders>Galleries</PageHeaders>
-      <AnimateSharedLayout type="crossfade">
-        <AnimatePresence>
-          <motion.div key="loader">
-            <Loader />
+    <AnimateSharedLayout type="crossfade">
+      <AnimatePresence>
+        <motion.div key="loader">
+          <motion.div>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+            >
+              {museum.map((room) =>
+                room.floors === topic
+                  ? room.rooms.map((r, i) => (
+                      <ImageBlock
+                        path={`/${r.url}`}
+                        src={r.introImg}
+                        variants={item}
+                        className={`image-${r.id}`}
+                        name={r.name}
+                      />
+                    ))
+                  : match.path === "/gallery"
+                  ? room.rooms.map((r, i) => (
+                      <ImageBlock
+                        path={`/${r.url}`}
+                        src={r.introImg}
+                        variants={item}
+                        className={`image-${r.id}`}
+                        name={r.name}
+                      />
+                    ))
+                  : null
+              )}
+            </motion.div>
           </motion.div>
-        </AnimatePresence>
-      </AnimateSharedLayout>
-      {/* <Scroll> */}
-      {/* <Ul className="thumbnails">
-        {museum.map((room) =>
-          room.floors === userName
-            ? room.rooms.map((r, i) => (
-                <Li key={i}>
-                  <Link to={`/${r.url}`}>
-                    <Hover>
-                      <img src={r.introImg} alt={`intro ${r.name}`} />
-                      <P>{r.name}</P>
-                    </Hover>
-                  </Link>
-                </Li>
-              ))
-            : match.path === "/gallery"
-            ? room.rooms.map((r, i) => (
-                <Li key={i}>
-                  <Link to={`/${r.url}`}>
-                    <Hover>
-                      <img src={r.introImg} alt={`intro ${r.name}`} />
-                      <P>{r.name}</P>
-                    </Hover>
-                  </Link>
-                </Li>
-              ))
-            : null
-        )}
-      </Ul> */}
-
-      {/* ////////////////// */}
-      {/* <div>
-        {match.path === "/gallery" ? (
-          <Ul>
-            <Li>
-              <Link to="look-at-the-flowers">
-                <Hover>
-                  <img
-                    style={{ width: 400, left: "16%", bottom: "14%" }}
-                    src={W2555}
-                    alt="haksdfj"
-                  />
-                  <P>LATF</P>
-                </Hover>
-              </Link>
-            </Li>
-            <Li>
-              <Link to="lightscapes">
-                <Hover>
-                  <img src={W2555} alt="haksdfj" />
-                  <P>Lightscapes</P>
-                </Hover>
-              </Link>
-            </Li>
-            <Li>
-              <Link to="angkor-wat">
-                <Hover>
-                  <img src={W2555} alt="haksdfj" />
-                  <P>Angkor Wat</P>
-                </Hover>
-              </Link>
-            </Li>
-          </Ul>
-        ) : null}
-      </div> */}
-
-      {/* </Scroll> */}
-    </div>
+        </motion.div>
+      </AnimatePresence>
+    </AnimateSharedLayout>
   );
 };
-export default Gallery;
+
+export const ImageBlock = ({ path, name, src, variants, className }) => {
+  return (
+    <motion.div variants={variants} className={`image-block ${className} `}>
+      <Link to={path}>
+        <Hover>
+          <Image positionX={"center"} className={className} src={src} />
+          <P>{name}</P>
+        </Hover>
+      </Link>
+    </motion.div>
+  );
+};
+
+export default Loader;
