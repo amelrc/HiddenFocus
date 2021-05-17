@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const ImageWrapper = styled.div`
   background-color: ${(props) => props.bg};
   display: flex;
@@ -15,6 +16,8 @@ const Img = styled.img`
   margin-bottom: ${(props) => props.mBottom};
   margin-left: ${(props) => props.mLeft};
 `;
+
+// const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }
 
 const Image = (props) => {
   const { bg, mTop, mRight, mBottom, mLeft, positionX, imgWidth, src } = props;

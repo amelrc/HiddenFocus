@@ -85,6 +85,10 @@ import Scroll from "../../components/Scroll";
 import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
 import Image from "../../components/Image";
+import { motion } from "framer-motion";
+import TransitionPage from "../../components/pageTransition";
+
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] }
 
 const Latf = () => {
   const [showModal, setShowModal] = useState(false);
@@ -106,8 +110,16 @@ const Latf = () => {
         />
       </Modal>
       <PageHeaders>Look at the Flowers</PageHeaders>
+      <div style={{ width: '100%', height: '100vh', backgroundColor: 'aqua', }}>
 
-      <Image src={W2555} imgWidth={"100%"} alt={W2555} />
+        <motion.div style={{ display: 'flex' }} animate={{ transition: { delay: .2, ...transition } }} >
+          <motion.img style={{
+            width: '30vw', left: '16%', bottom: '10%', position: 'absolute',
+          }}
+            animate={{ left: '20%', bottom: 0, width: '60%', transition: { delay: .2, ...transition } }} src={W2555} alt={W2555} />
+        </motion.div>
+      </div>
+
       <WrapperIntroText>
         <p>
           <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When we

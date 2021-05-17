@@ -14,10 +14,10 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 0 },
+  hidden: { opacity: 0, y: -50 },
   show: {
     opacity: 1,
-    y: -50,
+    y: 0,
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       duration: 1.6,
@@ -52,16 +52,16 @@ const Loader = ({ match }) => {
               {museum.map((room) =>
                 room.floors === topic
                   ? room.rooms.map((r, i) => (
-                      <ImageBlock
-                        path={`/${r.url}`}
-                        src={r.introImg}
-                        variants={item}
-                        className={`image-${r.id}`}
-                        name={r.name}
-                      />
-                    ))
+                    <ImageBlock
+                      path={`/${r.url}`}
+                      src={r.introImg}
+                      variants={item}
+                      className={`image-${r.id}`}
+                      name={r.name}
+                    />
+                  ))
                   : match.path === "/gallery"
-                  ? room.rooms.map((r, i) => (
+                    ? room.rooms.map((r, i) => (
                       <ImageBlock
                         path={`/${r.url}`}
                         src={r.introImg}
@@ -70,7 +70,7 @@ const Loader = ({ match }) => {
                         name={r.name}
                       />
                     ))
-                  : null
+                    : null
               )}
             </motion.div>
           </motion.div>
@@ -84,7 +84,7 @@ export const ImageBlock = ({ path, name, src, variants, className }) => {
   return (
     <motion.div variants={variants} className={`image-block ${className} `}>
       <Link to={path}>
-        <Hover>
+        <Hover className='img-hover-zoom'>
           <Image positionX={"center"} className={className} src={src} />
           <P>{name}</P>
         </Hover>
