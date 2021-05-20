@@ -15,6 +15,7 @@
     "framer-motion": "^2.9.5",
     "gsap": "^3.6.0",
     "informed": "^3.27.0",
+    "locomotive-scroll": "^4.1.1",
     "popmotion": "^9.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -86,19 +86,45 @@ import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
 import Image from "../../components/Image";
 import { motion } from "framer-motion";
-import TransitionPage from "../../components/pageTransition";
+
+import locomotiveScroll from 'locomotive-scroll';
+
+
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] }
+
+const firstName = {
+  initial: {
+    y: 0,
+
+  },
+  animate: {
+    y: 0,
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.04,
+      staggerDirection: -1,
+    },
+  },
+};
 
 const Latf = () => {
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState("");
+  const scrollRef = React.createRef();
 
   const openModal = (e) => {
     console.log(selected);
     setSelected(e.target.src);
     setShowModal((prev) => !prev);
   };
+
+  React.useEffect(() => {
+    const scroll = new locomotiveScroll({
+      el: scrollRef.current,
+      smooth: true
+    });
+  });
 
   return (
     <div style={{ backgroundColor: "#f5f5f5" }}>
@@ -109,20 +135,27 @@ const Latf = () => {
           alt={selected}
         />
       </Modal>
-      <PageHeaders>Look at the Flowers</PageHeaders>
-      <div style={{ width: '100%', height: '100vh', backgroundColor: 'aqua', }}>
+
+
+      <div style={{
+        width: '100%', height: '100vh', justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex'
+      }}>
+        <PageHeaders variants={firstName}>Look at the Flowers</PageHeaders>
 
         <motion.div style={{ display: 'flex' }} animate={{ transition: { delay: .2, ...transition } }} >
           <motion.img style={{
-            width: '30vw', left: '16%', bottom: '10%', position: 'absolute',
+            width: '30vw', left: '16%', bottom: '10%', position: 'absolute', marginBottom: 20
           }}
             animate={{ left: '20%', bottom: 0, width: '60%', transition: { delay: .2, ...transition } }} src={W2555} alt={W2555} />
         </motion.div>
       </div>
+      <div ref={scrollRef}>
 
-      <WrapperIntroText>
-        <p>
-          <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When we
+        <WrapperIntroText>
+          <p >
+            <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When we
           look at something, really look, what captures our attention stands out
           in sharp relief. Everything else blurs away. These flower “portraits”
           are taken with a 100mm Macro lens, and make deliberate use of the
@@ -131,103 +164,104 @@ const Latf = () => {
           elements of composition to invite the viewer to see the flowers in a
           particular way.
         </p>
-        <br />
-        <p>
-          Together, these images make up an imaginary exhibition called Look at
-          the Flowers… It is a still growing body of work that began in the
-          Spring and Summer of 2019. When Spring came around this year, I
-          wondered what would happen when I looked through the lens. Would
-          anything “new” show up? Please take a look with me and see!
+          <br />
+          <p>
+            Together, these images make up an imaginary exhibition called Look at
+            the Flowers… It is a still growing body of work that began in the
+            Spring and Summer of 2019. When Spring came around this year, I
+            wondered what would happen when I looked through the lens. Would
+            anything “new” show up? Please take a look with me and see!
         </p>
-      </WrapperIntroText>
-      <Image
-        mLeft={"24%"}
-        src={W0241}
-        imgWidth={"20%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        positionX={"flex-end"}
-        src={W0563}
-        imgWidth={"55%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        positionX={"flex-start"}
-        src={W0900}
-        imgWidth={"40%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        positionX={"flex-end"}
-        mTop={"-100px"}
-        mRight={"10%"}
-        src={W0291}
-        imgWidth={"16%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        positionX={"flex-end"}
-        mRight={"28%"}
-        src={W2499}
-        imgWidth={"30%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        mTop={"100px"}
-        src={W3881}
-        imgWidth={"100%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        mTop={"100px"}
-        mLeft={"20%"}
-        src={W4243}
-        imgWidth={"16%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        positionX={"flex-end"}
-        mRight={"10%"}
-        src={W4223}
-        imgWidth={"50%"}
-        onClick={(e) => openModal(e)}
-      />
-      <Image
-        positionX={"center"}
-        mTop={"10%"}
-        src={W3887}
-        imgWidth={"40%"}
-        onClick={(e) => openModal(e)}
-      />
-      <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+        </WrapperIntroText>
         <Image
-          style={{ margin: "10%" }}
-          positionX={"center"}
-          src={W2613}
-          imgWidth={"80%"}
+          mLeft={"24%"}
+          src={W0241}
+          imgWidth={"20%"}
           onClick={(e) => openModal(e)}
         />
-        <div style={{ justifyContent: "flex-end", display: "flex" }}>
-          <div
-            style={{
-              color: "#b3c53f",
-              display: "flex",
-              flexDirection: "column",
-              width: "35%",
-              alignItems: "flex-end",
-              paddingBottom: "10%",
-            }}
-          >
-            <div style={{ width: "80%" }}>
-              <p>I know even though I can't see it</p>
-              <p>somewhere waiting for me</p>
-              <p>there will always be love</p>
-            </div>
-            <br />
-            <div style={{ width: "60%" }}>
-              <p>Enrico Garzilli</p>
-              <p>from Rage of the Heart</p>
+        <Image
+          positionX={"flex-end"}
+          src={W0563}
+          imgWidth={"55%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-start"}
+          src={W0900}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"-100px"}
+          mRight={"10%"}
+          src={W0291}
+          imgWidth={"16%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mRight={"28%"}
+          src={W2499}
+          imgWidth={"30%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"100px"}
+          src={W3881}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"100px"}
+          mLeft={"20%"}
+          src={W4243}
+          imgWidth={"16%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mRight={"10%"}
+          src={W4223}
+          imgWidth={"50%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"center"}
+          mTop={"10%"}
+          src={W3887}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            src={W2613}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
             </div>
           </div>
         </div>
