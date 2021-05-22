@@ -1,5 +1,5 @@
 import React from 'react';
-import LATF1 from '../images/LATF/WEB 2348-260kb.jpg';
+import LATF1 from '../images/LATF/WEB-2348-260kb.jpg';
 
 const Show = ({ match }) => {
 	const {

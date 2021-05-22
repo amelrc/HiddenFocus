@@ -225,10 +225,7 @@ export const QueenImage = styled.img`
 
 ////////////////
 export const AnimationWrapper = styled.div`
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // height: 100vh;
+overflow: hidden;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -262,6 +259,7 @@ export const H1 = styled(motion.h1)`
   }
   @media ${device.medium} {
     font: 120px Hidden Focus;
+    margin-bottom: 10%;
   }
 `;
 

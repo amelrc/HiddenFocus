@@ -65,32 +65,117 @@ import {
   Winter20,
   BLUY,
 } from "./dataLatf";
-
+import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import W0241 from "../../images/LATF/WEB-0241-281kb.jpg";
 import W0563 from "../../images/LATF/WEB-0563-247kb.jpg";
 import W0900 from "../../images/LATF/WEB-0900-247kb.jpg";
 import W0291 from "../../images/LATF/WEB-0291-251kb.jpg";
 import W2499 from "../../images/LATF/WEB-2499-249kb.jpg";
-///////
 import W3881 from "../../images/LATF/WEB-3881-251kb.jpg";
 import W4223 from "../../images/LATF/WEB-4223-249kb.jpg";
 import W4243 from "../../images/LATF/WEB-4243-243kb.jpg";
-///////
 import W3887 from "../../images/LATF/WEB-3887-288kb.jpg";
-///////
 import W2613 from "../../images/LATF/WEB-2613-257kb.jpg";
+import W6417 from "../../images/LATF/WEB-6417-256kb.jpg";
+// import W2384 from '../../images/LATF/WEB-2384-260kb.jpg';
+import W8135 from "../../images/LATF/WEB-8135-249kb.jpg";
+import W7020 from "../../images/LATF/WEB-7020-254kb.jpg";
+import W3589 from "../../images/LATF/WEB-3589-249kb.jpg";
+import W9598 from "../../images/LATF/WEB-9598-250kb.jpg";
+import W9486 from "../../images/LATF/WEB-9486-313kb.jpg";
+import W9590 from "../../images/LATF/WEB-9590-250kb.jpg";
+import N7A7897 from "../../images/LATF/WEB-2N7A7897-255kb.jpg";
+import W5841 from "../../images/LATF/WEB-5841-275kb.jpg";
 ///////
+import W5075 from "../../images/LATF/WEB-5075-264kb.jpg";
+import W4590 from "../../images/LATF/WEB-4590-255kb.jpg";
+import W1763 from "../../images/LATF/WEB-1763-296kb.jpg";
+import W4799 from "../../images/LATF/WEB-4799-252kb.jpg";
+///////
+import W4767 from "../../images/LATF/WEB-4767-264kb.jpg";
+///////
+import W0347 from "../../images/LATF/WEB-0347-241kb.jpg";
+import W5679 from "../../images/LATF/WEB-5679-295kb.jpg";
+import W2421 from "../../images/LATF/WEB-2421-254kb.jpg";
+///////
+import W0362 from "../../images/LATF/WEB-0362-260kb.jpg";
+///////
+import W3838 from "../../images/LATF/WEB-3838-249kb.jpg";
+///////
+import W6408 from "../../images/LATF/WEB-6408-257kb.jpg";
+///////
+import W0430 from "../../images/LATF/WEB-0430-252kb.jpg";
+import W0907 from "../../images/LATF/Web-0907-251kb.jpg";
+import W6897 from "../../images/LATF/WEB-6897-248kb.jpg";
+///////
+import W2N7A8251 from "../../images/LATF/WEB-2N7A8251-250kb.jpg";
+///////
+import W9225 from "../../images/LATF/WEB-9225-250kb.jpg";
+import W9387 from "../../images/LATF/WEB-9387-257kb.jpg";
+///////
+import W4447 from "../../images/LATF/WEB-4447-253kb.jpg";
+///////
+import W9170 from "../../images/LATF/WEB-9170-259kb.jpg";
+import W9171 from "../../images/LATF/WEB-9171-251kb.jpg";
+import W9059 from "../../images/LATF/WEB-9059-258kb.jpg";
+///////
+import W2N7A8243 from "../../images/LATF/WEB-2N7A8243-249kb.jpg";
+///////
+import W1571 from "../../images/LATF/WEB-1571-250kb.jpg";
+import W0713 from "../../images/LATF/WEB-0713-251kb.jpg";
+import W2N7A8110 from "../../images/LATF/WEB-2N7A8110-282kb.jpg";
+///////
+import W1059 from "../../images/LATF/WEB-1059-249kb.jpg";
+///////
+import W1669 from "../../images/LATF/WEB-1669-254kb.jpg";
+import W1111 from "../../images/LATF/WEB-1111-251kb.jpg";
+///////
+import W0831 from "../../images/LATF/WEB-0831-252kb.jpg";
+///////
+import W5995 from "../../images/LATF/WEB-5995-248kb.jpg";
+import W0154 from "../../images/LATF/WEB-0154-261kb.jpg";
+import W1973 from "../../images/LATF/WEB-1973-249kb.jpg";
+///////
+import W0769 from "../../images/LATF/IMG_0769 Final cold press  Nicole.jpg";
+import W6441 from "../../images/LATF/WEB RAY_6441.jpg";
+///////
+import W7995 from "../../images/LATF/WEB-7995-256kb.jpg";
+import W8175 from "../../images/LATF/WEB-8175-249kb.jpg";
+import W7765 from "../../images/LATF/WEB-7765-251kb.jpg";
+///////
+import W0403 from "../../images/LATF/WEB-0403-250ob.jpg";
+///////
+import W8325 from "../../images/LATF/WEB-8325-256kb-1.jpg";
+///////
+import W9311 from "../../images/LATF/WEB-9311-262kb.jpg";
+///////
+import W8064 from "../../images/LATF/WEB-8064-252kb.jpg";
+import W8994 from "../../images/LATF/WEB-8994-254kb.jpg";
+import W9139 from "../../images/LATF/WEB-9139-251kb.jpg";
+///////
+import W3638 from "../../images/LATF/WEB-3638-250kb.jpg";
+///////
+import W9368 from "../../images/LATF/WEB-9368-253.jpg";
+import W9425 from "../../images/LATF/WEB-9425-252kb.jpg";
+import W3663 from "../../images/LATF/WEB-3663-255kb.jpg";
+///////
+import W8622 from "../../images/LATF/WEB-8622-256kb.jpg";
+///////
+import W2169 from "../../images/LATF/WEB-2169-258kb.jpg";
+///////
+import W6925 from "../../images/LATF/WEB-6925-6925.jpg";
+///////
+import W7742 from "../../images/LATF/WEB-7742-259kb.jpg";
 
 import Modal from "../../components/Modal";
 
-import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
 import Image from "../../components/Image";
 import { useViewportScroll, useTransform } from "framer-motion";
 
 // import styled from "styled-components";
 import { H1, HeaderWrapper } from "./styles";
-import "../../App.css";
+
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -98,7 +183,7 @@ const Latf = () => {
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState("");
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 2]);
+  const scale = useTransform(scrollYProgress, [0, 0.1], [1, 3]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const openModal = (e) => {
@@ -125,7 +210,7 @@ const Latf = () => {
               alignItems: "flex-end",
               transition: { delay: 1, ...transition },
             }}
-            style={{ opacity: opacity }}
+          // style={{ opacity: opacity }}
           >
             Look at the Flowers
           </H1>
@@ -146,9 +231,9 @@ const Latf = () => {
       </AnimationWrapper>
 
       <div>
-        <WrapperIntroText>
+        <WrapperIntroText style={{ marginTop: '10%' }}>
           <p>
-            <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When
+            <span style={{ font: "30px Hidden Focus" }}>Focus.</span> When
             we look at something, really look, what captures our attention
             stands out in sharp relief. Everything else blurs away. These flower
             “portraits” are taken with a 100mm Macro lens, and make deliberate
@@ -260,674 +345,351 @@ const Latf = () => {
             </div>
           </div>
         </div>
+
+
+        {/* ///here comes the new image//// */}
+        <Image
+          positionX={"flex-end"}
+          mRight={"4%"}
+          src={W6417}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        {/* <Image
+          positionX={"flex-start"}
+          src={W2384}
+          imgWidth={"30%"}
+          onClick={(e) => openModal(e)}
+        /> */}
+        <Image
+          mTop={"20%"}
+          src={W8135}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        <div style={{ justifyContent: "flex-start", display: "flex", marginLeft: '4%' }}>
+          <div
+            style={{
+              color: "#b3c53f",
+              display: "flex",
+              flexDirection: "column",
+              width: "50%",
+              alignItems: "flex-end",
+              paddingBottom: "10%",
+            }}
+          >
+            <div style={{ width: "80%" }}>
+              <p>Rose Window</p>
+              <p>My love for you is an evenoing star</p>
+              <p>that glows once more toward the end of day</p>
+            </div>
+            <br />
+            <div style={{ width: "80%" }}>
+              <p>My love for you is an ancient scar</p>
+              <p>a gash in you that bled away</p>
+            </div>
+            <br />
+            <div style={{ width: "80%" }}>
+              <p>My love for you is the morning star</p>
+              <p>the glint of light that leds the way</p>
+            </div>
+          </div>
+        </div>
+        <Image
+          mTop={"20%"}
+          src={W7020}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"20%"}
+          src={W3589}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"40%"}
+          src={W9590}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mLeft={"4%"}
+          mTop={"10%"}
+          src={W9486}
+          imgWidth={"70%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"4%"}
+          src={W9598}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"center"}
+          mTop={"30%"}
+          src={N7A7897}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"30%"}
+          src={W5841}
+          imgWidth={"80%"}
+          onClick={(e) => openModal(e)}
+        />
+        <div style={{ justifyContent: "flex-start", display: "flex", marginLeft: '4%' }}>
+          <div
+            style={{
+              color: "#b3c53f",
+              display: "flex",
+              flexDirection: "column",
+              width: "50%",
+              alignItems: "flex-end",
+              paddingBottom: "10%",
+            }}
+          >
+            <div style={{ width: "80%" }}>
+              <p>The Windhover</p>
+              <p>To Christ our Lord</p>
+
+            </div>
+          </div>
+        </div>
+        <Image
+          mTop={"30%"}
+          src={W1763}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"30%"}
+          mLeft={'10%'}
+          src={W4590}
+          imgWidth={"20%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"-26%"}
+          positionX={"flex-end"}
+          src={W5075}
+          imgWidth={"54%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"5%"}
+          src={W0430}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          src={W4799}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+
+        <Image
+          mTop={"5%"}
+          src={W4767}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        I dont have some images from 12.1
+        <Image
+          src={W0347}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"10%"}
+          src={W2421}
+          mLeft={'4%'}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"4%"}
+          src={W5679}
+          imgWidth={"80%"}
+          onClick={(e) => openModal(e)}
+        />
+
+        <Image
+          mTop={"4%"}
+          src={W0362}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"10%"}
+          src={W3838}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"10%"}
+          src={W6408}
+          imgWidth={"90%"}
+          onClick={(e) => openModal(e)}
+        />
+        <div style={{ justifyContent: "flex-start", display: "flex", marginLeft: '4%' }}>
+          <div
+            style={{
+              color: "#b3c53f",
+              display: "flex",
+              flexDirection: "column",
+              width: "50%",
+              alignItems: "flex-end",
+              paddingBottom: "10%",
+            }}
+          >
+            <div style={{ width: "80%" }}>
+              <p>Text</p>
+              <p>Cole porter</p>
+
+            </div>
+          </div>
+        </div>
+        <Image
+          mTop={"30%"}
+          src={W6897}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"30%"}
+          src={W2N7A8251}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mTop={"30%"}
+          mLeft={"10%"}
+          src={W9225}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"4%"}
+          mRight={"10%"}
+          src={W9387}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"center"}
+          mTop={"20%"}
+          src={W4447}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"center"}
+          mTop={"20%"}
+          src={W4447}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+
+          mTop={"20%"}
+          src={W9171}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"20%"}
+          src={W9059}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+
+          mTop={"20%"}
+          src={W9170}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+I dont have first image of page 19
+      <Image
+          positionX={"flex-end"}
+          mTop={"20%"}
+          src={W2N7A8110}
+          imgWidth={"40%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          mLeft={'5%'}
+          mTop={"20%"}
+          src={W1571}
+          imgWidth={"50%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+          positionX={"flex-end"}
+          mTop={"20%"}
+          src={W0713}
+          imgWidth={"60%"}
+          onClick={(e) => openModal(e)}
+        />
+        <Image
+
+          mTop={"20%"}
+          src={W1059}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+
+I dont have second image of page 20
+        {/* <Image
+          positionX={"flex-end"}
+          mTop={"50%"}
+          src={W0713}
+          imgWidth={"70%"}
+          onClick={(e) => openModal(e)}
+        /> */}
+        <Image
+          mTop={"20%"}
+          src={W1669}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+I dont have second and third image of page 21
+<br />
+
+home image Heer
+
+
+        <Image
+          mTop={"20%"}
+          src={W0831}
+          imgWidth={"100%"}
+          onClick={(e) => openModal(e)}
+        />
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
 
-      {/* //////////// */}
-      {/* <Scroll>
-        <IntroContainer>
-          <WrapperIntroText>
-            <p>
-              <span style={{ font: "30px/26px Mrs Saint Delafield" }}>F</span>
-              ocus. When we look at something, really look, what captures our
-              attention stands out in sharp relief. Everything else blurs away.
-              These flower “portraits” are taken with a 100mm Macro lens, and
-              make deliberate use of the focal plane as a major part of the
-              composition, along with the placement of objects and blocks of
-              color. The goal is to use all the elements of composition to
-              invite the viewer to see the flowers in a particular way.
-            </p>
-            <br />
-            <p>
-              Together, these images make up an imaginary exhibition called Look
-              at the Flowers… It is a still growing body of work that began in
-              the Spring and Summer of 2019. When Spring came around this year,
-              I wondered what would happen when I looked through the lens. Would
-              anything “new” show up? Please take a look with me and see!
-            </p>
-          </WrapperIntroText>
-          <ImageWrapper>
-            <img src={W2555} width={"100%"} alt={W2555} />
-          </ImageWrapper>
-        </IntroContainer>
-        {objects1.map((obj, i) => (
-          <Container key={i}>
-            <SubHeader>{obj.name}</SubHeader>
-            <Wrapper>
-              {obj.page.map((el, i) => (
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <p>{obj.text}</p>
-            </Wrapper>
-          </Container>
-        ))}
-        <Container>
-          <SubHeader>{Tulips20A.name}</SubHeader>
-          <Wrapper>
-            {Tulips20A.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={el.i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{BAON.name}</SubHeader>
-          <Wrapper>
-            {BAON.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{THOAA.name}</SubHeader>
-          <Wrapper>
-            {THOAA.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{RW.name}</SubHeader>
-          <Wrapper style={{ width: "80%" }}>
-            {RW.page.map((el, i) => (
-              <RWImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-            <RWText>
-              <p>
-                <SpanRW>My</SpanRW>
-                {"     "}
-                love for you is an evening star that glows once more toward the
-                end of day
-              </p>
-              <br />
-              <p>
-                My love for you is an ancient scar a gash in youth that bled
-                away
-              </p>
-              <br />
-              <p>
-                {" "}
-                My love for you is the morning star the glint of light that
-                leads the way
-              </p>
-            </RWText>
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Intimations.name}</SubHeader>
-          <Wrapper>
-            {Intimations.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{HC.name}</SubHeader>
-          <Wrapper>
-            {HC.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{WOF.name}</SubHeader>
-          <Wrapper>
-            {WOF.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Annunciation.name}</SubHeader>
-          <Wrapper>
-            {Annunciation.page.map((el, i) => (
-              <VerticalImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
 
-        <Container>
-          <SubHeader>{Windhover.name}</SubHeader>
-          <Wrapper>
-            <WrapperIntroText>
-              <h4>To Christ our Lord</h4>
-              <br />
-              <p>
-                <span style={{ font: "30px/26px Mrs Saint Delafield" }}>I</span>{" "}
-                caught this morning morning’s minion, kingdom of daylight’s
-                dauphin, dapple-dawn-drawn Falcon, in his riding Of the rolling
-                level underneath him steady air, and striding High there, how he
-                rung upon the rein of a wimpling wing In his ecstacy! then off,
-                off forth on swing, As a skate’s heel sweeps smooth on a
-                bow-bend: the hurl and gliding Rebuffed the big wind. My heart
-                in hiding Stirred for a bird,—the achieve of, the mastery of the
-                thing!
-              </p>
-              <br />
-              <p>
-                Brute beauty and valour and act, oh, air, pride, plume, here
-                Buckle! AND the fire that breaks from thee then, a billion Times
-                told lovelier, more dangerous, O my chevalier!
-              </p>
-              <br />
-              <p>
-                No wonder of it: shéer plód makes plough down sillion Shine, and
-                blue-bleak embers, ah my dear, Fall, gall themselves, and gash
-                gold-vermillion.
-              </p>
-
-              <br />
-              <h4>Gerard Manley Hopkins (1844 1889)</h4>
-            </WrapperIntroText>
-            {Windhover.p11.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{TA.name}</SubHeader>
-          <Wrapper>
-            {TA.page.map((el, i) => (
-              <FotoWrapper>
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={i}
-                />
-              </FotoWrapper>
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{TAA.name}</SubHeader>
-          <Wrapper>
-            {TAA.p13.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Peonies.name}</SubHeader>
-          <Wrapper>
-            {Peonies.page.map((el, i) => (
-              <PeoniesWrapper>
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={i}
-                />
-              </PeoniesWrapper>
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{PeoniesA.name}</SubHeader>
-          <Wrapper>
-            {PeoniesA.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{HTM.name}</SubHeader>
-          <Wrapper>
-            {HTM.page.map((el, i) => (
-              <VerticalImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{ITSOTN.name}</SubHeader>
-          <Wrapper style={{ width: "80%" }}>
-            {ITSOTN.page.map((el, i) => (
-              <RWImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-            <RWText>
-              <p>
-                <span style={{ font: "30px/26px Mrs Saint Delafield" }}>L</span>{" "}
-                ike the moon growing dim on the rim of the hill in the chill,
-                still of the night...
-              </p>
-              <br />
-              <br />
-              <h4>Cole Porter</h4>
-            </RWText>
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{UG.name}</SubHeader>
-          <Wrapper>
-            {UG.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{Alien.name}</SubHeader>
-          <Wrapper>
-            {Alien.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Animations.name}</SubHeader>
-          <Wrapper>
-            {Animations.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{HTGO.name}</SubHeader>
-          <Wrapper>
-            {HTGO.page.map((el, i) => (
-              <VerticalImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{Chrysanthemums.name}</SubHeader>
-          <Wrapper>
-            {Chrysanthemums.page.map((el, i) => (
-              <ChrysanthemumsWrapper>
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={i}
-                />
-              </ChrysanthemumsWrapper>
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{UL.name}</SubHeader>
-          <Wrapper>
-            {UL.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Hydrangeas.name}</SubHeader>
-          <Wrapper style={{ flexDirection: "column", height: "78%" }}>
-            {Hydrangeas.page.map((el, i) => (
-              <HydrangeasWrapper>
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={i}
-                />
-              </HydrangeasWrapper>
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{LOTF.name}</SubHeader>
-          <Wrapper>
-            {LOTF.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-            <LiliesText>
-              <p>
-                <SpanLilies>C</SpanLilies>
-                onsider the lilies of the field, how they grow: they neither
-                toil nor spin, yet I tell you, even Solomon in all his glory was
-                not arranged like one of these.
-              </p>
-              <br />
-              <h4>Matthew 6:28-29</h4>
-            </LiliesText>
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{HTRM.name}</SubHeader>
-          <Wrapper>
-            {HTRM.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{Iris.name}</SubHeader>
-          <Wrapper>
-            {Iris.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{MM.name}</SubHeader>
-          <Wrapper>
-            {MM.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{SM.name}</SubHeader>
-          <Wrapper>
-            {SM.page.map((el, i) => (
-            
-              <SunflowerImage
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{TODAC.name}</SubHeader>
-          <Wrapper>
-            {TODAC.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{CS.name}</SubHeader>
-          <Wrapper>
-            {CS.page.map((el, i) => (
-              <VerticalImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{AL.name}</SubHeader>
-          <Wrapper>
-            {AL.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{FL.name}</SubHeader>
-          <Wrapper>
-            {FL.page.map((el, i) => (
-              <img
-                key={i}
-                style={el.css}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{Winter19.name}</SubHeader>
-          <Wrapper>
-            <Winter19Text>
-              <p>
-                <SpanW19>F</SpanW19>
-                ull many a gem of purest ray serene
-              </p>{" "}
-              <p>The dark unfathom'd caves of ocean bear:</p>{" "}
-              <p>Full many a flower is born to blush unseen,</p>
-              <p> And waste its sweetness on the desert air. </p>{" "}
-              <p>Elegy in a Country Churchyard</p>
-              <br />
-              <h4>Thomas Gray</h4>
-            </Winter19Text>
-            {Winter19.page.map((el, i) => (
-              <VerticalImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={el.i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{Winter19A.name}</SubHeader>
-          <Wrapper>
-            {Winter19A.page.map((el, i) => (
-              <PeoniesWrapper>
-                <img
-                  key={i}
-                  style={el.css}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={i}
-                />
-              </PeoniesWrapper>
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{Winter20.name}</SubHeader>
-          <Wrapper>
-            {Winter20.page.map((el, i) => (
-              <VerticalImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={el.i}
-              />
-            ))}
-            <p>Satori</p>
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{BLUY.name}</SubHeader>
-          <Wrapper>
-            {BLUY.page.map((el, i) => (
-              <VerticalImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={el.i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-
-        <Container>
-          <SubHeader>{QAG.name}</SubHeader>
-          <Wrapper>
-            <QueenImageWrapper>
-              {QAG.page.map((el, i) => (
-                <QueenImage
-                  key={i}
-                  onClick={() => openModal(el)}
-                  src={el.image}
-                  alt={el.i}
-                />
-              ))}
-              <QueenText>
-                <p>
-                  <SpanQueen>T</SpanQueen>o see a World in a Grain of Sand And a
-                  Heaven in a Wild Flower, Hold Infinity in the palm of your
-                  hand And Eternity in an hour.
-                </p>
-                <br />
-                <h4> Auguries of Innocence William Blake</h4>
-              </QueenText>
-            </QueenImageWrapper>
-          </Wrapper>
-        </Container>
-        <Container>
-          <SubHeader>{Elysium.name}</SubHeader>
-          <Wrapper>
-            {Elysium.page.map((el, i) => (
-              <SingleImage
-                key={i}
-                onClick={() => openModal(el)}
-                src={el.image}
-                alt={i}
-              />
-            ))}
-          </Wrapper>
-        </Container>
-      </Scroll> */}
     </div>
   );
 };

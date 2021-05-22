@@ -11,7 +11,7 @@ import W4243 from "../../images/LATF/WEB-4243-243kb.jpg";
 import W3887 from "../../images/LATF/WEB-3887-288kb.jpg";
 ///////
 import W6417 from "../../images/LATF/WEB-6417-256kb.jpg";
-import W2348 from "../../images/LATF/WEB 2348-260kb.jpg";
+import W2348 from "../../images/LATF/WEB-2348-260kb.jpg";
 ///////
 import W2613 from "../../images/LATF/WEB-2613-257kb.jpg";
 ///////
