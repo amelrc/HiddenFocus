@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { device } from "../../generalStyles";
 
@@ -81,17 +82,17 @@ export const SubHeader = styled.h2`
   color: #331c65;
 `;
 
-export const ImageWrapper = styled.figure`
-  background-color: antiquewhite;
-  padding: 20px;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  @media ${device.small} {
-    width: 40%;
-  }
-`;
+// export const ImageWrapper = styled.figure`
+//   background-color: antiquewhite;
+//   padding: 20px;
+//   width: 30%;
+//   display: flex;
+//   flex-direction: column;
+//   align-self: center;
+//   @media ${device.small} {
+//     width: 40%;
+//   }
+// `;
 
 export const RWImage = styled.img`
   width: 64%;
@@ -220,4 +221,53 @@ export const QueenImage = styled.img`
     width: 56%;
     margin: 20px;
   }
+`;
+
+////////////////
+export const AnimationWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const HeaderWrapper = styled.div`
+  position: relative;
+  height: 50vh;
+`;
+export const ImageWrapper = styled.div`
+  position: relative;
+  height: 50vh;
+  width: 50%;
+  @media ${device.tablet} {
+    // height: 30vh;
+  }
+`;
+
+export const H1 = styled(motion.h1)`
+  height: 50vh;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  font: 40px Hidden Focus;
+  z-index: 1;
+  color: #331c65;
+  // color: #fff;
+  opacity: 0;
+  bottom: 10%;
+  position: absolute;
+  @media ${device.tablet} {
+    font: 80px Hidden Focus;
+    margin-bottom: 10%;
+  }
+  @media ${device.medium} {
+    font: 120px Hidden Focus;
+  }
+`;
+
+export const AnimatedImage = styled(motion.img)`
+  width: 30vw;
+  left: 16%;
+  bottom: 20%; //aparently bigger than starting point in galleries
+  position: absolute;
+  // margin-bottom: 3%;
 `;

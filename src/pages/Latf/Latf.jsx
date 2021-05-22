@@ -22,6 +22,8 @@ import {
   SpanLilies,
   SpanW19,
   SpanQueen,
+  AnimatedImage,
+  AnimationWrapper,
 } from "./styles";
 import {
   objects1,
@@ -80,33 +82,18 @@ import W2613 from "../../images/LATF/WEB-2613-257kb.jpg";
 ///////
 
 import Modal from "../../components/Modal";
-import PageHeaders from "../../components/PageHeaders";
+
 import Scroll from "../../components/Scroll";
 import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
 import Image from "../../components/Image";
 import { motion } from "framer-motion";
 
-import locomotiveScroll from 'locomotive-scroll';
+import locomotiveScroll from "locomotive-scroll";
+import styled from "styled-components";
+import { H1, HeaderWrapper } from "./styles";
 
-
-
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] }
-
-const firstName = {
-  initial: {
-    y: 0,
-
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: -1,
-    },
-  },
-};
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const Latf = () => {
   const [showModal, setShowModal] = useState(false);
@@ -122,7 +109,7 @@ const Latf = () => {
   React.useEffect(() => {
     const scroll = new locomotiveScroll({
       el: scrollRef.current,
-      smooth: true
+      smooth: true,
     });
   });
 
@@ -136,42 +123,53 @@ const Latf = () => {
         />
       </Modal>
 
+      <AnimationWrapper>
+        <HeaderWrapper>
+          <H1
+            animate={{
+              opacity: 1,
+              bottom: 0,
+              alignItems: "flex-end",
+              transition: { delay: 1, ...transition },
+            }}
+          >
+            Look at the Flowers
+          </H1>
+        </HeaderWrapper>
+        <ImageWrapper>
+          <AnimatedImage
+            animate={{
+              left: "20%",
+              // bottom: 0,
+              width: "60%",
+              transition: { delay: 0.2, ...transition },
+            }}
+            src={W2555}
+            alt={W2555}
+          />
+        </ImageWrapper>
+      </AnimationWrapper>
 
-      <div style={{
-        width: '100%', height: '100vh', justifyContent: 'center',
-        alignItems: 'center',
-        display: 'flex'
-      }}>
-        <PageHeaders variants={firstName}>Look at the Flowers</PageHeaders>
-
-        <motion.div style={{ display: 'flex' }} animate={{ transition: { delay: .2, ...transition } }} >
-          <motion.img style={{
-            width: '30vw', left: '16%', bottom: '10%', position: 'absolute', marginBottom: 20
-          }}
-            animate={{ left: '20%', bottom: 0, width: '60%', transition: { delay: .2, ...transition } }} src={W2555} alt={W2555} />
-        </motion.div>
-      </div>
       <div ref={scrollRef}>
-
         <WrapperIntroText>
-          <p >
-            <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When we
-          look at something, really look, what captures our attention stands out
-          in sharp relief. Everything else blurs away. These flower “portraits”
-          are taken with a 100mm Macro lens, and make deliberate use of the
-          focal plane as a major part of the composition, along with the
-          placement of objects and blocks of color. The goal is to use all the
-          elements of composition to invite the viewer to see the flowers in a
-          particular way.
-        </p>
+          <p>
+            <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When
+            we look at something, really look, what captures our attention
+            stands out in sharp relief. Everything else blurs away. These flower
+            “portraits” are taken with a 100mm Macro lens, and make deliberate
+            use of the focal plane as a major part of the composition, along
+            with the placement of objects and blocks of color. The goal is to
+            use all the elements of composition to invite the viewer to see the
+            flowers in a particular way.
+          </p>
           <br />
           <p>
-            Together, these images make up an imaginary exhibition called Look at
-            the Flowers… It is a still growing body of work that began in the
+            Together, these images make up an imaginary exhibition called Look
+            at the Flowers… It is a still growing body of work that began in the
             Spring and Summer of 2019. When Spring came around this year, I
             wondered what would happen when I looked through the lens. Would
             anything “new” show up? Please take a look with me and see!
-        </p>
+          </p>
         </WrapperIntroText>
         <Image
           mLeft={"24%"}

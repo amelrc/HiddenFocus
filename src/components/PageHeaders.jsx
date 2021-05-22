@@ -1,20 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../generalStyles";
-import { motion } from 'framer-motion'
-
+import { motion } from "framer-motion";
 
 const H1 = styled(motion.h1)`
   // position: fixed;
-  // height: 16%;
+  height: 50vh;
   width: 100%;
   justify-content: center;
   display: flex;
   align-items: flex-end;
   font: 7vw Hidden Focus;
-  overflow:hidden;
-  // z-index: 2;
+  overflow: hidden;
+  z-index: 1;
   color: #331c65;
+
   @media ${device.tablet} {
     // height: 14%;
   }
