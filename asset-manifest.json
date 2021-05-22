@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/HiddenFocus/static/css/main.31526f49.chunk.css",
-    "main.js": "/HiddenFocus/static/js/main.20fd4f60.chunk.js",
-    "main.js.map": "/HiddenFocus/static/js/main.20fd4f60.chunk.js.map",
+    "main.css": "/HiddenFocus/static/css/main.f3ee66ba.chunk.css",
+    "main.js": "/HiddenFocus/static/js/main.89e94ff9.chunk.js",
+    "main.js.map": "/HiddenFocus/static/js/main.89e94ff9.chunk.js.map",
     "runtime-main.js": "/HiddenFocus/static/js/runtime-main.40f0dbd6.js",
     "runtime-main.js.map": "/HiddenFocus/static/js/runtime-main.40f0dbd6.js.map",
-    "static/js/2.ed4ea31e.chunk.js": "/HiddenFocus/static/js/2.ed4ea31e.chunk.js",
-    "static/js/2.ed4ea31e.chunk.js.map": "/HiddenFocus/static/js/2.ed4ea31e.chunk.js.map",
+    "static/js/2.9ffd9a83.chunk.js": "/HiddenFocus/static/js/2.9ffd9a83.chunk.js",
+    "static/js/2.9ffd9a83.chunk.js.map": "/HiddenFocus/static/js/2.9ffd9a83.chunk.js.map",
     "static/js/3.8fe9c6d6.chunk.js": "/HiddenFocus/static/js/3.8fe9c6d6.chunk.js",
     "static/js/3.8fe9c6d6.chunk.js.map": "/HiddenFocus/static/js/3.8fe9c6d6.chunk.js.map",
     "index.html": "/HiddenFocus/index.html",
-    "static/css/main.31526f49.chunk.css.map": "/HiddenFocus/static/css/main.31526f49.chunk.css.map",
-    "static/js/2.ed4ea31e.chunk.js.LICENSE.txt": "/HiddenFocus/static/js/2.ed4ea31e.chunk.js.LICENSE.txt",
+    "static/css/main.f3ee66ba.chunk.css.map": "/HiddenFocus/static/css/main.f3ee66ba.chunk.css.map",
+    "static/js/2.9ffd9a83.chunk.js.LICENSE.txt": "/HiddenFocus/static/js/2.9ffd9a83.chunk.js.LICENSE.txt",
     "static/media/index.css": "/HiddenFocus/static/media/HiddenFocus.464cfef6.otf",
     "static/media/IMG_0769 Final cold press  Nicole.4713fe4f.jpg": "/HiddenFocus/static/media/IMG_0769 Final cold press  Nicole.4713fe4f.jpg",
     "static/media/IMG_1384 Final Metallic Glossy.c5ab12a3.jpg": "/HiddenFocus/static/media/IMG_1384 Final Metallic Glossy.c5ab12a3.jpg",
     "static/media/Leather.e6dd91fa.png": "/HiddenFocus/static/media/Leather.e6dd91fa.png",
     "static/media/Logo_Official.da71a373.svg": "/HiddenFocus/static/media/Logo_Official.da71a373.svg",
-    "static/media/WEB 2348-260kb.4c40bab9.jpg": "/HiddenFocus/static/media/WEB 2348-260kb.4c40bab9.jpg",
     "static/media/WEB RAY_6441.f1443633.jpg": "/HiddenFocus/static/media/WEB RAY_6441.f1443633.jpg",
     "static/media/WEB--0355--288kb--Angkor--p.2.7d92be19.jpg": "/HiddenFocus/static/media/WEB--0355--288kb--Angkor--p.2.7d92be19.jpg",
     "static/media/WEB--0371-257kb--Angkor--p.2.51c4149e.jpg": "/HiddenFocus/static/media/WEB--0371-257kb--Angkor--p.2.51c4149e.jpg",
@@ -62,6 +61,7 @@
     "static/media/WEB-1763-296kb.eab8ba96.jpg": "/HiddenFocus/static/media/WEB-1763-296kb.eab8ba96.jpg",
     "static/media/WEB-1973-249kb.5b8c1621.jpg": "/HiddenFocus/static/media/WEB-1973-249kb.5b8c1621.jpg",
     "static/media/WEB-2169-258kb.cf6d04ee.jpg": "/HiddenFocus/static/media/WEB-2169-258kb.cf6d04ee.jpg",
+    "static/media/WEB-2348-260kb.4c40bab9.jpg": "/HiddenFocus/static/media/WEB-2348-260kb.4c40bab9.jpg",
     "static/media/WEB-2421-254kb.8b80c1d9.jpg": "/HiddenFocus/static/media/WEB-2421-254kb.8b80c1d9.jpg",
     "static/media/WEB-2499-249kb.f0aca0e9.jpg": "/HiddenFocus/static/media/WEB-2499-249kb.f0aca0e9.jpg",
     "static/media/WEB-2555-263kb.e4cdfe10.jpg": "/HiddenFocus/static/media/WEB-2555-263kb.e4cdfe10.jpg",
@@ -158,8 +158,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.40f0dbd6.js",
-    "static/js/2.ed4ea31e.chunk.js",
-    "static/css/main.31526f49.chunk.css",
-    "static/js/main.20fd4f60.chunk.js"
+    "static/js/2.9ffd9a83.chunk.js",
+    "static/css/main.f3ee66ba.chunk.css",
+    "static/js/main.89e94ff9.chunk.js"
   ]
 }
