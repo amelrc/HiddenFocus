@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const ImageWrapper = styled.div`
   background-color: ${(props) => props.bg};
   display: flex;

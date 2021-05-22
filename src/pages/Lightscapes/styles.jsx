@@ -17,17 +17,17 @@ export const WrapperIntroText = styled.div`
   width: 40%;
   height: 50%;
   padding: 30px;
-  font: 14px/24px Lato;
+  font: 14px/24px Kumbh Sans;
   color: #331c65;
   overflow: scroll;
   align-self: center;
   @media ${device.small} {
-    height: 20%;
-    font: 16px/26px Lato;
+    // height: 20%;
+    font: 16px/26px Kumbh Sans;
   }
   @media ${device.medium} {
-    height: 20%;
-    font: 20px/32px Lato;
+    // height: 20%;
+    font: 20px/32px Kumbh Sans;
   }
   @media ${device.large} {
     width: 30%;

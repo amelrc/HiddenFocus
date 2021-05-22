@@ -83,35 +83,28 @@ import W2613 from "../../images/LATF/WEB-2613-257kb.jpg";
 
 import Modal from "../../components/Modal";
 
-import Scroll from "../../components/Scroll";
 import W2555 from "../../images/LATF/WEB-2555-263kb.jpg";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
 import Image from "../../components/Image";
-import { motion } from "framer-motion";
+import { useViewportScroll, useTransform } from "framer-motion";
 
-import locomotiveScroll from "locomotive-scroll";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { H1, HeaderWrapper } from "./styles";
+import "../../App.css";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const Latf = () => {
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState("");
-  const scrollRef = React.createRef();
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 2]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const openModal = (e) => {
-    console.log(selected);
     setSelected(e.target.src);
     setShowModal((prev) => !prev);
   };
-
-  React.useEffect(() => {
-    const scroll = new locomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-    });
-  });
 
   return (
     <div style={{ backgroundColor: "#f5f5f5" }}>
@@ -132,25 +125,27 @@ const Latf = () => {
               alignItems: "flex-end",
               transition: { delay: 1, ...transition },
             }}
+            style={{ opacity: opacity }}
           >
             Look at the Flowers
           </H1>
         </HeaderWrapper>
         <ImageWrapper>
           <AnimatedImage
+            style={{ scale: scale }}
             animate={{
               left: "20%",
-              // bottom: 0,
               width: "60%",
               transition: { delay: 0.2, ...transition },
             }}
             src={W2555}
             alt={W2555}
+            onClick={(e) => openModal(e)}
           />
         </ImageWrapper>
       </AnimationWrapper>
 
-      <div ref={scrollRef}>
+      <div>
         <WrapperIntroText>
           <p>
             <span style={{ font: "30px/26px Hidden Focus" }}>Focus.</span> When
@@ -171,6 +166,7 @@ const Latf = () => {
             anything “new” show up? Please take a look with me and see!
           </p>
         </WrapperIntroText>
+
         <Image
           mLeft={"24%"}
           src={W0241}
@@ -239,6 +235,7 @@ const Latf = () => {
             imgWidth={"80%"}
             onClick={(e) => openModal(e)}
           />
+
           <div style={{ justifyContent: "flex-end", display: "flex" }}>
             <div
               style={{
@@ -266,7 +263,7 @@ const Latf = () => {
       </div>
 
       {/* //////////// */}
-      <Scroll>
+      {/* <Scroll>
         <IntroContainer>
           <WrapperIntroText>
             <p>
@@ -752,7 +749,7 @@ const Latf = () => {
           <SubHeader>{SM.name}</SubHeader>
           <Wrapper>
             {SM.page.map((el, i) => (
-              // <div style={el.css}>
+            
               <SunflowerImage
                 key={i}
                 style={el.css}
@@ -760,8 +757,7 @@ const Latf = () => {
                 src={el.image}
                 alt={i}
               />
-              /* <p>{el.text}</p> */
-              // </div>
+            
             ))}
           </Wrapper>
         </Container>
@@ -931,7 +927,7 @@ const Latf = () => {
             ))}
           </Wrapper>
         </Container>
-      </Scroll>
+      </Scroll> */}
     </div>
   );
 };

@@ -225,9 +225,10 @@ export const QueenImage = styled.img`
 
 ////////////////
 export const AnimationWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // height: 100vh;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -237,9 +238,9 @@ export const HeaderWrapper = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   height: 50vh;
-  width: 50%;
+  // width: 100%;
   @media ${device.tablet} {
-    // height: 30vh;
+    // height: 70vh;
   }
 `;
 
@@ -269,5 +270,4 @@ export const AnimatedImage = styled(motion.img)`
   left: 16%;
   bottom: 20%; //aparently bigger than starting point in galleries
   position: absolute;
-  // margin-bottom: 3%;
 `;
