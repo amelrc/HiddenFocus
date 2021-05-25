@@ -3,7 +3,7 @@ import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 import { museum } from "../../Data";
 import Image from "../../components/Image";
-import { Hover, ImageBlocks, P } from "./styles";
+import { Hover, P } from "./styles";
 
 const container = {
   show: {
@@ -52,44 +52,41 @@ const Loader = ({ match }) => {
               {museum.map((room) =>
                 room.floors === topic
                   ? room.rooms.map((r, i) => (
-                    <ImageBlock
-                      path={`/${r.url}`}
-                      src={r.introImg}
-                      variants={item}
-                      className={`image-${r.id}`}
-                      name={r.name}
-                    />
-                  ))
-                  : match.path === "/gallery"
-                    ? room.rooms.map((r, i) => (
-                      <ImageBlock
-                        path={`/${r.url}`}
-                        src={r.introImg}
+                      <motion.div
+                        key={i}
                         variants={item}
-                        className={`image-${r.id}`}
-                        name={r.name}
-                      />
+                        className={`image-block image-${r.id} `}
+                      >
+                        <Hover className="img-hover-zoom">
+                          <Link to={`/${r.url}`}>
+                            <Image pic={r.introImg} name={r.name} />
+                            <P>{r.name}</P>
+                          </Link>
+                        </Hover>
+                      </motion.div>
                     ))
-                    : null
+                  : match.path === "/gallery"
+                  ? room.rooms.map((r, i) => (
+                      <motion.div
+                        key={i}
+                        variants={item}
+                        className={`image-block image-${r.id} `}
+                      >
+                        <Hover className="img-hover-zoom">
+                          <Link to={`/${r.url}`}>
+                            <Image pic={r.introImg} name={r.name} />
+                            <P>{r.name}</P>
+                          </Link>
+                        </Hover>
+                      </motion.div>
+                    ))
+                  : null
               )}
             </motion.div>
           </motion.div>
         </motion.div>
       </AnimatePresence>
     </AnimateSharedLayout>
-  );
-};
-
-export const ImageBlock = ({ path, name, src, variants, className }) => {
-  return (
-    <motion.div variants={variants} className={`image-block ${className} `}>
-      <Link to={path}>
-        <Hover className='img-hover-zoom'>
-          <Image positionX={"center"} className={className} src={src} />
-          <P>{name}</P>
-        </Hover>
-      </Link>
-    </motion.div>
   );
 };
 

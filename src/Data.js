@@ -1,4 +1,4 @@
-import W2555 from "./images/LATF/WEB-2555-263kb.jpg";
+import I0 from "../src/images/LATF/0.jpg";
 
 import W0762 from "./images/MX/WEB-0762-250kb.jpg";
 
@@ -121,7 +121,7 @@ export const museum = [
       {
         url: "look-at-the-flowers",
         id: 1,
-        introImg: W2555,
+        introImg: I0,
         name: "Look at the Flowers",
       },
       {
