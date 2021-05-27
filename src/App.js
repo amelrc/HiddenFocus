@@ -25,7 +25,7 @@ import Home from "./pages/Home/Home.jsx";
 const App = styled.div`
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
 `;
 
 const ReactRouterSetup = () => {
