@@ -6,8 +6,16 @@ import Image from "../../components/Image";
 
 import I0 from "../../images/LATF/0.jpg";
 import I10 from "../../images/LATF/10.jpg";
+import I14 from "../../images/LATF/14_text.jpg";
+import I14a6 from "../../images/LATF/14a6_text.jpg";
+import I25 from "../../images/LATF/25_text.jpg";
+import I43 from "../../images/LATF/43_text.jpg";
+import I50 from "../../images/LATF/50_text.jpg";
+import I67 from "../../images/LATF/67_text.jpg";
+import I73 from "../../images/LATF/73_text.jpg";
+import I74 from "../../images/LATF/74.jpg";
 
-import { FirstBlock, SecondBlock } from "./dataLatf";
+import { FirstBlock, SecondBlock, ThirdBlock, FourthBlock, FifthBlock, SixthBlock, SeventhBlock, EighthBlock } from "./dataLatf";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
 import {
   H1,
@@ -104,7 +112,7 @@ const Latf = () => {
               positionX={el.positionX}
               speed={el.speed}
               onClick={() => openModal(el)}
-              // whileHover={{ scale: 1.3 }}
+            // whileHover={{ scale: 1.3 }}
             />
           );
         })}
@@ -156,352 +164,378 @@ const Latf = () => {
               positionX={el.positionX}
               speed={el.speed}
               onClick={() => openModal(el)}
-              // whileHover={{ scale: 1.3 }}
+            // whileHover={{ scale: 1.3 }}
             />
           );
         })}
 
-        {/* <Image
-          mLeft={"24%"}
-          src={W0241}
-          imgWidth={"20%"}
-          onClick={(e) => openModal(e)}
-        />
-        
-        
-     
-        <Image
-          positionX={"flex-end"}
-          mRight={"4%"}
-          src={W6417}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-start"}
-          src={W2384}
-          imgWidth={"30%"}
-          onClick={(e) => openModal(e)}
-        /> 
-        <Image
-          mTop={"20%"}
-          src={W8135}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        <div
-          style={{
-            justifyContent: "flex-start",
-            display: "flex",
-            marginLeft: "4%",
-          }}
-        >
-          <div
-            style={{
-              color: "#b3c53f",
-              display: "flex",
-              flexDirection: "column",
-              width: "50%",
-              alignItems: "flex-end",
-              paddingBottom: "10%",
-            }}
-          >
-            <div style={{ width: "80%" }}>
-              <p>Rose Window</p>
-              <p>My love for you is an evenoing star</p>
-              <p>that glows once more toward the end of day</p>
-            </div>
-            <br />
-            <div style={{ width: "80%" }}>
-              <p>My love for you is an ancient scar</p>
-              <p>a gash in you that bled away</p>
-            </div>
-            <br />
-            <div style={{ width: "80%" }}>
-              <p>My love for you is the morning star</p>
-              <p>the glint of light that leds the way</p>
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            pic={I14}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
             </div>
           </div>
         </div>
-        <Image
-          mTop={"20%"}
-          src={W7020}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"20%"}
-          src={W3589}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"40%"}
-          src={W9590}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mLeft={"4%"}
-          mTop={"10%"}
-          src={W9486}
-          imgWidth={"70%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"4%"}
-          src={W9598}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"center"}
-          mTop={"30%"}
-          src={N7A7897}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"30%"}
-          src={W5841}
-          imgWidth={"80%"}
-          onClick={(e) => openModal(e)}
-        />
-        <div
-          style={{
-            justifyContent: "flex-start",
-            display: "flex",
-            marginLeft: "4%",
-          }}
-        >
-          <div
-            style={{
-              color: "#b3c53f",
-              display: "flex",
-              flexDirection: "column",
-              width: "50%",
-              alignItems: "flex-end",
-              paddingBottom: "10%",
-            }}
-          >
-            <div style={{ width: "80%" }}>
-              <p>The Windhover</p>
-              <p>To Christ our Lord</p>
+
+        {ThirdBlock.map((el, i) => {
+          return (
+            <Image
+              key={i}
+              pic={el.pic}
+              imgWidth={el.imgWidth}
+              mTop={el.mTop}
+              mRight={el.mRight}
+              mBottom={el.mBottom}
+              mLeft={el.mLeft}
+              positionX={el.positionX}
+              speed={el.speed}
+              onClick={() => openModal(el)}
+            // whileHover={{ scale: 1.3 }}
+            />
+          );
+        })}
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            pic={I14a6}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
             </div>
           </div>
         </div>
-        <Image
-          mTop={"30%"}
-          src={W1763}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"30%"}
-          mLeft={"10%"}
-          src={W4590}
-          imgWidth={"20%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"-26%"}
-          positionX={"flex-end"}
-          src={W5075}
-          imgWidth={"54%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"5%"}
-          src={W0430}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          src={W4799}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"5%"}
-          src={W4767}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        I dont have some images from 12.1
-        <Image src={W0347} imgWidth={"100%"} onClick={(e) => openModal(e)} />
-        <Image
-          mTop={"10%"}
-          src={W2421}
-          mLeft={"4%"}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"4%"}
-          src={W5679}
-          imgWidth={"80%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"4%"}
-          src={W0362}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"10%"}
-          src={W3838}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"10%"}
-          src={W6408}
-          imgWidth={"90%"}
-          onClick={(e) => openModal(e)}
-        />
-        <div
-          style={{
-            justifyContent: "flex-start",
-            display: "flex",
-            marginLeft: "4%",
-          }}
-        >
-          <div
-            style={{
-              color: "#b3c53f",
-              display: "flex",
-              flexDirection: "column",
-              width: "50%",
-              alignItems: "flex-end",
-              paddingBottom: "10%",
-            }}
-          >
-            <div style={{ width: "80%" }}>
-              <p>Text</p>
-              <p>Cole porter</p>
+
+        {FourthBlock.map((el, i) => {
+          return (
+            <Image
+              key={i}
+              pic={el.pic}
+              imgWidth={el.imgWidth}
+              mTop={el.mTop}
+              mRight={el.mRight}
+              mBottom={el.mBottom}
+              mLeft={el.mLeft}
+              positionX={el.positionX}
+              speed={el.speed}
+              onClick={() => openModal(el)}
+            // whileHover={{ scale: 1.3 }}
+            />
+          );
+        })}
+
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            pic={I25}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
             </div>
           </div>
         </div>
+
+
+        {FifthBlock.map((el, i) => {
+          return (
+            <Image
+              key={i}
+              pic={el.pic}
+              imgWidth={el.imgWidth}
+              mTop={el.mTop}
+              mRight={el.mRight}
+              mBottom={el.mBottom}
+              mLeft={el.mLeft}
+              positionX={el.positionX}
+              speed={el.speed}
+              onClick={() => openModal(el)}
+            // whileHover={{ scale: 1.3 }}
+            />
+          );
+        })}
+
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            pic={I43}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {SixthBlock.map((el, i) => {
+          return (
+            <Image
+              key={i}
+              pic={el.pic}
+              imgWidth={el.imgWidth}
+              mTop={el.mTop}
+              mRight={el.mRight}
+              mBottom={el.mBottom}
+              mLeft={el.mLeft}
+              positionX={el.positionX}
+              speed={el.speed}
+              onClick={() => openModal(el)}
+            // whileHover={{ scale: 1.3 }}
+            />
+          );
+        })}
+
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            pic={I50}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {SeventhBlock.map((el, i) => {
+          return (
+            <Image
+              key={i}
+              pic={el.pic}
+              imgWidth={el.imgWidth}
+              mTop={el.mTop}
+              mRight={el.mRight}
+              mBottom={el.mBottom}
+              mLeft={el.mLeft}
+              positionX={el.positionX}
+              speed={el.speed}
+              onClick={() => openModal(el)}
+            // whileHover={{ scale: 1.3 }}
+            />
+          );
+        })}
+
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            pic={I67}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {EighthBlock.map((el, i) => {
+          return (
+            <Image
+              key={i}
+              pic={el.pic}
+              imgWidth={el.imgWidth}
+              mTop={el.mTop}
+              mRight={el.mRight}
+              mBottom={el.mBottom}
+              mLeft={el.mLeft}
+              positionX={el.positionX}
+              speed={el.speed}
+              onClick={() => openModal(el)}
+            // whileHover={{ scale: 1.3 }}
+            />
+          );
+        })}
+
+
+
+
+
+
+
+
+
+
+
+        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+          <Image
+            style={{ margin: "10%" }}
+            positionX={"center"}
+            pic={I73}
+            imgWidth={"80%"}
+            onClick={(e) => openModal(e)}
+          />
+
+          <div style={{ justifyContent: "flex-end", display: "flex" }}>
+            <div
+              style={{
+                color: "#b3c53f",
+                display: "flex",
+                flexDirection: "column",
+                width: "35%",
+                alignItems: "flex-end",
+                paddingBottom: "10%",
+              }}
+            >
+              <div style={{ width: "80%" }}>
+                <p>I know even though I can't see it</p>
+                <p>somewhere waiting for me</p>
+                <p>there will always be love</p>
+              </div>
+              <br />
+              <div style={{ width: "60%" }}>
+                <p>Enrico Garzilli</p>
+                <p>from Rage of the Heart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <Image
-          mTop={"30%"}
-          src={W6897}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"30%"}
-          src={W2N7A8251}
+
+          pic={I74}
           imgWidth={"100%"}
           onClick={(e) => openModal(e)}
         />
-        <Image
-          mTop={"30%"}
-          mLeft={"10%"}
-          src={W9225}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"4%"}
-          mRight={"10%"}
-          src={W9387}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"center"}
-          mTop={"20%"}
-          src={W4447}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"center"}
-          mTop={"20%"}
-          src={W4447}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"20%"}
-          src={W9171}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"20%"}
-          src={W9059}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"20%"}
-          src={W9170}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        I dont have first image of page 19
-        <Image
-          positionX={"flex-end"}
-          mTop={"20%"}
-          src={W2N7A8110}
-          imgWidth={"40%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mLeft={"5%"}
-          mTop={"20%"}
-          src={W1571}
-          imgWidth={"50%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          positionX={"flex-end"}
-          mTop={"20%"}
-          src={W0713}
-          imgWidth={"60%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"20%"}
-          src={W1059}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        I dont have second image of page 20
-        <Image
-          positionX={"flex-end"}
-          mTop={"50%"}
-          src={W0713}
-          imgWidth={"70%"}
-          onClick={(e) => openModal(e)}
-        />
-        <Image
-          mTop={"20%"}
-          src={W1669}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-        I dont have second and third image of page 21
-        <br />
-        home image Heer
-        <Image
-          mTop={"20%"}
-          src={W0831}
-          imgWidth={"100%"}
-          onClick={(e) => openModal(e)}
-        />
-      </div>
-    </div>  */}
+
+
+
+
+
       </div>
     </div>
   );
