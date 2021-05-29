@@ -22,6 +22,7 @@ const Img = styled.img`
 const Image = (props) => {
   const {
     bg,
+    id,
     mTop,
     mRight,
     mBottom,
@@ -45,6 +46,7 @@ const Image = (props) => {
       whileHover={whileHover}
     >
       <Img
+        id={id}
         imgWidth={imgWidth}
         mTop={mTop}
         mRight={mRight}

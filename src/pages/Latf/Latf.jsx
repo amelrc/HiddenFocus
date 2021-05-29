@@ -34,8 +34,9 @@ const Latf = () => {
   const scale = useTransform(scrollYProgress, [0, 0.1], [1, 2]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
-  const openModal = (id) => {
-    setSelected(id);
+  const openModal = (e) => {
+    console.log(e)
+    setSelected(e);
     setShowModal((prev) => !prev);
   };
 
@@ -103,6 +104,7 @@ const Latf = () => {
           return (
             <Image
               key={i}
+              id={el.i}
               pic={el.pic}
               imgWidth={el.imgWidth}
               mTop={el.mTop}
@@ -117,10 +119,11 @@ const Latf = () => {
           );
         })}
 
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
+        <div style={{ backgroundColor: "#180920", marginTop: "20%" }}>
           <Image
             style={{ margin: "10%" }}
             positionX={"center"}
+            mTop={'100px'}
             pic={I10}
             imgWidth={"80%"}
             onClick={(e) => openModal(e)}

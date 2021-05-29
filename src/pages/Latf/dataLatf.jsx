@@ -83,26 +83,29 @@ import I74 from "../../images/LATF/74.jpg";
 
 export const FirstBlock = [
   {
+    id: 1,
     pic: I1,
     imgWidth: "20%",
-    mTop: "",
+    mTop: "100px",
     mRight: "",
     mBottom: "",
     mLeft: "24%",
     positionX: "",
-    speed: 5,
+    speed: 30,
   },
   {
+    id: 2,
     pic: I2,
     imgWidth: "56%",
-    mTop: "",
+    mTop: "100px",
     mRight: "",
     mBottom: "",
     mLeft: "",
     positionX: "flex-end",
-    speed: 6,
+    speed: -30,
   },
   {
+    id: 3,
     pic: I3,
     imgWidth: "50%",
     mTop: "100px",
@@ -113,9 +116,10 @@ export const FirstBlock = [
     speed: 5,
   },
   {
+    id: 4,
     pic: I4,
     imgWidth: "16%",
-    mTop: "20%",
+    mTop: "",
     mRight: "10%",
     mBottom: "",
     mLeft: "24%",
@@ -123,6 +127,7 @@ export const FirstBlock = [
     speed: -20,
   },
   {
+    id: 5,
     pic: I5,
     imgWidth: "26%",
     mTop: "",
@@ -133,6 +138,7 @@ export const FirstBlock = [
     speed: -10,
   },
   {
+    id: 6,
     pic: I6,
     imgWidth: "100%",
     mTop: "100px",
@@ -143,6 +149,7 @@ export const FirstBlock = [
     speed: 2.5,
   },
   {
+    id: 7,
     pic: I7,
     imgWidth: "16%",
     mTop: "100px",
@@ -153,6 +160,7 @@ export const FirstBlock = [
     speed: 5,
   },
   {
+    id: 8,
     pic: I8,
     imgWidth: "50%",
     mTop: "30%",
@@ -163,6 +171,7 @@ export const FirstBlock = [
     speed: -3,
   },
   {
+    id: 9,
     pic: I9,
     imgWidth: "50%",
     mTop: "",
@@ -175,6 +184,7 @@ export const FirstBlock = [
 ];
 export const SecondBlock = [
   {
+    id: 11,
     pic: I11,
     imgWidth: "70%",
     mTop: "",
@@ -185,6 +195,7 @@ export const SecondBlock = [
     speed: 5,
   },
   {
+    id: 12,
     pic: I12,
     imgWidth: "80%",
     mTop: "",
@@ -195,6 +206,7 @@ export const SecondBlock = [
     speed: 6,
   },
   {
+    id: 13,
     pic: I13,
     imgWidth: "50%",
     mTop: "40%",
