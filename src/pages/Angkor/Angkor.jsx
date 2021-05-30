@@ -48,7 +48,7 @@ const Angkor = () => {
           alt={selected}
         />
       </Modal>
-      <PageHeaders>Angkor Wat</PageHeaders>
+      {/* <PageHeaders>Angkor Wat</PageHeaders> */}
       <Scroll>
         <Container>
           <Wrapper>

@@ -12,14 +12,14 @@ import I10 from "../../images/LATF/10.jpg";
 import I11 from "../../images/LATF/11.jpg";
 import I12 from "../../images/LATF/12.jpg";
 import I13 from "../../images/LATF/13.jpg";
-import I14T from "../../images/LATF/14_text.jpg";
+import I14 from "../../images/LATF/14_text.jpg";
 import I14a from "../../images/LATF/14a.jpg";
 import I14a1 from "../../images/LATF/14a1.jpg";
 import I14a2 from "../../images/LATF/14a2.jpg";
 import I14a3 from "../../images/LATF/14a3.jpg";
 import I14a4 from "../../images/LATF/14a4.jpg";
 import I14a5 from "../../images/LATF/14a5.jpg";
-import I14a6T from "../../images/LATF/14a6_text.jpg";
+import I14a6 from "../../images/LATF/14a6_text.jpg";
 import I15 from "../../images/LATF/15.jpg";
 import I16 from "../../images/LATF/16.jpg";
 import I17 from "../../images/LATF/17.jpg";
@@ -30,7 +30,7 @@ import I21 from "../../images/LATF/21.jpg";
 import I22 from "../../images/LATF/22.jpg";
 import I23 from "../../images/LATF/23.jpg";
 import I24 from "../../images/LATF/24.jpg";
-import I25T from "../../images/LATF/25_text.jpg";
+import I25 from "../../images/LATF/25_text.jpg";
 import I26 from "../../images/LATF/26.jpg";
 import I27 from "../../images/LATF/27.jpg";
 import I28 from "../../images/LATF/28.jpg";
@@ -48,14 +48,14 @@ import I39 from "../../images/LATF/39.jpg";
 import I40 from "../../images/LATF/40.jpg";
 import I41 from "../../images/LATF/41.jpg";
 import I42 from "../../images/LATF/42.jpg";
-import I43T from "../../images/LATF/43_text.jpg";
+import I43 from "../../images/LATF/43_text.jpg";
 import I44 from "../../images/LATF/44.jpg";
 import I45 from "../../images/LATF/45.jpg";
 import I46 from "../../images/LATF/46.jpg";
 import I47 from "../../images/LATF/47.jpg";
 import I48 from "../../images/LATF/48.jpg";
 import I49 from "../../images/LATF/49.jpg";
-import I50T from "../../images/LATF/50_text.jpg";
+import I50 from "../../images/LATF/50_text.jpg";
 import I51 from "../../images/LATF/51.jpg";
 import I52 from "../../images/LATF/52.jpg";
 import I53 from "../../images/LATF/53.jpg";
@@ -827,5 +827,97 @@ export const EighthBlock = [
     mLeft: "5%",
     positionX: "center",
     speed: 2.5,
+  },
+];
+export const SubPage = [
+  {
+    id: 0,
+    pic: I10,
+    imgWidth: "80%",
+    mTop: "100px",
+    mRight: "",
+    mBottom: "",
+    mLeft: "",
+    positionX: "center",
+    speed: 0,
+  },
+
+  {
+    id: 1,
+    pic: I14,
+    imgWidth: "80%",
+    mTop: "100px",
+    mRight: "",
+    mBottom: "",
+    mLeft: "",
+    positionX: "center",
+    speed: 0,
+  },
+
+  {
+    id: 2,
+    pic: I14a6,
+    imgWidth: "80%",
+    mTop: "100px",
+    mRight: "",
+    mBottom: "",
+    mLeft: "",
+    positionX: "center",
+    speed: 0,
+  },
+  {
+    id: 3,
+    pic: I25,
+    imgWidth: "16%",
+    mTop: "",
+    mRight: "10%",
+    mBottom: "",
+    mLeft: "24%",
+    positionX: "flex-end",
+    speed: -20,
+  },
+  {
+    id: 4,
+    pic: I43,
+    imgWidth: "26%",
+    mTop: "",
+    mRight: "20%",
+    mBottom: "",
+    mLeft: "",
+    positionX: "flex-end",
+    speed: -10,
+  },
+  {
+    id: 5,
+    pic: I50,
+    imgWidth: "100%",
+    mTop: "100px",
+    mRight: "",
+    mBottom: "",
+    mLeft: "",
+    positionX: "",
+    speed: 2.5,
+  },
+  {
+    id: 6,
+    pic: I67,
+    imgWidth: "16%",
+    mTop: "100px",
+    mRight: "",
+    mBottom: "",
+    mLeft: "20%",
+    positionX: "",
+    speed: 5,
+  },
+  {
+    id: 7,
+    pic: I73,
+    imgWidth: "50%",
+    mTop: "30%",
+    mRight: "10%",
+    mBottom: "",
+    mLeft: "",
+    positionX: "flex-end",
+    speed: 0,
   },
 ];
