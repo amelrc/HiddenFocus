@@ -225,7 +225,7 @@ export const QueenImage = styled.img`
 
 ////////////////
 export const AnimationWrapper = styled.div`
-overflow: hidden;
+  overflow: hidden;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -268,4 +268,10 @@ export const AnimatedImage = styled(motion.img)`
   left: 16%;
   bottom: 20%; //aparently bigger than starting point in galleries
   position: absolute;
+`;
+
+export const Font = styled.div`
+  display: flex;
+  font: 20px/30px Kumbh Sans;
+  margin: 6% 10%;
 `;

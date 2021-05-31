@@ -33,6 +33,7 @@ import {
   ImageWrapper,
   AnimatedImage,
   AnimationWrapper,
+  Font,
 } from "./styles";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -108,7 +109,6 @@ const Latf = () => {
             anything “new” show up? Please take a look with me and see!
           </p>
         </WrapperIntroText>
-
         {FirstBlock.map((el, i) => {
           return (
             <Image
@@ -127,7 +127,6 @@ const Latf = () => {
             />
           );
         })}
-
         {SubPage.map((el, i) => {
           return i === 0 ? (
             <div style={{ backgroundColor: "#180920", marginTop: "20%" }}>
@@ -145,35 +144,36 @@ const Latf = () => {
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
-              <div style={{ justifyContent: "flex-end", display: "flex" }}>
+              <Font>
                 <div
                   style={{
-                    color: "#b3c53f",
+                    color: "#edf1d0",
                     display: "flex",
                     flexDirection: "column",
-                    width: "35%",
-                    alignItems: "flex-end",
                     paddingBottom: "10%",
                   }}
                 >
-                  <div style={{ width: "80%" }}>
+                  <div>
                     <p>I know even though I can't see it</p>
                     <p>somewhere waiting for me</p>
                     <p>there will always be love</p>
                   </div>
                   <br />
-                  <div style={{ width: "60%" }}>
-                    <p>Enrico Garzilli</p>
-                    <p>from Rage of the Heart</p>
+                  <div>
+                    <p style={{ fontWeight: 700, color: "#9dad34" }}>
+                      Enrico Garzilli
+                    </p>
+                    <p style={{ color: "#9dad34" }}>
+                      from <i>Rage of the Heart</i>
+                    </p>
                   </div>
                 </div>
-              </div>
+              </Font>
             </div>
           ) : (
             ""
           );
         })}
-
         {SecondBlock.map((el, i) => {
           return (
             <Image
@@ -191,41 +191,53 @@ const Latf = () => {
             />
           );
         })}
-
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
-          <Image
-            style={{ margin: "10%" }}
-            positionX={"center"}
-            pic={I14}
-            imgWidth={"80%"}
-            onClick={(e) => openModal(e)}
-          />
-
-          <div style={{ justifyContent: "flex-end", display: "flex" }}>
-            <div
-              style={{
-                color: "#b3c53f",
-                display: "flex",
-                flexDirection: "column",
-                width: "35%",
-                alignItems: "flex-end",
-                paddingBottom: "10%",
-              }}
-            >
-              <div style={{ width: "80%" }}>
-                <p>I know even though I can't see it</p>
-                <p>somewhere waiting for me</p>
-                <p>there will always be love</p>
-              </div>
-              <br />
-              <div style={{ width: "60%" }}>
-                <p>Enrico Garzilli</p>
-                <p>from Rage of the Heart</p>
-              </div>
+        {SubPage.map((el, i) => {
+          return i === 1 ? (
+            <div style={{ backgroundColor: "#ffffff", marginTop: "20%" }}>
+              <Image
+                key={i}
+                id={el.i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+              <Font>
+                <div
+                  style={{
+                    color: "#9dad34",
+                    display: "flex",
+                    flexDirection: "column",
+                    paddingBottom: "10%",
+                  }}
+                >
+                  <p style={{ font: "40px Hidden Focus", color: "#9dad34" }}>
+                    Rose Window
+                  </p>
+                  <br />
+                  <div>
+                    <p>My love for you is an evening star</p>
+                    <p>that glows once more toward the end of day</p>
+                    <br />
+                    <p>My love for you is an ancient sear</p>
+                    <p>a gash in youth that bled away</p>
+                    <br />
+                    <p>My love for you is the morning star</p>
+                    <p>the glint of light that leads the way</p>
+                  </div>
+                </div>
+              </Font>
             </div>
-          </div>
-        </div>
-
+          ) : (
+            ""
+          );
+        })}
         {ThirdBlock.map((el, i) => {
           return (
             <Image
@@ -243,40 +255,105 @@ const Latf = () => {
             />
           );
         })}
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
-          <Image
-            style={{ margin: "10%" }}
-            positionX={"center"}
-            pic={I14a6}
-            imgWidth={"80%"}
-            onClick={(e) => openModal(e)}
-          />
+        {SubPage.map((el, i) => {
+          return i === 2 ? (
+            <div style={{ marginTop: "20%" }}>
+              <Image
+                key={i}
+                id={el.i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+              <Font>
+                <div
+                  style={{
+                    color: "#331c65",
+                    display: "flex",
+                    flexDirection: "column",
+                    paddingBottom: "10%",
+                  }}
+                >
+                  <p style={{ font: "40px Hidden Focus", color: "#331c65" }}>
+                    The Windhover
+                  </p>
+                  <p
+                    style={{
+                      font: "600 20px Kumbh Sans",
+                      color: "#602380",
+                      marginLeft: 10,
+                    }}
+                  >
+                    To Christ our Lord
+                  </p>
+                  <br />
+                  <div style={{ width: "100%" }}>
+                    <p>I cought this morning morning's minion, king-</p>
+                    <p style={{ marginLeft: 16 }}>
+                      dom of daylight's dauphin, dapple-dawn-drawn Falcon, in
+                      his riding
+                    </p>
+                    <p style={{ marginLeft: 16 }}>
+                      Of the rolling level underneath him steady air, and
+                      striding
+                    </p>
+                    <p>
+                      High there, how he rung upon the rein of a wimpling wing
+                    </p>
+                    <p>In this ecstasy! then off, off forth on swing.</p>
+                    <p style={{ marginLeft: 16 }}>
+                      As a skate's heel sweeps smooth on a bow-bend: the hurl
+                      and gliding
+                    </p>
+                    <p style={{ marginLeft: 16 }}>
+                      Rebuffed the big wind. My heart in hiding
+                    </p>
+                    <p>
+                      Stirred for a bird, --the achieve of, the mastery of the
+                      thing!
+                    </p>
+                    <br />
+                    <p>
+                      Brute beauty and valour and act, oh, air, pride, plume,
+                      here
+                    </p>
+                    <p style={{ marginLeft: 16 }}>
+                      Buckle! AND the fire that breaks fron thee then, a billion
+                    </p>
+                    <p>Times told lovelier, more dangerous, O my chevailer!</p>
+                    <br />
+                    <p style={{ marginLeft: 16 }}>
+                      No wonder of it: sheer plod makes plough down sillion
+                    </p>
+                    <p>Shine, and blue-bleak embers, ah my dear,</p>
+                    <p style={{ marginLeft: 16 }}>
+                      Fall, gall themselves, and gash gold-vermillion
+                    </p>
 
-          <div style={{ justifyContent: "flex-end", display: "flex" }}>
-            <div
-              style={{
-                color: "#b3c53f",
-                display: "flex",
-                flexDirection: "column",
-                width: "35%",
-                alignItems: "flex-end",
-                paddingBottom: "10%",
-              }}
-            >
-              <div style={{ width: "80%" }}>
-                <p>I know even though I can't see it</p>
-                <p>somewhere waiting for me</p>
-                <p>there will always be love</p>
-              </div>
-              <br />
-              <div style={{ width: "60%" }}>
-                <p>Enrico Garzilli</p>
-                <p>from Rage of the Heart</p>
-              </div>
+                    <p
+                      style={{
+                        margin: "8% 0 0 40%",
+                        fontWeight: 600,
+                        color: "#602380",
+                      }}
+                    >
+                      Gerard Manley Hopkins
+                    </p>
+                  </div>
+                </div>
+              </Font>
             </div>
-          </div>
-        </div>
-
+          ) : (
+            ""
+          );
+        })}
         {FourthBlock.map((el, i) => {
           return (
             <Image
@@ -294,41 +371,63 @@ const Latf = () => {
             />
           );
         })}
-
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
-          <Image
-            style={{ margin: "10%" }}
-            positionX={"center"}
-            pic={I25}
-            imgWidth={"80%"}
-            onClick={(e) => openModal(e)}
-          />
-
-          <div style={{ justifyContent: "flex-end", display: "flex" }}>
-            <div
-              style={{
-                color: "#b3c53f",
-                display: "flex",
-                flexDirection: "column",
-                width: "35%",
-                alignItems: "flex-end",
-                paddingBottom: "10%",
-              }}
-            >
-              <div style={{ width: "80%" }}>
-                <p>I know even though I can't see it</p>
-                <p>somewhere waiting for me</p>
-                <p>there will always be love</p>
-              </div>
-              <br />
-              <div style={{ width: "60%" }}>
-                <p>Enrico Garzilli</p>
-                <p>from Rage of the Heart</p>
+        {SubPage.map((el, i) => {
+          return i === 3 ? (
+            <div style={{ marginTop: "20%" }}>
+              <Image
+                key={i}
+                id={el.i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+              <div
+                style={{
+                  justifyContent: "flex-end",
+                  display: "flex",
+                  marginTop: "5%",
+                  font: "20px/20px Kumbh Sans",
+                }}
+              >
+                <div
+                  style={{
+                    color: "#331c65",
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "35%",
+                    alignItems: "flex-end",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  <div style={{ width: "80%" }}>
+                    <p>Like the moon growing dim</p>
+                    <p>on the rim f the hill</p>
+                    <p>In the chill, still of the night.</p>
+                  </div>
+                  <br />
+                  <div
+                    style={{
+                      width: "60%",
+                      marginRight: "-15%",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <p>Cole Porter</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
+          ) : (
+            ""
+          );
+        })}
         {FifthBlock.map((el, i) => {
           return (
             <Image
@@ -346,41 +445,56 @@ const Latf = () => {
             />
           );
         })}
-
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
-          <Image
-            style={{ margin: "10%" }}
-            positionX={"center"}
-            pic={I43}
-            imgWidth={"80%"}
-            onClick={(e) => openModal(e)}
-          />
-
-          <div style={{ justifyContent: "flex-end", display: "flex" }}>
-            <div
-              style={{
-                color: "#b3c53f",
-                display: "flex",
-                flexDirection: "column",
-                width: "35%",
-                alignItems: "flex-end",
-                paddingBottom: "10%",
-              }}
-            >
-              <div style={{ width: "80%" }}>
-                <p>I know even though I can't see it</p>
-                <p>somewhere waiting for me</p>
-                <p>there will always be love</p>
-              </div>
-              <br />
-              <div style={{ width: "60%" }}>
-                <p>Enrico Garzilli</p>
-                <p>from Rage of the Heart</p>
-              </div>
+        {SubPage.map((el, i) => {
+          return i === 4 ? (
+            <div style={{ marginTop: "20%" }}>
+              <Image
+                key={i}
+                id={el.i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+              <Font>
+                <div
+                  style={{
+                    color: "#737e26",
+                    display: "flex",
+                    flexDirection: "column",
+                    paddingBottom: "10%",
+                  }}
+                >
+                  <div>
+                    <p>Consider the lillies of the field, how they grow:</p>
+                    <p>
+                      they neither toil nor spin. &ensp; Yet I tell you, even
+                      Solomon
+                    </p>
+                    <p>in all his glory was not arrayed like one of these</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "60%",
+                      margin: "6% 0 0 30%",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <p>Cole Porter</p>
+                  </div>
+                </div>
+              </Font>
             </div>
-          </div>
-        </div>
-
+          ) : (
+            ""
+          );
+        })}
         {SixthBlock.map((el, i) => {
           return (
             <Image
@@ -398,41 +512,63 @@ const Latf = () => {
             />
           );
         })}
-
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
-          <Image
-            style={{ margin: "10%" }}
-            positionX={"center"}
-            pic={I50}
-            imgWidth={"80%"}
-            onClick={(e) => openModal(e)}
-          />
-
-          <div style={{ justifyContent: "flex-end", display: "flex" }}>
-            <div
-              style={{
-                color: "#b3c53f",
-                display: "flex",
-                flexDirection: "column",
-                width: "35%",
-                alignItems: "flex-end",
-                paddingBottom: "10%",
-              }}
-            >
-              <div style={{ width: "80%" }}>
-                <p>I know even though I can't see it</p>
-                <p>somewhere waiting for me</p>
-                <p>there will always be love</p>
-              </div>
-              <br />
-              <div style={{ width: "60%" }}>
-                <p>Enrico Garzilli</p>
-                <p>from Rage of the Heart</p>
+        {SubPage.map((el, i) => {
+          return i === 5 ? (
+            <div style={{ marginTop: "20%" }}>
+              <Image
+                key={i}
+                id={el.i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+              <div
+                style={{
+                  justifyContent: "flex-end",
+                  display: "flex",
+                  marginTop: "20%",
+                  font: "20px/20px Kumbh Sans",
+                }}
+              >
+                <div
+                  style={{
+                    color: "#331c65",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-end",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  <div style={{ width: "80%" }}>
+                    <p>
+                      Truhling, Sommer und Herbst genoss der gluckliche Dichter,
+                    </p>
+                    <p>Vor dem Winter hat ihm endlich der Hugel geschutzt.</p>
+                  </div>
+                  <br />
+                  <div
+                    style={{
+                      width: "60%",
+                      marginRight: "-15%",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <p>J. W. von Goethe</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
+          ) : (
+            ""
+          );
+        })}
         {SeventhBlock.map((el, i) => {
           return (
             <Image
@@ -450,41 +586,53 @@ const Latf = () => {
             />
           );
         })}
-
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
-          <Image
-            style={{ margin: "10%" }}
-            positionX={"center"}
-            pic={I67}
-            imgWidth={"80%"}
-            onClick={(e) => openModal(e)}
-          />
-
-          <div style={{ justifyContent: "flex-end", display: "flex" }}>
-            <div
-              style={{
-                color: "#b3c53f",
-                display: "flex",
-                flexDirection: "column",
-                width: "35%",
-                alignItems: "flex-end",
-                paddingBottom: "10%",
-              }}
-            >
-              <div style={{ width: "80%" }}>
-                <p>I know even though I can't see it</p>
-                <p>somewhere waiting for me</p>
-                <p>there will always be love</p>
-              </div>
-              <br />
-              <div style={{ width: "60%" }}>
-                <p>Enrico Garzilli</p>
-                <p>from Rage of the Heart</p>
-              </div>
+        {SubPage.map((el, i) => {
+          return i === 6 ? (
+            <div>
+              <Image
+                key={i}
+                id={el.i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+              <Font>
+                <div
+                  style={{
+                    color: "#737e26",
+                    display: "flex",
+                    flexDirection: "center",
+                    width: "60%",
+                  }}
+                >
+                  <div>
+                    <p>Full many a flow's is born to blush unseen</p>
+                    <p>and waste its sweetness on the desert air.</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "60%",
+                      margin: "2% 0 0 60%",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <p>Thomas Gray</p>
+                    <p>Elegy Written in a Country Churchyard</p>
+                  </div>
+                </div>
+              </Font>
             </div>
-          </div>
-        </div>
-
+          ) : (
+            ""
+          );
+        })}
         {EighthBlock.map((el, i) => {
           return (
             <Image
@@ -502,41 +650,54 @@ const Latf = () => {
             />
           );
         })}
-
-        <div style={{ backgroundColor: "#1a2b04", marginTop: "20%" }}>
-          <Image
-            style={{ margin: "10%" }}
-            positionX={"center"}
-            pic={I73}
-            imgWidth={"80%"}
-            onClick={(e) => openModal(e)}
-          />
-
-          <div style={{ justifyContent: "flex-end", display: "flex" }}>
-            <div
-              style={{
-                color: "#b3c53f",
-                display: "flex",
-                flexDirection: "column",
-                width: "35%",
-                alignItems: "flex-end",
-                paddingBottom: "10%",
-              }}
-            >
-              <div style={{ width: "80%" }}>
-                <p>I know even though I can't see it</p>
-                <p>somewhere waiting for me</p>
-                <p>there will always be love</p>
-              </div>
-              <br />
-              <div style={{ width: "60%" }}>
-                <p>Enrico Garzilli</p>
-                <p>from Rage of the Heart</p>
-              </div>
+        {SubPage.map((el, i) => {
+          return i === 7 ? (
+            <div style={{ marginTop: "20%" }}>
+              <Image
+                key={i}
+                id={el.i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+              <Font>
+                <div
+                  style={{
+                    color: "#737e26",
+                    display: "flex",
+                    flexDirection: "column",
+                    paddingBottom: "10%",
+                  }}
+                >
+                  <div>
+                    <p>To see a World in a Grain of Sand</p>
+                    <p>And a Heaver in a Wild Flower</p>
+                    <p>Hold Infinity in the palm of your hand</p>
+                    <p>And Eternity in an hour</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "60%",
+                      margin: "6% 0 0 30%",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <p>Cole Porter</p>
+                  </div>
+                </div>
+              </Font>
             </div>
-          </div>
-        </div>
-
+          ) : (
+            ""
+          );
+        })}
         <Image pic={I74} imgWidth={"100%"} onClick={(e) => openModal(e)} />
       </div>
     </div>
