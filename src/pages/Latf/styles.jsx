@@ -272,6 +272,10 @@ export const AnimatedImage = styled(motion.img)`
 
 export const Font = styled.div`
   display: flex;
-  font: 20px/30px Kumbh Sans;
+  font-family: Kumbh Sans;
+  // font-size: 2vw;
   margin: 6% 10%;
+`;
+export const Pe = styled.p`
+  margin: 2px auto;
 `;

@@ -34,6 +34,7 @@ import {
   AnimatedImage,
   AnimationWrapper,
   Font,
+  Pe,
 } from "./styles";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -121,7 +122,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -140,7 +141,7 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
@@ -185,7 +186,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -204,7 +205,7 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
@@ -249,7 +250,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -268,7 +269,7 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
@@ -365,7 +366,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -384,45 +385,37 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
-              <div
-                style={{
-                  justifyContent: "flex-end",
-                  display: "flex",
-                  marginTop: "5%",
-                  font: "20px/20px Kumbh Sans",
-                }}
-              >
+              <Font>
                 <div
                   style={{
                     color: "#331c65",
                     display: "flex",
-                    flexDirection: "column",
-                    width: "35%",
-                    alignItems: "flex-end",
+                    width: "100%",
+                    justifyContent: "flex-end",
                     lineHeight: 1.5,
                   }}
                 >
-                  <div style={{ width: "80%" }}>
-                    <p>Like the moon growing dim</p>
-                    <p>on the rim f the hill</p>
-                    <p>In the chill, still of the night.</p>
-                  </div>
-                  <br />
-                  <div
-                    style={{
-                      width: "60%",
-                      marginRight: "-15%",
-                      fontWeight: 600,
-                    }}
-                  >
-                    <p>Cole Porter</p>
+                  <div>
+                    <div style={{}}>
+                      <p>Like the moon growing dim</p>
+                      <p>on the rim f the hill</p>
+                      <p>In the chill, still of the night.</p>
+                    </div>
+                    <br />
+                    <div
+                      style={{
+                        fontWeight: 600,
+                      }}
+                    >
+                      <p>Cole Porter</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Font>
             </div>
           ) : (
             ""
@@ -439,7 +432,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -458,7 +451,7 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
@@ -482,11 +475,11 @@ const Latf = () => {
                   <div
                     style={{
                       width: "60%",
-                      margin: "6% 0 0 30%",
+                      margin: "6% 0 0 80%",
                       fontWeight: 600,
                     }}
                   >
-                    <p>Cole Porter</p>
+                    <p>Matthew 6: 28-29</p>
                   </div>
                 </div>
               </Font>
@@ -506,7 +499,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -525,20 +518,14 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
-              <div
-                style={{
-                  justifyContent: "flex-end",
-                  display: "flex",
-                  marginTop: "20%",
-                  font: "20px/20px Kumbh Sans",
-                }}
-              >
+              <Font>
                 <div
                   style={{
+                    marginTop: "30%",
                     color: "#331c65",
                     display: "flex",
                     flexDirection: "column",
@@ -546,24 +533,18 @@ const Latf = () => {
                     lineHeight: 1.5,
                   }}
                 >
-                  <div style={{ width: "80%" }}>
+                  <div>
                     <p>
                       Truhling, Sommer und Herbst genoss der gluckliche Dichter,
                     </p>
                     <p>Vor dem Winter hat ihm endlich der Hugel geschutzt.</p>
                   </div>
                   <br />
-                  <div
-                    style={{
-                      width: "60%",
-                      marginRight: "-15%",
-                      fontWeight: 600,
-                    }}
-                  >
+                  <div style={{ fontWeight: 600 }}>
                     <p>J. W. von Goethe</p>
                   </div>
                 </div>
-              </div>
+              </Font>
             </div>
           ) : (
             ""
@@ -580,7 +561,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -599,17 +580,19 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
-              <Font>
+              <Font style={{ justifyContent: "center" }}>
                 <div
                   style={{
                     color: "#737e26",
                     display: "flex",
-                    flexDirection: "center",
-                    width: "60%",
+                    justifyContent: "center",
+                    marginTop: "36%",
+                    flexDirection: "column",
+                    width: "100%",
                   }}
                 >
                   <div>
@@ -618,9 +601,11 @@ const Latf = () => {
                   </div>
                   <div
                     style={{
-                      width: "60%",
-                      margin: "2% 0 0 60%",
+                      marginTop: "10%",
                       fontWeight: 600,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-end",
                     }}
                   >
                     <p>Thomas Gray</p>
@@ -644,7 +629,7 @@ const Latf = () => {
               mBottom={el.mBottom}
               mLeft={el.mLeft}
               positionX={el.positionX}
-              speed={el.speed}
+              // speed={el.speed}
               onClick={() => openModal(el)}
               // whileHover={{ scale: 1.3 }}
             />
@@ -663,11 +648,11 @@ const Latf = () => {
                 mBottom={el.mBottom}
                 mLeft={el.mLeft}
                 positionX={el.positionX}
-                speed={el.speed}
+                // speed={el.speed}
                 onClick={() => openModal(el)}
                 // whileHover={{ scale: 1.3 }}
               />
-              <Font>
+              <Font style={{ justifyContent: "flex-end" }}>
                 <div
                   style={{
                     color: "#737e26",
@@ -689,7 +674,7 @@ const Latf = () => {
                       fontWeight: 600,
                     }}
                   >
-                    <p>Cole Porter</p>
+                    <p>William Blake</p>
                   </div>
                 </div>
               </Font>
