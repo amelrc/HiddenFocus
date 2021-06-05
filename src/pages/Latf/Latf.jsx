@@ -24,6 +24,7 @@ import {
   SixthBlock,
   SeventhBlock,
   EighthBlock,
+  LastBlock,
   SubPage,
 } from "./dataLatf";
 import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
@@ -34,7 +35,6 @@ import {
   AnimatedImage,
   AnimationWrapper,
   Font,
-  Pe,
 } from "./styles";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -45,7 +45,7 @@ const Latf = () => {
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState(0);
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.1], [1, 2]);
+  const scale = useTransform(scrollYProgress, [0, 0.1], [1, 5]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const openModal = (e) => {
@@ -527,7 +527,6 @@ const Latf = () => {
               <Font>
                 <div
                   style={{
-                    marginTop: "30%",
                     color: "#331c65",
                     display: "flex",
                     flexDirection: "column",
@@ -592,9 +591,8 @@ const Latf = () => {
                     color: "#737e26",
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: "36%",
                     flexDirection: "column",
-                    width: "100%",
+                    width: "70%",
                   }}
                 >
                   <div>
@@ -685,7 +683,25 @@ const Latf = () => {
             ""
           );
         })}
-        <Image pic={I74} imgWidth={"100%"} onClick={(e) => openModal(e)} />
+        <div style={{ backgroundColor: "#e8e8e8", padding: "10% " }}>
+          {LastBlock.map((el, i) => {
+            return (
+              <Image
+                key={i}
+                pic={el.pic}
+                imgWidth={el.imgWidth}
+                mTop={el.mTop}
+                mRight={el.mRight}
+                mBottom={el.mBottom}
+                mLeft={el.mLeft}
+                positionX={el.positionX}
+                // speed={el.speed}
+                onClick={() => openModal(el)}
+                // whileHover={{ scale: 1.3 }}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

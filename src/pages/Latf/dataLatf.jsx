@@ -119,10 +119,10 @@ export const FirstBlock = [
     id: 4,
     pic: I4,
     imgWidth: "16%",
-    mTop: "",
+    mTop: "-10%",
     mRight: "10%",
     mBottom: "",
-    mLeft: "24%",
+    mLeft: "",
     positionX: "flex-end",
     speed: -20,
   },
@@ -130,7 +130,7 @@ export const FirstBlock = [
     id: 5,
     pic: I5,
     imgWidth: "26%",
-    mTop: "",
+    mTop: "10%",
     mRight: "20%",
     mBottom: "",
     mLeft: "",
@@ -241,7 +241,7 @@ export const ThirdBlock = [
   {
     pic: I14a2,
     imgWidth: "60%",
-    mTop: "40%",
+    mTop: "20%",
     mRight: "",
     mBottom: "",
     mLeft: "",
@@ -334,7 +334,7 @@ export const FourthBlock = [
   {
     pic: I31,
     imgWidth: "100%",
-    mTop: "",
+    mTop: "10%",
     mRight: "",
     mBottom: "",
     mLeft: "",
@@ -829,6 +829,20 @@ export const EighthBlock = [
     mLeft: "",
     positionX: "center",
     speed: 2.5,
+  },
+];
+
+export const LastBlock = [
+  {
+    id: 1,
+    pic: I74,
+    imgWidth: "80%",
+    mTop: "",
+    mRight: "",
+    mBottom: "",
+    mLeft: "",
+    positionX: "center",
+    speed: "",
   },
 ];
 export const SubPage = [
