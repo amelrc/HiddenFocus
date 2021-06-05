@@ -5,15 +5,6 @@ import Modal from "../../components/Modal";
 import Image from "../../components/Image";
 
 import I0 from "../../images/LATF/0.jpg";
-import I10 from "../../images/LATF/10.jpg";
-import I14 from "../../images/LATF/14_text.jpg";
-import I14a6 from "../../images/LATF/14a6_text.jpg";
-import I25 from "../../images/LATF/25_text.jpg";
-import I43 from "../../images/LATF/43_text.jpg";
-import I50 from "../../images/LATF/50_text.jpg";
-import I67 from "../../images/LATF/67_text.jpg";
-import I73 from "../../images/LATF/73_text.jpg";
-import I74 from "../../images/LATF/74.jpg";
 
 import {
   FirstBlock,
@@ -27,7 +18,7 @@ import {
   LastBlock,
   SubPage,
 } from "./dataLatf";
-import { IntroContainer, WrapperIntroText } from "../Lightscapes/styles";
+import { WrapperIntroText } from "../Lightscapes/styles";
 import {
   H1,
   HeaderWrapper,
@@ -38,8 +29,6 @@ import {
 } from "./styles";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
-
-console.log("hello");
 
 const Latf = () => {
   const [showModal, setShowModal] = useState(false);
@@ -683,7 +672,7 @@ const Latf = () => {
             ""
           );
         })}
-        <div style={{ backgroundColor: "#e8e8e8", padding: "10% " }}>
+        <div style={{ backgroundColor: "#edf2fd", padding: "10% " }}>
           {LastBlock.map((el, i) => {
             return (
               <Image

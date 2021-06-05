@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
-import '../../App.css';
-import ImgHome from "../../images/HOME/WEB-0789-1500x1000--517-kb.jpg";
+import "../../App.css";
+import ImgHome from "../../images/LATF/47.jpg";
 import Image from "../../components/Image";
-import TransitionPage from '../../components/pageTransition'
-import { HeaderHome, HeaderWrapper, HomePage, Phrase, SubTitle } from "./styles";
+import TransitionPage from "../../components/pageTransition";
+import {
+  HeaderHome,
+  HeaderWrapper,
+  HomePage,
+  Phrase,
+  SubTitle,
+} from "./styles";
 
 const Home = () => {
   return (
@@ -18,7 +24,7 @@ const Home = () => {
           style={{ width: "45%", margin: "0 auto" }}
         >
           <Link to="/gallery">
-            <Image src={ImgHome} />
+            <Image pic={ImgHome} />
           </Link>
         </div>
         <Phrase>Each of our lives is a different way of seeing</Phrase>

@@ -46,11 +46,12 @@ export const P = styled.p`
   // -webkit-transition: opacity 0.2s, visibility 0.2s;
   transition: opacity 0.2s, visibility 0.2s;
   margin: auto;
-  font: 300 4vw Kumbh Sans;
-  color: #331c65;
+  font: 700 2vw Kumbh Sans;
+  color: #fff;
   // white-space: nowrap;
-  text-align: left;
+  text-align: center;
 `;
+
 export const Hover = styled.div`
   position: relative;
   &:hover {
@@ -62,6 +63,7 @@ export const Hover = styled.div`
       left: 0;
       bottom: 0;
       z-index: 1;
+      background-color: #1d0d2580;
     }
   }
 `;
