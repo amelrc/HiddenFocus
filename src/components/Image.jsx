@@ -5,12 +5,15 @@ const ImageWrapper = styled(motion.div)`
   background-color: ${(props) => props.bg};
   display: flex;
   justify-content: ${(props) => props.positionX};
-  width: 100%;
+  align-items: ${(props) => props.positionY};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   // position: absolute;
 `;
 
 const Img = styled.img`
   width: ${(props) => props.imgWidth};
+  height: ${(props) => props.imgHeight};
   margin-top: ${(props) => props.mTop};
   margin-right: ${(props) => props.mRight};
   margin-bottom: ${(props) => props.mBottom};
@@ -28,11 +31,15 @@ const Image = (props) => {
     mBottom,
     mLeft,
     positionX,
+    positionY,
     imgWidth,
+    imgHeight,
     pic,
     speed,
     onClick,
     whileHover,
+    width,
+    height,
   } = props;
   const { scrollYProgress } = useViewportScroll();
   const transform = useTransform(scrollYProgress, [0, 1], [0, 100 * speed]);
@@ -43,17 +50,22 @@ const Image = (props) => {
       style={{ y: transform }}
       bg={bg}
       positionX={positionX}
+      positionY={positionY}
       whileHover={whileHover}
+      width={width}
+      height={height}
     >
       <Img
         id={id}
         imgWidth={imgWidth}
+        imgHeight={imgHeight}
         mTop={mTop}
         mRight={mRight}
         mBottom={mBottom}
         mLeft={mLeft}
         src={pic}
         onClick={onClick}
+        // speed={ speed}
         alt="image"
       />
     </ImageWrapper>

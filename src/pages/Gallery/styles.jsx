@@ -46,10 +46,11 @@ export const P = styled.p`
   // -webkit-transition: opacity 0.2s, visibility 0.2s;
   transition: opacity 0.2s, visibility 0.2s;
   margin: auto;
-  font: 700 2vw Kumbh Sans;
+  font: 700 2vw Hidden Focus;
   color: #fff;
   // white-space: nowrap;
   text-align: center;
+  letter-spacing: 1px;
 `;
 
 export const Hover = styled.div`
@@ -63,7 +64,7 @@ export const Hover = styled.div`
       left: 0;
       bottom: 0;
       z-index: 1;
-      background-color: #1d0d2580;
+      background-color: #1d0d2559;
     }
   }
 `;

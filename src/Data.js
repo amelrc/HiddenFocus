@@ -2,7 +2,7 @@ import I0 from "../src/images/LATF/0.jpg";
 
 import W0762 from "./images/MX/WEB-0762-250kb.jpg";
 
-import W0106 from "./images/CAUC/WEB-P1020106-312kb.jpg";
+import W0106 from "./images/CAUC/3.jpg";
 ///////// LIGHTSPCAPES //////////
 
 import LS1 from "./images/LS/WEB-LS1-RAY-3838-249kb.jpg";
@@ -157,10 +157,10 @@ export const museum = [
         name: "George Enescu's Secret Garden",
       },
       {
-        url: "show-look-at-the-flowers",
+        url: "digital-table-book",
         id: 9,
         introImg: W0762,
-        name: "Look at the Flowers",
+        name: "A Digital Coffee Table Book",
       },
       {
         url: "cuatro-amigos",
