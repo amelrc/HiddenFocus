@@ -115,7 +115,7 @@ const Hamburger = ({ state }) => {
       ></div>
       <div ref={(el) => (reveal2 = el)} className="menu-layer flex">
         <LeftMenu>
-          <Li>Hidden Focus</Li>
+          {/* <Li>Hidden Focus</Li> */}
           <Link to="/constest">
             <img width={"70%"} src={Contest} alt="" />
           </Link>

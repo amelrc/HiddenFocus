@@ -32,8 +32,8 @@ const Menu = () => {
   return (
     <MenuWrapper>
       <LeftMenu>
-        <h3>Hidden Focus</h3>
-        <img onClick={test} width={300} height={200} src={Contest} alt="" />
+        {/* <h3>Hidden Focus</h3> */}
+        <img width={300} height={200} src={Contest} alt="" />
         <h3>name the picture context</h3>
       </LeftMenu>
       <RightMenu>

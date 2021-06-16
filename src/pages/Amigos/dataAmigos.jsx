@@ -15,7 +15,7 @@ const T1 = (
   </p>
 );
 const T2 = (
-  <>
+  <p>
     Lilia Ulla was a teenager at the time of the Revolution, and has experienced
     firsthand the remaking of Cuban society as it unfolded over the decades.
     Through her eyes, we could still catch a glimpse of Havana’s former
@@ -26,7 +26,7 @@ const T2 = (
     her friends, including Amel, Boris and Abel. New friendships quickly
     developed, and Lilia happily and capably took charge of making this expo
     happen.
-  </>
+  </p>
 );
 
 export const PageOne = {
@@ -62,6 +62,7 @@ export const FirstBlock = [
     positionY: "",
     speed: "",
     height: "100vh",
+    width: '100%'
   },
   {
     id: 2,
@@ -74,6 +75,7 @@ export const FirstBlock = [
     positionY: "flex-end",
     speed: "",
     height: "100vh",
+    width: '100%'
   },
   {
     id: 3,
@@ -86,6 +88,7 @@ export const FirstBlock = [
     positionY: "center",
     speed: "",
     height: "100vh",
+    width: '100%'
   },
   {
     id: 4,
@@ -98,17 +101,19 @@ export const FirstBlock = [
     positionY: "",
     speed: "",
     height: "100vh",
+    width: '100%'
   },
   {
     id: 5,
     pic: I5,
     imgHeight: "40%",
     mTop: "",
-    mRight: "",
+    mRight: "20%",
     mBottom: "10%",
     mLeft: "4%",
     positionY: "flex-end",
     speed: "",
     height: "100vh",
+    width: '100%'
   },
 ];

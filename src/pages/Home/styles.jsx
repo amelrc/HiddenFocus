@@ -49,6 +49,6 @@ export const Phrase = styled.h3`
   }
   @media ${device.small} {
     font: 3vw/3vw Mrs Saint Delafield;
-    margin: -60px 0 0 46%;
+    margin: -60px 0 0 49%;
   }
 `;
